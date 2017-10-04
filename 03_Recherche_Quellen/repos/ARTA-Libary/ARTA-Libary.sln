@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTA-Library", "ARTA-Libary\ARTA-Library.csproj", "{0BC2FC46-1642-4831-A5ED-2D664ACBAE36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTA-Test", "ARTA-Test\ARTA-Test.csproj", "{C2D75FB8-F1E7-4A70-88E4-9ECED8DBFAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTA-Examples", "ARTA-Examples\ARTA-Examples.csproj", "{06F3BEBF-1A82-4ED9-9497-6F891BACFD45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "..\Apache-Commons-Math3-C-\Math.csproj", "{B5C4017E-E790-4A28-B4F1-708D837A7387}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BC2FC46-1642-4831-A5ED-2D664ACBAE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC2FC46-1642-4831-A5ED-2D664ACBAE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC2FC46-1642-4831-A5ED-2D664ACBAE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC2FC46-1642-4831-A5ED-2D664ACBAE36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D75FB8-F1E7-4A70-88E4-9ECED8DBFAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D75FB8-F1E7-4A70-88E4-9ECED8DBFAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D75FB8-F1E7-4A70-88E4-9ECED8DBFAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D75FB8-F1E7-4A70-88E4-9ECED8DBFAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F3BEBF-1A82-4ED9-9497-6F891BACFD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F3BEBF-1A82-4ED9-9497-6F891BACFD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F3BEBF-1A82-4ED9-9497-6F891BACFD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F3BEBF-1A82-4ED9-9497-6F891BACFD45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C4017E-E790-4A28-B4F1-708D837A7387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C4017E-E790-4A28-B4F1-708D837A7387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C4017E-E790-4A28-B4F1-708D837A7387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C4017E-E790-4A28-B4F1-708D837A7387}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9C96566-18BE-4EBA-9E3A-71A2BDE85341}
+	EndGlobalSection
+EndGlobal
