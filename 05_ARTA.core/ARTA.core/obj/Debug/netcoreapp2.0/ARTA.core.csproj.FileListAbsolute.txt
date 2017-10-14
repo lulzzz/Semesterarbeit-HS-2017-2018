@@ -1,0 +1,9 @@
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\bin\Debug\netcoreapp2.0\ARTA.core.deps.json
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\bin\Debug\netcoreapp2.0\ARTA.core.dll
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\bin\Debug\netcoreapp2.0\ARTA.core.pdb
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.csprojResolveAssemblyReference.cache
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.csproj.CoreCompileInputs.cache
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.AssemblyInfoInputs.cache
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.AssemblyInfo.cs
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.dll
+C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.pdb

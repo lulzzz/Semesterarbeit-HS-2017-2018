@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTA.core", "ARTA.core\ARTA.core.csproj", "{B7174CC9-62C6-422B-8A86-943FBD0B340D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatisticalTests", "StatisticalTests\StatisticalTests.csproj", "{FB1D22D5-508B-42C4-B526-82441DAB726B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math3", "Math3\Math3.csproj", "{99169B24-E7D7-4D5D-A3A1-EC60364951B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7174CC9-62C6-422B-8A86-943FBD0B340D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7174CC9-62C6-422B-8A86-943FBD0B340D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7174CC9-62C6-422B-8A86-943FBD0B340D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7174CC9-62C6-422B-8A86-943FBD0B340D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB1D22D5-508B-42C4-B526-82441DAB726B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1D22D5-508B-42C4-B526-82441DAB726B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1D22D5-508B-42C4-B526-82441DAB726B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1D22D5-508B-42C4-B526-82441DAB726B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99169B24-E7D7-4D5D-A3A1-EC60364951B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99169B24-E7D7-4D5D-A3A1-EC60364951B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99169B24-E7D7-4D5D-A3A1-EC60364951B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99169B24-E7D7-4D5D-A3A1-EC60364951B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49DAD8CE-0564-413A-9462-761882023770}
+	EndGlobalSection
+EndGlobal

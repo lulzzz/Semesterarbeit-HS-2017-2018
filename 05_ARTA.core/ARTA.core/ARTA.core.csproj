@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ch.hsr.arta\" />
+    <Folder Include="ch.hsr.math\" />
+    <Folder Include="ch.hsr.test\" />
+    <Folder Include="ch.hsr.util\" />
+    <Folder Include="ch.hsr.fitting\" />
+  </ItemGroup>
+
+</Project>
