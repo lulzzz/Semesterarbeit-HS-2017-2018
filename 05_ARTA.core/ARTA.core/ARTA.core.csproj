@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ch.hsr.arta\" />
-    <Folder Include="ch.hsr.math\" />
     <Folder Include="ch.hsr.test\" />
     <Folder Include="ch.hsr.util\" />
-    <Folder Include="ch.hsr.fitting\" />
   </ItemGroup>
 
 </Project>
