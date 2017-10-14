@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "ARTA.core/1.0.0": {
+      "arta.core/1.0.0": {
         "runtime": {
           "ARTA.core.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "ARTA.core/1.0.0": {
+    "arta.core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

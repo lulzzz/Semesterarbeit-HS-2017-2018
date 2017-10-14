@@ -7,3 +7,10 @@ C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.cor
 C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.AssemblyInfo.cs
 C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.dll
 C:\Users\Delay\source\repos\ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\bin\Debug\netcoreapp2.0\ARTA.core.deps.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\bin\Debug\netcoreapp2.0\ARTA.core.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\bin\Debug\netcoreapp2.0\ARTA.core.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.csprojResolveAssemblyReference.cache
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.AssemblyInfo.cs
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.pdb
