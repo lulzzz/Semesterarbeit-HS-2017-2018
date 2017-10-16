@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Microsoft.NETCore.App/2.0.0": {
@@ -194,7 +194,7 @@
           "lib/netstandard1.0/_._": {}
         },
         "build": {
-          "build/netstandard2.0/NETStandard.Library.targets": {}
+          "build/NETStandard.Library.targets": {}
         }
       }
     }
@@ -664,61 +664,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adelay\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Philipp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\ARTA.core.csproj",
+      "projectUniqueName": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\ARTA.core.csproj",
       "projectName": "ARTA.core",
-      "projectPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\ARTA.core.csproj",
-      "packagesPath": "C:\\Users\\adelay\\.nuget\\packages\\",
-      "outputPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\obj\\",
+      "projectPath": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\ARTA.core.csproj",
+      "outputPath": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
-      "configFilePaths": [
-        "C:\\Users\\adelay\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
-        },
-        "imports": [
-          "net461"
-        ],
-        "assetTargetFallback": true,
-        "warn": true
+        }
       }
     }
   }
