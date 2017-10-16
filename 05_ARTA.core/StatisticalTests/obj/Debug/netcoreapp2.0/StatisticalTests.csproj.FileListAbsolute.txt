@@ -13,3 +13,4 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\Stati
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.AssemblyInfo.cs
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.dll
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.pdb
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.csprojResolveAssemblyReference.cache

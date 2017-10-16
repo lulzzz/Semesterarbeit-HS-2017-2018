@@ -18,7 +18,7 @@ namespace ARTA.core.ch.hsr.arta
          override protected double Transform(double value)
         {
             // Transform to uniform distribution U(0,1)
-            double result = normal.CumulativeProbability(value);
+            double result = normal.cumulativeProbability(value);
             // Transform to desired distribution
             result = distribution.inverseCumulativeProbability(result);
             return result;

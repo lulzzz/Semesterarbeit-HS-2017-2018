@@ -1,0 +1,2 @@
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\Math3\bin\Debug\netcoreapp2.0\Math3.deps.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\Math3\obj\Debug\netcoreapp2.0\Math3.csprojResolveAssemblyReference.cache

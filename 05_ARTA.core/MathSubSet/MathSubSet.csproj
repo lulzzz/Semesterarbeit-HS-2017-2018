@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CSharpTest.Net.Collections" Version="14.906.1403.1082" />
+  </ItemGroup>
+
 </Project>

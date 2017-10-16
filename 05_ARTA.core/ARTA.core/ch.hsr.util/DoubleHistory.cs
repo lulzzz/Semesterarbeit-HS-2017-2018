@@ -21,20 +21,20 @@ namespace ARTA.core.ch.hsr.util
             this.addIndex = 0;
         }
 
-        public override add(double value)
+        public void add(double value)
         {
-            value[addIndex] = value;
+            values[addIndex] = value;
             addIndex++;
-            if(addIndex >= size)
+            if (addIndex >= size)
             {
                 addIndex = 0;
             }
         }
 
-        public override double get(int index)
+        public double get(int index)
         {
             int i = addIndex + size - index - 1;
-            if(i >= size)
+            if (i >= size)
             {
                 i = i - size;
             }

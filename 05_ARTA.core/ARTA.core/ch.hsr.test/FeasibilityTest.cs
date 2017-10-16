@@ -9,8 +9,8 @@ namespace ARTA.core.ch.hsr.test
     class FeasibilityTest
     {
 
-        private readonly UnivariateIntegrator  integrator;
-	private readonly double minimumFeasibleBivariateCorrelation;
+        private readonly UnivariateIntegrator integrator;
+        private readonly double minimumFeasibleBivariateCorrelation;
 
 
 
@@ -66,11 +66,16 @@ namespace ARTA.core.ch.hsr.test
             double minFBC = 0.0;
 
             // consider special cases, final else is general approach
-            if (distribution is NormalDistribution || distribution is UniformRealDistribution || distribution is TDistribution) {
+            if (distribution is NormalDistribution || distribution is UniformRealDistribution || distribution is TDistribution)
+            {
                 minFBC = -1.0;
-            } else if (distribution is ExponentialDistribution) {
+            }
+            else if (distribution is ExponentialDistribution)
+            {
                 minFBC = 1.0 - Math.PI * Math.PI / 6.0;
-            } else {
+            }
+            else
+            {
                 double mean = distribution.getNumericalMean();
                 double variance = distribution.getNumericalVariance();
                 double integral = integrator.integrate(IterativeLegendreGaussIntegrator.DEFAULT_MAX_ITERATIONS_COUNT, new UnivariatDistributionFunction(distribution), 0.0, 1.0);
@@ -83,20 +88,20 @@ namespace ARTA.core.ch.hsr.test
         private class UnivariatDistributionFunction : UnivariateFunction
         {
 
-        private readonly RealDistribution  distribution;
+            private readonly RealDistribution distribution;
 
 
 
-		private UnivariatDistributionFunction(RealDistribution distribution)
-        {
-            this.distribution = distribution;
-        }
+            private UnivariatDistributionFunction(RealDistribution distribution)
+            {
+                this.distribution = distribution;
+            }
 
-        public override double Value(double d)
-        {
-            double result = distribution.inverseCumulativeProbability(d) * distribution.inverseCumulativeProbability(1 - d);
-            return result;
+            public double value(double arg0)
+            {
+                double result = distribution.inverseCumulativeProbability(arg0) * distribution.inverseCumulativeProbability(1 - arg0);
+                return result;
+            }
         }
     }
-}
 }

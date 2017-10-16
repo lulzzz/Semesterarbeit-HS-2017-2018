@@ -152,7 +152,7 @@ namespace ARTA.core.ch.hsr.fitting
             if (result == null)
             {
                 // Transform to uniform distribution U(0,1)
-                result = standardNormal.CumulativeProbability(value);
+                result = standardNormal.cumulativeProbability(value);
                 // Transform to desired distribution
                 result = distribution.inverseCumulativeProbability(result);
                 transformationCache.Put(value, result);

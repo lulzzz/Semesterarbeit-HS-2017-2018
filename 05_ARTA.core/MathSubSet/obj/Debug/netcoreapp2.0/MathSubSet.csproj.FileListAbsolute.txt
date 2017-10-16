@@ -1,0 +1,6 @@
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\MathSubSet\obj\Debug\netcoreapp2.0\MathSubSet.csprojResolveAssemblyReference.cache
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\MathSubSet\obj\Debug\netcoreapp2.0\MathSubSet.csproj.CoreCompileInputs.cache
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\MathSubSet\obj\Debug\netcoreapp2.0\MathSubSet.AssemblyInfoInputs.cache
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\MathSubSet\obj\Debug\netcoreapp2.0\MathSubSet.AssemblyInfo.cs
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\MathSubSet\bin\Debug\netcoreapp2.0\MathSubSet.deps.json
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\MathSubSet\bin\Debug\netcoreapp2.0\MathSubSet.dll

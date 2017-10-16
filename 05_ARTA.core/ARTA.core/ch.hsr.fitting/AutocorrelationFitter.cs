@@ -18,18 +18,18 @@ namespace ARTA.core.ch.hsr.fitting
         {
             int dim = desiredArtaAutocorrelations.Length;
             double[] maxErrors = new double[dim];
-            for(int i = 0; i < dim; i++)
+            for (int i = 0; i < dim; i++)
             {
                 maxErrors[i] = maxError;
             }
             return FitArAutocorrelations(desiredArtaAutocorrelations, maxErrors);
         }
 
-        public double[] FitAutoCorrelations(double[] desiredArtaAutocorrelations, double[] maxErrors)
+        public double[] FitArAutocorrelations(double[] desiredArtaAutocorrelations, double[] maxErrors)
         {
             int dim = desiredArtaAutocorrelations.Length;
             double[] result = new double[dim];
-            for(int i = 0; i < dim; i++)
+            for (int i = 0; i < dim; i++)
             {
                 result[i] = FitArAutocorrelation(desiredArtaAutocorrelations[i], maxErrors[i]);
             }
@@ -44,13 +44,13 @@ namespace ARTA.core.ch.hsr.fitting
             double estimatedCorrelation;
 
             estimatedCorrelation = artaCorrelationEstimator.estimateArtaCorrelation(lowerBound);
-            if(Math.Abs(desiredArtaCorrealtion - estimatedCorrelation) < maxError)
+            if (Math.Abs(desiredArtaCorrealtion - estimatedCorrelation) < maxError)
             {
                 return lowerBound;
             }
 
             estimatedCorrelation = artaCorrelationEstimator.estimateArtaCorrelation(upperBound);
-            if(Math.Abs(desiredArtaCorrealtion - estimatedCorrelation) > maxError)
+            if (Math.Abs(desiredArtaCorrealtion - estimatedCorrelation) > maxError)
             {
                 return upperBound;
             }
@@ -64,7 +64,7 @@ namespace ARTA.core.ch.hsr.fitting
             {
                 centerPoint = (lowerBound + upperBound) / 2.0;
                 estimatedCorrelation = artaCorrelationEstimator.estimateArtaCorrelation(centerPoint);
-                if(desiredArtaCorrealtion < estimatedCorrelation)
+                if (desiredArtaCorrealtion < estimatedCorrelation)
                 {
                     upperBound = centerPoint;
                 }
@@ -72,9 +72,12 @@ namespace ARTA.core.ch.hsr.fitting
                 {
                     lowerBound = centerPoint;
                 }
-            } while (Math.Abs(desiredArtaCorrealtion - estimatedCorrelation ) > maxError){
-                return centerPoint;
             }
+            while (Math.Abs(desiredArtaCorrealtion - estimatedCorrelation) > maxError);
+            
+            return centerPoint;
+            
+    
         }
     }
 }
