@@ -262,8 +262,8 @@ namespace Math3.analysis.solvers
         /// known within some error margin, <c>r</c> should be set to 1 and <c>q</c> should be 
         /// set to the order of magnitude of the error margin. When the location of the root 
         /// is really a wild guess, then <c>r</c> should be set to a value larger than 1 
-        /// (typically 2 to double the interval length at each iteration) and <c>q</c> should
-        /// be set according to half the initial search interval length.
+        /// (typically 2 to double the interval Length at each iteration) and <c>q</c> should
+        /// be set according to half the initial search interval Length.
         /// </para>
         /// <para>
         /// As an example, if we consider the trivial function <c>f(x) = 1 - x</c> and use

@@ -54,7 +54,7 @@ namespace Math3.random
     /// cryptographically secure random sequence is required. A secure random
     /// sequence is a sequence of pseudo-random values which, in addition to being
     /// well-dispersed (so no subsequence of values is an any more likely than other
-    /// subsequence of the the same length), also has the additional property that
+    /// subsequence of the the same Length), also has the additional property that
     /// knowledge of values generated up to any point in the sequence does not make
     /// it any easier to predict subsequent values.</item>
     /// <item>
@@ -118,7 +118,7 @@ namespace Math3.random
         }
 
         /// <inheritdoc/>
-        /// <param name="len">the desired string length.</param>
+        /// <param name="len">the desired string Length.</param>
         /// <returns>the random string.</returns>
         /// <remarks>
         /// <para>
@@ -136,7 +136,7 @@ namespace Math3.random
         {
             if (len <= 0)
             {
-                throw new NotStrictlyPositiveException<Int32>(new LocalizedFormats("LENGTH"), len);
+                throw new NotStrictlyPositiveException<Int32>(new LocalizedFormats("Length"), len);
             }
 
             // Get a random number generator
@@ -266,7 +266,7 @@ namespace Math3.random
         {
             if (len <= 0)
             {
-                throw new NotStrictlyPositiveException<Int32>(new LocalizedFormats("LENGTH"), len);
+                throw new NotStrictlyPositiveException<Int32>(new LocalizedFormats("Length"), len);
             }
 
             // Get SecureRandom and setup Digest provider
@@ -300,7 +300,7 @@ namespace Math3.random
                      */
                     String hex = (c + 128).ToString("X");
 
-                    // Keep strings uniform length -- guarantees 40 bytes
+                    // Keep strings uniform Length -- guarantees 40 bytes
                     if (hex.Length == 1)
                     {
                         hex = "0" + hex;

@@ -147,7 +147,7 @@ namespace Math3.linear
         /// <exception cref="NullArgumentException"> if the row or column selections are
         /// <c>null</c></exception>
         /// <exception cref="NoDataException"> if the row or column selections are empty (zero
-        /// length).</exception>
+        /// Length).</exception>
         /// <exception cref="OutOfRangeException"> if the indices are not valid.</exception>
         RealMatrix getSubMatrix(int[] selectedRows, int[] selectedColumns);
 
@@ -179,7 +179,7 @@ namespace Math3.linear
         /// <exception cref="NullArgumentException"> if the row or column selections are
         /// <c>null</c></exception>
         /// <exception cref="NoDataException"> if the row or column selections are empty (zero
-        /// length).</exception>
+        /// Length).</exception>
         /// <exception cref="OutOfRangeException"> if the indices are not valid.</exception>
         /// <exception cref="MatrixDimensionMismatchException"> if the destination array is too
         /// small.</exception>
@@ -210,7 +210,7 @@ namespace Math3.linear
         /// <exception cref="OutOfRangeException"> if <c>subMatrix</c> does not fit into
         /// this matrix from element in <c>(row, column)</c>.</exception>
         /// <exception cref="DimensionMismatchException"> if <c>subMatrix</c> is not rectangular
-        /// (not all rows have the same length) or empty.</exception>
+        /// (not all rows have the same Length) or empty.</exception>
         /// <exception cref="NullArgumentException"> if <c>subMatrix</c> is <c>null</c>.
         /// </exception>
         void setSubMatrix(double[][] subMatrix, int row, int column);
@@ -326,7 +326,7 @@ namespace Math3.linear
         /// columns as the instance)</param>
         /// <exception cref="OutOfRangeException"> if the specified row index is invalid.
         /// </exception>
-        /// <exception cref="MatrixDimensionMismatchException"> if the <c>array</c> length does
+        /// <exception cref="MatrixDimensionMismatchException"> if the <c>array</c> Length does
         /// not match the column dimension of <c>this</c> matrix.</exception>
         void setRow(int row, double[] array);
 
@@ -349,7 +349,7 @@ namespace Math3.linear
         /// rows as the instance).</param>
         /// <exception cref="OutOfRangeException"> if the specified column index is invalid.
         /// </exception>
-        /// <exception cref="MatrixDimensionMismatchException"> if the <c>array</c> length does
+        /// <exception cref="MatrixDimensionMismatchException"> if the <c>array</c> Length does
         /// not match the row dimension of <c>this</c> matrix.</exception>
         void setColumn(int column, double[] array);
 
@@ -416,7 +416,7 @@ namespace Math3.linear
         /// </summary>
         /// <param name="v">the vector to operate on</param>
         /// <returns><c>this * v</c></returns>
-        /// <exception cref="DimensionMismatchException"> if the length of <c>v</c> does not
+        /// <exception cref="DimensionMismatchException"> if the Length of <c>v</c> does not
         /// match the column dimension of <c>this</c>.</exception>
         double[] operate(double[] v);
 
@@ -434,7 +434,7 @@ namespace Math3.linear
         /// </summary>
         /// <param name="v">the row vector to premultiply by</param>
         /// <returns><c>v * this</c></returns>
-        /// <exception cref="DimensionMismatchException"> if the length of <c>v</c> does not
+        /// <exception cref="DimensionMismatchException"> if the Length of <c>v</c> does not
         /// match the row dimension of <c>this</c>.</exception>
         double[] preMultiply(double[] v);
 

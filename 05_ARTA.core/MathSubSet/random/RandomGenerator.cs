@@ -55,7 +55,7 @@ namespace Math3.random
         /// <summary>
         /// Generates random bytes and places them into a user-supplied
         /// byte array.  The number of random bytes produced is equal to
-        /// the length of the byte array.
+        /// the Length of the byte array.
         /// </summary>
         /// <param name="bytes">bytes the non-null byte array in which to put the
         /// random bytes</param>

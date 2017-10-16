@@ -24,15 +24,15 @@ namespace Math3.random
     public interface RandomData
     {
         /// <summary>
-        /// Generates a random string of hex characters of length <c>len</c>.
+        /// Generates a random string of hex characters of Length <c>len</c>.
         /// <para>
         /// The generated string will be random, but not cryptographically
         /// secure. To generate cryptographically secure strings, use
         /// <see cref="nextSecureHexString(int)"/>.
         /// </para>
         /// </summary>
-        /// <param name="len">the length of the string to be generated</param>
-        /// <returns>a random string of hex characters of length <c>len</c></returns>
+        /// <param name="len">the Length of the string to be generated</param>
+        /// <returns>a random string of hex characters of Length <c>len</c></returns>
         /// <exception cref="NotStrictlyPositiveException"> if <c>len <= 0</c><exception>
         String nextHexString(int len);
 
@@ -76,8 +76,8 @@ namespace Math3.random
         /// <see cref="nextHexString(int)"/>.
         /// </para>
         /// </summary>
-        /// <param name="len">the length of the string to be generated</param>
-        /// <returns>a random string of hex characters of length <c>len</c></returns>
+        /// <param name="len">the Length of the string to be generated</param>
+        /// <returns>a random string of hex characters of Length <c>len</c></returns>
         /// <exception cref="NotStrictlyPositiveException"> if <c>len <= 0</c></exception>
         String nextSecureHexString(int len);
 
@@ -204,7 +204,7 @@ namespace Math3.random
         double nextUniform(double lower, double upper, Boolean lowerInclusive);
 
         /// <summary>
-        /// Generates an integer array of length <c>k</c> whose entries are selected
+        /// Generates an integer array of Length <c>k</c> whose entries are selected
         /// randomly, without repetition, from the integers <c>0, ..., n - 1</c>
         /// (inclusive).
         /// <para>

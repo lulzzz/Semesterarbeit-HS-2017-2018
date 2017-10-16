@@ -37,9 +37,9 @@ namespace Math3.linear
         private double[] data;
 
         /// <summary>
-        /// Build a 0-length vector.
-        /// Zero-length vectors may be used to initialized construction of vectors
-        /// by data gathering. We start with zero-length and use either the
+        /// Build a 0-Length vector.
+        /// Zero-Length vectors may be used to initialized construction of vectors
+        /// by data gathering. We start with zero-Length and use either the
         /// <see cref="ArrayRealVector(ArrayRealVector, ArrayRealVector)">constructor</see>
         /// or one of the <c>append</c> method (<see cref="append(double)"/>,
         /// <see cref="append(ArrayRealVector)"/>) to gather data into this vector.

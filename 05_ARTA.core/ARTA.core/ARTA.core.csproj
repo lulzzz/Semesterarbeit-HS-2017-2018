@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="ch.hsr.test\" />
     <Folder Include="ch.hsr.util\" />
+    <Folder Include="temp\" />
   </ItemGroup>
 
   <ItemGroup>

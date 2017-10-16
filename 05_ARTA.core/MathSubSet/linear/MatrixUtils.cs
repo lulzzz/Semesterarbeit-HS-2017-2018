@@ -108,7 +108,7 @@ namespace Math3.linear
         /// <param name="data">input array</param>
         /// <returns>RealMatrix containing the values of the array</returns>
         /// <exception cref="DimensionMismatchException">
-        /// if <c>data</c> is not rectangular (not all rows have the same length).</exception>
+        /// if <c>data</c> is not rectangular (not all rows have the same Length).</exception>
         /// <exception cref="NoDataException"> if a row or column is empty.</exception>
         /// <exception cref="NullArgumentException"> if either <c>data</c> or <c>data[0]</c>
         /// is <c>null</c>.</exception>
@@ -147,7 +147,7 @@ namespace Math3.linear
         /// <param name="data">input array</param>
         /// <returns>a matrix containing the values of the array.</returns>
         /// <exception cref="DimensionMismatchException">
-        /// if <c>data</c> is not rectangular (not all rows have the same length).</exception>
+        /// if <c>data</c> is not rectangular (not all rows have the same Length).</exception>
         /// <exception cref="NoDataException"> if a row or column is empty.</exception>
         /// <exception cref="NullArgumentException"> if either <c>data</c> or <c>data[0]</c>
         /// is <c>null</c>.</exception>
@@ -250,7 +250,7 @@ namespace Math3.linear
         /// Creates a <see cref="RealVector"/> using the data from the input array.
         /// </summary>
         /// <param name="data">the input data</param>
-        /// <returns>a data.length RealVector</returns>
+        /// <returns>a data.Length RealVector</returns>
         /// <exception cref="NoDataException"> if <c>data</c> is empty.</exception>
         /// <exception cref="NullArgumentException"> if <c>data</c> is <c>null</c>.</exception>
         public static RealVector createRealVector(double[] data)
@@ -267,7 +267,7 @@ namespace Math3.linear
         /// </summary>
         /// <typeparam name="T">the type of the field elements</typeparam>
         /// <param name="data">the input data</param>
-        /// <returns>a data.length FieldVector</returns>
+        /// <returns>a data.Length FieldVector</returns>
         /// <exception cref="NoDataException"> if <c>data</c> is empty.</exception>
         /// <exception cref="NullArgumentException"> if <c>data</c> is <c>null</c>.</exception>
         /// <exception cref="ZeroException"> if <c>data</c> has 0 elements</exception>
@@ -289,7 +289,7 @@ namespace Math3.linear
         /// array.
         /// </summary>
         /// <param name="rowData">the input row data</param>
-        /// <returns>a 1 x rowData.length RealMatrix</returns>
+        /// <returns>a 1 x rowData.Length RealMatrix</returns>
         /// <exception cref="NoDataException"> if <c>rowData</c> is empty.</exception>
         /// <exception cref="NullArgumentException"> if <c>rowData</c> is <c>null</c>.</exception>
         public static RealMatrix createRowRealMatrix(double[] rowData)
@@ -313,7 +313,7 @@ namespace Math3.linear
         /// </summary>
         /// <typeparam name="T">the type of the field elements</typeparam>
         /// <param name="rowData">the input row data</param>
-        /// <returns>a 1 x rowData.length FieldMatrix</returns>
+        /// <returns>a 1 x rowData.Length FieldMatrix</returns>
         /// <exception cref="NoDataException"> if <c>rowData</c> is empty.</exception>
         /// <exception cref="NullArgumentException"> if <c>rowData</c> is <c>null</c>.</exception>
         public static FieldMatrix<T> createRowFieldMatrix<T>(T[] rowData) where T : FieldElement<T>
@@ -543,7 +543,7 @@ namespace Math3.linear
         /// <exception cref="NullArgumentException"> if <c>selectedRows</c> or
         /// <c>selectedColumns</c> are <c>null</c>.</exception>
         /// <exception cref="NoDataException"> if the row or column selections are empty (zero
-        /// length).</exception>
+        /// Length).</exception>
         /// <exception cref="OutOfRangeException"> if row or column selections are not valid.
         /// </exception>
         public static void checkSubMatrixIndex(AnyMatrix m, int[] selectedRows, int[] selectedColumns)
@@ -738,7 +738,7 @@ namespace Math3.linear
         /// is assumed, though not checked, to be in lower triangular form.
         /// The vector <see cref="RealVector"/> is overwritten with the solution.
         /// The matrix is checked that it is square and its dimensions match
-        /// the length of the vector.
+        /// the Length of the vector.
         /// </para>
         /// </summary>
         /// <param name="rm">RealMatrix which is lower triangular</param>
@@ -788,7 +788,7 @@ namespace Math3.linear
         /// is assumed, though not checked, to be in upper triangular form.
         /// The vector <see cref="RealVector"/> is overwritten with the solution.
         /// The matrix is checked that it is square and its dimensions match
-        /// the length of the vector.
+        /// the Length of the vector.
         /// </para>
         /// </summary>
         /// <param name="rm">RealMatrix which is upper triangular</param>

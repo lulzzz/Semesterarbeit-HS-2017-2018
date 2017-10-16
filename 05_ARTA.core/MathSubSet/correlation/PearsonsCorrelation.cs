@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Math3.distribution;
+using Math3.linear;
+using MathSubSet.regression;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -48,23 +51,40 @@ namespace MathSubSet
         }
         public RealMatrix GetCorrelationStandardErrors()
         {
-
+            int nVars = this.correlationMatrix.getColumnDimension();
+            double[][] outVar = new double[nVars][];
+            for(int i = 0; i < nVars; i++)
+            {
+                for(int j = 0; j < nVars; j++)
+                {
+                    double r = this.correlationMatrix.getEntry(i, j);
+                    outVar[i][j] = Math.Sqrt((1.0D - r * r) / (this.nObs - 2));
+                }
+            }
+            return new BlockRealMatrix(outVar);
         }
-        public RealMatrix getCorrelationPValues()
+        public RealMatrix GetCorrelationPValues()
         {
             TDistribution tDistribution = new TDistribution(this.nObs - 2);
             int nVars = this.correlationMatrix.getColumnDimension();
-            double[][] out = new double[nVars][];
+            double[][] outVar = new double[nVars][];
             for(int i = 0; i < nVars; i++)
             {
                 for(int j = 0; j < nVars; j++)
                 {
                     if(i == j)
                     {
-                        out[i][j] = 0.0D;
+                        outVar[i][j] = 0.0D;
+                    }
+                    else
+                    {
+                        double r = this.correlationMatrix.getEntry(i, j);
+                        double t = Math.Abs(r * Math.Sqrt((this.nObs - 2) / (1.0D - r * r)));
+                        outVar[i][j] = (2.0D * tDistribution.cumulativeProbability(-t));
                     }
                 }
             }
+            return new BlockRealMatrix(outVar);
         }
         public RealMatrix ComputeCorrelationMatrix(RealMatrix matrix)
         {
@@ -75,7 +95,7 @@ namespace MathSubSet
             {
                 for(int j = 0; j < i; j++)
                 {
-                    double corr = correlation(matrix.getColumn(i), matrix.getColumn(j));
+                    double corr = Correlation(matrix.getColumn(i), matrix.getColumn(j));
                     outMatrix.setEntry(i, j, corr);
                     outMatrix.setEntry(j, i, corr);
                 }
@@ -83,7 +103,7 @@ namespace MathSubSet
             }
             return outMatrix;
         }
-        public RealMatrix ComputeCorrelationMatrix(double[,] data)
+        public RealMatrix ComputeCorrelationMatrix(double[][] data)
         {
             return ComputeCorrelationMatrix(RealMatrix matrix);
         }
@@ -100,13 +120,26 @@ namespace MathSubSet
             }
             for(int i = 0; i < xArray.Length; i++)
             {
-                regression.addData(xArray[i], yArray[i]);
+                regression.AddData(xArray[i], yArray[i]);
             }
-            return regression.getR();
+            return regression.GetR();
         }
         public RealMatrix CovarianceToCorrelation(RealMatrix covarianceMatrix)
         {
-            
+            int nVars = covarianceMatrix.getColumnDimension();
+            RealMatrix outMatrix = new BlockRealMatrix(nVars, nVars);
+            for(int i = 0; i < nVars; i++)
+            {
+                double sigma = Math.Sqrt(covarianceMatrix.getEntry(i, i));
+                outMatrix.setEntry(i, i, 1.0D);
+                for(int j = 0; j < i; j++)
+                {
+                    double entry = covarianceMatrix.getEntry(i, j) / (sigma * Math.Sqrt(covarianceMatrix.getEntry(j, j)));
+                    outMatrix.setEntry(i, j, entry);
+                    outMatrix.setEntry(j, i, entry);
+                }
+            }
+            return outMatrix;
         }
         private void CheckSufficientData(RealMatrix matrix)
         {

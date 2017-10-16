@@ -3,13 +3,7 @@
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "CSharpTest.Net.Collections/14.906.1403.1082": {
-        "type": "package",
-        "compile": {
-          "lib/net40/CSharpTest.Net.Collections.dll": {}
-        },
-        "runtime": {
-          "lib/net40/CSharpTest.Net.Collections.dll": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore.App/2.0.0": {
         "type": "package",
@@ -210,13 +204,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "CSharpTest.Net.Collections": "14.906.1403.1082"
-        },
-        "compile": {
-          "bin/placeholder/MathSubSet.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MathSubSet.dll": {}
+          "CSharpTest.Net.Collections": "14.906.1403.1082",
+          "Microsoft.NETCore.App": "2.0.0"
         }
       }
     }
@@ -721,8 +710,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\MathSubSet\\MathSubSet.csproj": {
-              "projectPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\MathSubSet\\MathSubSet.csproj"
+            "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\MathSubSet\\MathSubSet.csproj": {
+              "projectPath": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\MathSubSet\\MathSubSet.csproj"
             }
           }
         }
@@ -739,17 +728,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'CSharpTest.Net.Collections 14.906.1403.1082' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "CSharpTest.Net.Collections",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

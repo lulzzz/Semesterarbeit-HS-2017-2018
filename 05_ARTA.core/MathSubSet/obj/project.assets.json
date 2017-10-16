@@ -3,13 +3,7 @@
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "CSharpTest.Net.Collections/14.906.1403.1082": {
-        "type": "package",
-        "compile": {
-          "lib/net40/CSharpTest.Net.Collections.dll": {}
-        },
-        "runtime": {
-          "lib/net40/CSharpTest.Net.Collections.dll": {}
-        }
+        "type": "package"
       },
       "Microsoft.NETCore.App/2.0.0": {
         "type": "package",
@@ -721,17 +715,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'CSharpTest.Net.Collections 14.906.1403.1082' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "CSharpTest.Net.Collections",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

@@ -96,12 +96,12 @@ namespace Math3.util
         public const Int32 EXP_INT_TABLE_LEN = EXP_INT_TABLE_MAX_INDEX * 2;
 
         /// <summary>
-        /// Logarithm table length.
+        /// Logarithm table Length.
         /// </summary>
         public const Int32 LN_MANT_LEN = 1024;
 
         /// <summary>
-        /// Exponential fractions table length.
+        /// Exponential fractions table Length.
         /// </summary>
         public const Int32 EXP_FRAC_TABLE_LEN = 1025; // 0, 1/1024, ... 1024/1024
 

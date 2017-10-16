@@ -38,9 +38,9 @@ namespace Math3.linear
         private readonly Field<T> field;
 
         /// <summary>
-        /// Build a 0-length vector.
-        /// Zero-length vectors may be used to initialize construction of vectors
-        /// by data gathering. We start with zero-length and use either the 
+        /// Build a 0-Length vector.
+        /// Zero-Length vectors may be used to initialize construction of vectors
+        /// by data gathering. We start with zero-Length and use either the 
         /// <see cref="ArrayFieldVector(ArrayFieldVector, ArrayFieldVector)">constructor</see>
         /// or one of the <c>append</c> methods (<see cref="add(FieldVector)"/> or
         /// <see cref="append(ArrayFieldVector)"/>) to gather data into this vector.
@@ -77,7 +77,7 @@ namespace Math3.linear
         /// Construct a vector from an array, copying the input array.
         /// This constructor needs a non-empty <c>d</c> array to retrieve
         /// the field from its first element. This implies it cannot build
-        /// 0 length vectors. To build vectors from any size, one should
+        /// 0 Length vectors. To build vectors from any size, one should
         /// use the <see cref="ArrayFieldVector(Field, FieldElement[])"/> constructor.
         /// </summary>
         /// <param name="d">Array.</param>
@@ -125,7 +125,7 @@ namespace Math3.linear
         /// performance as no new array will be built and no data will be copied.
         /// This constructor needs a non-empty <c>d</c> array to retrieve
         /// the field from its first element. This implies it cannot build
-        /// 0 length vectors. To build vectors from any size, one should
+        /// 0 Length vectors. To build vectors from any size, one should
         /// use the <see cref="ArrayFieldVector(Field, FieldElement[], boolean)"/>
         /// constructor.
         /// </summary>
@@ -348,7 +348,7 @@ namespace Math3.linear
         /// Construct a vector by appending one vector to another vector.
         /// This constructor needs at least one non-empty array to retrieve
         /// the field from its first element. This implies it cannot build
-        /// 0 length vectors. To build vectors from any size, one should
+        /// 0 Length vectors. To build vectors from any size, one should
         /// use the <see cref="ArrayFieldVector(Field, FieldElement[], FieldElement[])"/>
         /// constructor.
         /// </summary>

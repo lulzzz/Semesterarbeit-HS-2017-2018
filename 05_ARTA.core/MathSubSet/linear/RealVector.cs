@@ -485,7 +485,7 @@ namespace Math3.linear
         /// <summary>
         /// Get the index of the minimum entry.
         /// </summary>
-        /// <returns>the index of the minimum entry or -1 if vector length is 0
+        /// <returns>the index of the minimum entry or -1 if vector Length is 0
         /// or all entries are <c>NaN</c>.</returns>
         public int getMinIndex()
         {
@@ -518,7 +518,7 @@ namespace Math3.linear
         /// <summary>
         /// Get the index of the maximum entry.
         /// </summary>
-        /// <returns>the index of the maximum entry or -1 if vector length is 0
+        /// <returns>the index of the maximum entry or -1 if vector Length is 0
         /// or all entries are <c>NaN</c></returns>
         public int getMaxIndex()
         {

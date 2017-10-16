@@ -100,7 +100,7 @@ namespace Math3.util
         /// <param name="SINE_TABLE_B">table of the least significant part of the sines</param>
         /// <param name="COSINE_TABLE_A">table of the most significant part of the cosines</param>
         /// <param name="COSINE_TABLE_B">table of the most significant part of the cosines</param>
-        /// <param name="SINE_TABLE_LEN">length of the tables</param>
+        /// <param name="SINE_TABLE_LEN">Length of the tables</param>
         /// <param name="TANGENT_TABLE_A">table of the most significant part of the tangents</param>
         /// <param name="TANGENT_TABLE_B">table of the most significant part of the tangents</param>
         private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE_B, double[] COSINE_TABLE_A, double[] COSINE_TABLE_B, int SINE_TABLE_LEN, double[] TANGENT_TABLE_A, double[] TANGENT_TABLE_B)
@@ -650,7 +650,7 @@ namespace Math3.util
         /// </summary>
         /// <param name="sw">text output stream where output should be printed</param>
         /// <param name="name">array name</param>
-        /// <param name="expectedLen">expected length of the array</param>
+        /// <param name="expectedLen">expected Length of the array</param>
         /// <param name="array2d">array data</param>
         internal static void printarray(StreamWriter sw, String name, int expectedLen, double[][] array2d)
         {
@@ -709,7 +709,7 @@ namespace Math3.util
         /// </summary>
         /// <param name="sw">text output stream where output should be printed</param>
         /// <param name="name">array name</param>
-        /// <param name="expectedLen">expected length of the array</param>
+        /// <param name="expectedLen">expected Length of the array</param>
         /// <param name="array">array data</param>
         internal static void printarray(StreamWriter sw, String name, int expectedLen, double[] array)
         {
@@ -741,11 +741,11 @@ namespace Math3.util
         }
 
         /// <summary>
-        /// Check two lengths are equal. 
+        /// Check two Lengths are equal. 
         /// </summary>
-        /// <param name="expectedLen">expected length</param>
-        /// <param name="actual">actual length</param>
-        /// <exception cref="DimensionMismatchException"> if the two lengths are not equal</exception>
+        /// <param name="expectedLen">expected Length</param>
+        /// <param name="actual">actual Length</param>
+        /// <exception cref="DimensionMismatchException"> if the two Lengths are not equal</exception>
         private static void checkLen(int expectedLen, int actual)
         {
             if (expectedLen != actual)
