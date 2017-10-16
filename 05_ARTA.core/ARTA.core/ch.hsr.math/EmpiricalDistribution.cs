@@ -15,15 +15,14 @@ namespace ARTA.core.ch.hsr.math
         private readonly double lowerBound;
         private readonly double upperBound;
 
-        public EmpiricalDistribution(double[] values)
+        public EmpiricalDistribution(double[] values) :base(new Well1024a())
         {
-            base(new Well1024a());
             this.nPoints = values.Length;
-            points = Array.Copy(values, nPoints);
-            Arrays.sort(points);
+            points = Array.ConstrainedCopy(values, nPoints);
+            Array.Sort(points);
             this.lowerBound = points[0];
             this.upperBound = points[nPoints - 1];
-            this.mean = StatUtils.mean(values);
+            this.mean = Math.mean(values);
             // populationVariance vs. Variance
             this.variance = StatUtils.variance(values);
 

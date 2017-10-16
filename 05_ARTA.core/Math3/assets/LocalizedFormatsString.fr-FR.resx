@@ -147,7 +147,8 @@
   <data name="NO_REGRESSORS" xml:space="preserve">
     <value>le modèle de régression doit inclure au moins une variable explicative</value>
   </data>
-  <data name="NOT_POSITIVE_POISSON_MEAN" xml:space="preserve">
+  <data name="NOT_POSITIVE_POISSON_
+        " xml:space="preserve">
     <value>la moyenne de Poisson doit être positive ({0})</value>
   </data>
   <data name="NOT_ENOUGH_POINTS_IN_SPLINE_PARTITION" xml:space="preserve">
