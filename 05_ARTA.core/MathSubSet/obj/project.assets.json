@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\ARTA.core.csproj",
-      "projectName": "ARTA.core",
-      "projectPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\ARTA.core.csproj",
+      "projectUniqueName": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\MathSubSet\\MathSubSet.csproj",
+      "projectName": "MathSubSet",
+      "projectPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\MathSubSet\\MathSubSet.csproj",
       "packagesPath": "C:\\Users\\adelay\\.nuget\\packages\\",
-      "outputPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\ARTA.core\\obj\\",
+      "outputPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\05_ARTA.core\\MathSubSet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

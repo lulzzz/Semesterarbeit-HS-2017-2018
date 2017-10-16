@@ -9,8 +9,4 @@
     <Folder Include="ch.hsr.util\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Math3\Math3.csproj" />
-  </ItemGroup>
-
 </Project>
