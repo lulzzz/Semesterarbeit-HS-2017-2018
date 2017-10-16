@@ -3,6 +3,7 @@ using ARTA.core.ch.hsr.math;
 using ARTA.core.ch.hsr.test;
 using Math3.distribution;
 using Math3.linear;
+using Math3.random;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,15 +25,15 @@ namespace ARTA.core.ch.hsr.arta
             int order = OrderEstimator.EstimateOrder(data);
             Console.WriteLine("order" + order);
             double[] artaCorrelationCoefficients = Array.Copy(AutoCorrelation.CalculateAcfs(data, order), 1, order + 1);
-            return createArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new MersenneTwister()));
+            return CreateArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new Well19937c()));
         }
 
-        public static ArtaProcess CreateArtaProcess(RealDistribution distribution, double[] artaCorrelationCoefficients)// throws NonFeasibleCorrelationException, NotStationaryException 
+        public static IArtaProcess CreateArtaProcess(RealDistribution distribution, double[] artaCorrelationCoefficients)// throws NonFeasibleCorrelationException, NotStationaryException 
         {
-            return createArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new MersenneTwister()));
+            return CreateArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new Well19937c()));
         }
 
-        public static ArtaProcess CreateArtaProcess(RealDistribution distribution, double[] artaCorrelationCoefficients, RandomGenerator random) //throws NonFeasibleCorrelationException, NotStationaryException 
+        public static IArtaProcess CreateArtaProcess(RealDistribution distribution, double[] artaCorrelationCoefficients, RandomGenerator random) //throws NonFeasibleCorrelationException, NotStationaryException 
         {
             AbstractArtaProcess arta = null;
             if (artaCorrelationCoefficients == null || artaCorrelationCoefficients.Length == 0)
@@ -43,7 +44,7 @@ namespace ARTA.core.ch.hsr.arta
 
             // check feasibility 
             FeasibilityTest ft = new FeasibilityTest(distribution);
-            ft.checkFeasibility(artaCorrelationCoefficients);
+            ft.CheckFeasibility(artaCorrelationCoefficients);
 
             // check if correlation matrix is positive definite, if not CholeskyDecomposition throws Error
             new CholeskyDecomposition(AutoCorrelation.GetCorrelationMatrix(artaCorrelationCoefficients));
@@ -70,7 +71,7 @@ namespace ARTA.core.ch.hsr.arta
             ArtaProcessGeneral arta = null;
             AutocorrelationFitter fitter = new AutocorrelationFitter(distribution);
             double[] arCorrelationCoefficients = fitter.FitArAutocorrelations(artaCorrelationCoefficients, DEFAULT_ERROR);
-            ArProcess ar = ArProcessFactory.createArProcess(arCorrelationCoefficients, random);
+            ArProcess ar = ArProcessFactory.CreateArProcess(arCorrelationCoefficients, random);
             arta = new ArtaProcessGeneral(ar, distribution);
             return arta;
         }

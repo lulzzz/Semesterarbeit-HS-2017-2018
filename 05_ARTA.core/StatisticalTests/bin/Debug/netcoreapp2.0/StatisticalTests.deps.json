@@ -6,28 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "arta.core/1.0.0": {
-        "dependencies": {
-          "Math3": "1.0.0"
-        },
+      "statisticaltests/1.0.0": {
         "runtime": {
-          "ARTA.core.dll": {}
-        }
-      },
-      "math3/1.0.0": {
-        "runtime": {
-          "Math3.dll": {}
+          "StatisticalTests.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "arta.core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "math3/1.0.0": {
+    "statisticaltests/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

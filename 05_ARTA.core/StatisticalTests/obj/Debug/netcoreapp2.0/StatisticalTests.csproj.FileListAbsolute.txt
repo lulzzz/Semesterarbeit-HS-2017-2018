@@ -1,0 +1,7 @@
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\bin\Debug\netcoreapp2.0\StatisticalTests.deps.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\bin\Debug\netcoreapp2.0\StatisticalTests.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\bin\Debug\netcoreapp2.0\StatisticalTests.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.csprojResolveAssemblyReference.cache
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.AssemblyInfo.cs
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\StatisticalTests\obj\Debug\netcoreapp2.0\StatisticalTests.pdb

@@ -15,7 +15,7 @@ namespace ARTA.core.ch.hsr.arta
 
         public ArProcess CreateArProcess(double[] arAutocorrealtions)
         {
-            return CreateArProcess(arAutocorrealtions, new MersenneTwister());
+            return CreateArProcess(arAutocorrealtions, new Well19937c());
         }
 
         public ArProcess CreateArProcess(double[] arAutocorrelations, RandomGenerator random)
