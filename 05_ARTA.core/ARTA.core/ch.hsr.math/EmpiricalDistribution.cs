@@ -22,12 +22,12 @@ namespace ARTA.core.ch.hsr.math
             Array.Sort(points);
             this.lowerBound = points[0];
             this.upperBound = points[nPoints - 1];
-            this.mean = Math.mean(values);
+            this.mean = Math.Mean(values);
             // populationVariance vs. Variance
             this.variance = StatUtils.variance(values);
 
         }
-        public override double CumulativeProbability(double x)
+        public override double cumulativeProbability(double x)
         {
             return 0;
         }

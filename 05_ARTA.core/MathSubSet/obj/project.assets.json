@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "CSharpTest.Net.Collections/14.906.1403.1082": {
+        "type": "package",
+        "compile": {
+          "lib/net40/CSharpTest.Net.Collections.dll": {}
+        },
+        "runtime": {
+          "lib/net40/CSharpTest.Net.Collections.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -200,6 +209,19 @@
     }
   },
   "libraries": {
+    "CSharpTest.Net.Collections/14.906.1403.1082": {
+      "sha512": "31Pu0wcHG2c814AUVPSzyL/ijcfyvu4S524+uxOhx2d1dRiIJ9eMLLvRWUhhP7F0Q17cvQpnGnZk8+4DhdJPgg==",
+      "type": "package",
+      "path": "csharptest.net.collections/14.906.1403.1082",
+      "files": [
+        "csharptest.net.collections.14.906.1403.1082.nupkg.sha512",
+        "csharptest.net.collections.nuspec",
+        "lib/net20/CSharpTest.Net.Collections.XML",
+        "lib/net20/CSharpTest.Net.Collections.dll",
+        "lib/net40/CSharpTest.Net.Collections.XML",
+        "lib/net40/CSharpTest.Net.Collections.dll"
+      ]
+    },
     "Microsoft.NETCore.App/2.0.0": {
       "sha512": "/mzXF+UtZef+VpzzN88EpvFq5U6z4rj54ZMq/J968H6pcvyLOmcupmTRpJ3CJm8ILoCGh9WI7qpDdiKtuzswrQ==",
       "type": "package",
@@ -660,6 +682,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "CSharpTest.Net.Collections >= 14.906.1403.1082",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -707,6 +730,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "CSharpTest.Net.Collections": {
+            "target": "Package",
+            "version": "14.906.1403.1082"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -721,5 +748,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'CSharpTest.Net.Collections 14.906.1403.1082' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CSharpTest.Net.Collections",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

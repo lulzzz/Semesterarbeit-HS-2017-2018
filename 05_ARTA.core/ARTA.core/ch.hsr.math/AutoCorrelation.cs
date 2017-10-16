@@ -30,7 +30,7 @@ namespace ARTA.core.ch.hsr.math
             else
             {
                 // TODO consider faster implementation without array-copying
-                acc = pearsonsAc.correlation(Array.Copy(data, 0, l - lag), Arrays.copyOfRange(data, lag, l));
+                acc = pearsonsAc.correlation(Array.Copy(data, 0, l - lag), Array.ConstrainedCopy(data, lag, l));
             }
             return acc;
         }
@@ -55,7 +55,7 @@ namespace ARTA.core.ch.hsr.math
         {
             Math3.linear.RealMatrix result = null;
             int dim = autocorrelations.Length;
-            double[,] psiValues = new double[dim, dim];
+            double[][] psiValues = new double[dim][];
 
             for (int row = 0; row < dim; row++)
             {
@@ -63,12 +63,12 @@ namespace ARTA.core.ch.hsr.math
                 {
                     if (row == col)
                     {
-                        psiValues[col, row] = 1.0;
+                        psiValues[col][row] = 1.0;
                     }
                     else
                     {
-                        psiValues[col, row] = autocorrelations[col - row - 1];
-                        psiValues[row, col] = autocorrelations[col - row - 1];
+                        psiValues[col][row] = autocorrelations[col - row - 1];
+                        psiValues[row][col] = autocorrelations[col - row - 1];
                     }
 
                 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ARTA.core.ch.hsr.math;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,8 +13,8 @@ namespace ARTA.core.ch.hsr.fitting
         {
             double significanceLevel = 2 / Math.Sqrt(data.Length);
             int order = maxOrder;
-            double[] acfs = AutocorrelationFitter.CalculateAcfs(data, maxOrder);
-            double[] pacfs = AutocorrelationFitter.CalculatePacfs(acfs);
+            double[] acfs = AutoCorrelation.CalculateAcfs(data, maxOrder);
+            double[] pacfs = AutoCorrelation.CalculatePacfs(acfs);
             for(int i = 0; i < maxOrder; i++)
             {
                 if(Math.Abs(pacfs[i+1]) < significanceLevel)
