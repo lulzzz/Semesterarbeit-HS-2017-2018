@@ -4,7 +4,10 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.util
 {
-    class ValueHistory
+    interface ValueHistory<T>
     {
+        T get(int index);
+        void add(T element);
+        int size();
     }
 }

@@ -6,5 +6,6 @@ namespace ARTA.core.ch.hsr.test
 {
     class NotStationaryException
     {
+
     }
 }

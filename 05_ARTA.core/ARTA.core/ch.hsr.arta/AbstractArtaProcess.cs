@@ -4,7 +4,25 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.arta
 {
-    class AbstractArtaProcess
+    abstract class AbstractArtaProcess : IArtaProcess
     {
+        private readonly ArProcess ar;
+        public AbstractArtaProcess(ArProcess ar)
+        {
+            this.ar = ar;
+        }
+
+        public ArProcess GetArProcess()
+        {
+            return ar;
+        }
+
+        public double Next()
+        {
+            return Transform(ar.Next());
+        }
+
+        abstract protected double Transform(double value);
+        
     }
 }

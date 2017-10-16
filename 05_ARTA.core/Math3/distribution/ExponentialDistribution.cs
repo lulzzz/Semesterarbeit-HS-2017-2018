@@ -187,7 +187,7 @@ namespace Math3.distribution
         /// Exponential Distribution</a>, equation (1).</item>
         /// </list>
         /// </remarks>
-        public override double cumulativeProbability(double x)
+        public override double CumulativeProbability(double x)
         {
             double ret;
             if (x <= 0.0)

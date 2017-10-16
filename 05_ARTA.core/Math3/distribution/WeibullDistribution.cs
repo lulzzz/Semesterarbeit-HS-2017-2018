@@ -204,7 +204,7 @@ namespace Math3.distribution
         }
 
         /// <inheritdoc/>
-        public override double cumulativeProbability(double x)
+        public override double CumulativeProbability(double x)
         {
             double ret;
             if (x <= 0.0)

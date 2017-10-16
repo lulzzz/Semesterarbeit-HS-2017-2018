@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.util
 {
-    class Format
+    sealed class Format
     {
+        public static sealed DecimalFormat THREE_DIGITS = new DecimalFormat("#0.000");
     }
 }

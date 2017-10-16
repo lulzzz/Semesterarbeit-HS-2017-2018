@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.util
 {
-    class LruCache
+    class LruCache<K, V>
     {
     }
 }

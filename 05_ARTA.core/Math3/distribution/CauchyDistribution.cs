@@ -121,7 +121,7 @@ namespace Math3.distribution
         }
 
         /// <inheritdoc/>
-        public override double cumulativeProbability(double x)
+        public override double CumulativeProbability(double x)
         {
             return 0.5 + (FastMath.atan((x - median) / scale) / FastMath.PI);
         }

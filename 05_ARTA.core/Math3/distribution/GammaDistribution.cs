@@ -340,7 +340,7 @@ namespace Math3.distribution
         /// </item>
         /// </list>
         /// </remarks>
-        public override double cumulativeProbability(double x)
+        public override double CumulativeProbability(double x)
         {
             double ret;
 

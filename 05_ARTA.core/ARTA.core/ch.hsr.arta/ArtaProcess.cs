@@ -4,7 +4,9 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.arta
 {
-    class ArtaProcess
+    interface IArtaProcess
     {
+        double Next();
+        ArProcess GetArProcess();
     }
 }

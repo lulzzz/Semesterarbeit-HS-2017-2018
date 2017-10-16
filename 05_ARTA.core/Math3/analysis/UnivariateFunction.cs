@@ -73,6 +73,6 @@ namespace Math3.analysis
         /// When Commons Math throws an <c>IllegalArgumentException</c>, it is
         /// usually the consequence of checking the actual parameters passed to
         /// the method.</exception>
-        double value(double x);
+        double Value(double x);
     }
 }

@@ -34,7 +34,7 @@ namespace Math3.distribution
         /// <summary>
         /// Returns the probability density function (PDF) of this distribution
         /// evaluated at the specified point <c>x</c>. In general, the PDF is
-        /// the derivative of the <see cref="cumulativeProbability(double)">CDF</see>.
+        /// the derivative of the <see cref="CumulativeProbability(double)">CDF</see>.
         /// If the derivative does not exist at <c>x</c>, then an appropriate
         /// replacement should be returned, e.g. <c>Double.PositiveInfinity</c>,
         /// <c>Double.NaN</c>, or  the limit inferior or limit superior of the
@@ -53,7 +53,7 @@ namespace Math3.distribution
         /// <param name="x">the point at which the CDF is evaluated</param>
         /// <returns>the probability that a random variable with this
         /// distribution takes a value less than or equal to <c>x</c></returns>
-        double cumulativeProbability(double x);
+        double CumulativeProbability(double x);
 
         /// <summary>
         /// For a random variable <c>X</c> whose values are distributed according

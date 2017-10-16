@@ -211,7 +211,7 @@ namespace Math3.distribution
         public double normalApproximateProbability(int x)
         {
             // calculate the probability using half-correction
-            return normal.cumulativeProbability(x + 0.5);
+            return normal.CumulativeProbability(x + 0.5);
         }
 
         /// <inheritdoc/>

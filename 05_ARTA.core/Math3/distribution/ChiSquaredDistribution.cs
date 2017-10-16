@@ -107,9 +107,9 @@ namespace Math3.distribution
         }
 
         /// <inheritdoc/>
-        public override double cumulativeProbability(double x)
+        public override double CumulativeProbability(double x)
         {
-            return gamma.cumulativeProbability(x);
+            return gamma.CumulativeProbability(x);
         }
 
         /// <inheritdoc/>

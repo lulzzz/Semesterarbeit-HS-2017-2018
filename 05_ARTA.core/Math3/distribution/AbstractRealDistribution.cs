@@ -96,7 +96,7 @@ namespace Math3.distribution
             {
                 throw new NumberIsTooLargeException<Double, Double>(new LocalizedFormats("LOWER_ENDPOINT_ABOVE_UPPER_ENDPOINT"), x0, x1, true);
             }
-            return cumulativeProbability(x1) - cumulativeProbability(x0);
+            return CumulativeProbability(x1) - CumulativeProbability(x0);
         }
 
         /// <inheritdoc/>
@@ -169,7 +169,7 @@ namespace Math3.distribution
                 else
                 {
                     lowerBound = -1.0;
-                    while (cumulativeProbability(lowerBound) >= p)
+                    while (CumulativeProbability(lowerBound) >= p)
                     {
                         lowerBound *= 2.0;
                     }
@@ -185,7 +185,7 @@ namespace Math3.distribution
                 else
                 {
                     upperBound = 1.0;
-                    while (cumulativeProbability(upperBound) < p)
+                    while (CumulativeProbability(upperBound) < p)
                     {
                         upperBound *= 2.0;
                     }
@@ -205,14 +205,14 @@ namespace Math3.distribution
                 double dx = getSolverAbsoluteAccuracy();
                 if (x - dx >= getSupportLowerBound())
                 {
-                    double px = cumulativeProbability(x);
-                    if (cumulativeProbability(x - dx) == px)
+                    double px = CumulativeProbability(x);
+                    if (CumulativeProbability(x - dx) == px)
                     {
                         upperBound = x;
                         while (upperBound - lowerBound > dx)
                         {
                             double midPoint = 0.5 * (lowerBound + upperBound);
-                            if (cumulativeProbability(midPoint) < px)
+                            if (CumulativeProbability(midPoint) < px)
                             {
                                 lowerBound = midPoint;
                             }
@@ -238,7 +238,7 @@ namespace Math3.distribution
             }
             public double value(double x)
             {
-                return cumulativeProbability(x) - p;
+                return CumulativeProbability(x) - p;
             }
 
             public override double density(double x)
@@ -246,7 +246,7 @@ namespace Math3.distribution
                 throw new NotImplementedException();
             }
 
-            public override double cumulativeProbability(double x)
+            public override double CumulativeProbability(double x)
             {
                 throw new NotImplementedException();
             }
@@ -347,7 +347,7 @@ namespace Math3.distribution
         /// <summary>
         /// Returns the natural logarithm of the probability density function (PDF) of
         /// this distribution evaluated at the specified point <c>x</c>. In general, the PDF
-        /// is the derivative of the <see cref="cumulativeProbability(double)">CDF</see>. 
+        /// is the derivative of the <see cref="CumulativeProbability(double)">CDF</see>. 
         /// If the derivative does not exist at <c>x<c>, then an appropriate replacement should
         /// be returned, e.g. <c>Double.PositiveInfinity</c>, <c>Double.NaN</c>, or the limit 
         /// inferior or limit superior of the difference quotient. Note that due to the floating
@@ -367,7 +367,7 @@ namespace Math3.distribution
         public abstract double density(double x);
 
         /// <inheritdoc/>
-        public abstract double cumulativeProbability(double x);
+        public abstract double CumulativeProbability(double x);
 
         /// <inheritdoc/>
         public abstract double getNumericalMean();

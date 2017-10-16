@@ -171,7 +171,7 @@ namespace Math3.distribution
         /// is returned, as in these cases the actual value is within
         /// <c>Double.MinValue</c> of 0 or 1.
         /// </remarks>
-        public override double cumulativeProbability(double x)
+        public override double CumulativeProbability(double x)
         {
             double dev = x - mean;
             if (FastMath.abs(dev) > 40 * standardDeviation)
