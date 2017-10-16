@@ -30,7 +30,7 @@ namespace ARTA.core.ch.hsr.math
             else
             {
                 // TODO consider faster implementation without array-copying
-                acc = pearsonsAc.correlation(Array.copyOfRange(data, 0, l - lag), Arrays.copyOfRange(data, lag, l));
+                acc = pearsonsAc.correlation(Array.Copy(data, 0, l - lag), Arrays.copyOfRange(data, lag, l));
             }
             return acc;
         }

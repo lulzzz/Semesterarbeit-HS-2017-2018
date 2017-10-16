@@ -18,7 +18,7 @@ namespace ARTA.core.ch.hsr.math
         public EmpiricalDistribution(double[] values) :base(new Well1024a())
         {
             this.nPoints = values.Length;
-            points = Array.ConstrainedCopy(values, nPoints);
+            Array.Copy(values, points, nPoints);
             Array.Sort(points);
             this.lowerBound = points[0];
             this.upperBound = points[nPoints - 1];
