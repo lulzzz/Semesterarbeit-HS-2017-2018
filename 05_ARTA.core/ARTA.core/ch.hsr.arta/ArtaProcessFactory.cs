@@ -18,13 +18,14 @@ namespace ARTA.core.ch.hsr.arta
             // no instantiation
 
         }
-        public static ArtaProcess CreateArtaProcess(double[] data)// throws NonFeasibleCorrelationException, NotStationaryException 
+        public static IArtaProcess CreateArtaProcess(double[] data)// throws NonFeasibleCorrelationException, NotStationaryException 
         {
 
             EmpiricalDistribution distribution = new EmpiricalDistribution(data);
             int order = OrderEstimator.EstimateOrder(data);
             Console.WriteLine("order" + order);
-            double[] artaCorrelationCoefficients = Array.Copy(AutoCorrelation.CalculateAcfs(data, order), 1, order + 1);
+            double[] artaCorrelationCoefficients = new double[AutoCorrelation.CalculateAcfs(data, order).Length];
+            Array.ConstrainedCopy(AutoCorrelation.CalculateAcfs(data, order), 1, artaCorrelationCoefficients , 1, order + 1);
             return CreateArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new Well19937c()));
         }
 

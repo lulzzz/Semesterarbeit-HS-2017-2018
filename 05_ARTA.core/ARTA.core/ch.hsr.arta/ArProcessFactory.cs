@@ -6,19 +6,19 @@ using System;
 
 namespace ARTA.core.ch.hsr.arta
 {
-    class ArProcessFactory
+    internal class ArProcessFactory
     {
         private ArProcessFactory()
         {
             //no instantiation
         }
 
-        public ArProcess CreateArProcess(double[] arAutocorrealtions)
+        public static ArProcess CreateArProcess(double[] arAutocorrealtions)
         {
             return CreateArProcess(arAutocorrealtions, new Well19937c());
         }
 
-        public ArProcess CreateArProcess(double[] arAutocorrelations, RandomGenerator random)
+        public static ArProcess CreateArProcess(double[] arAutocorrelations, RandomGenerator random)
         {//TODO Exception-Handling
                 double[] alphas = ArAutocorrelationsToAlphas(arAutocorrelations);
                 double variance = CalculateVariance(arAutocorrelations, alphas);
@@ -30,7 +30,7 @@ namespace ARTA.core.ch.hsr.arta
         /**
          * Determines the coefficients (alpha) for the ARTA-Process.
          * */
-        public double[] ArAutocorrelationsToAlphas(double[] arAutocorrelations)
+        public static double[] ArAutocorrelationsToAlphas(double[] arAutocorrelations)
         {
             int dim = arAutocorrelations.Length;
             double[] alphas = new double[dim];
@@ -42,7 +42,7 @@ namespace ARTA.core.ch.hsr.arta
             return alphas;
         }
 
-        public double CalculateVariance(double[] arAutocorrelations, double[] alphas)
+        public static double CalculateVariance(double[] arAutocorrelations, double[] alphas)
         {
             double variance = 0;
             for (int i = 0; i < alphas.Length; i++)

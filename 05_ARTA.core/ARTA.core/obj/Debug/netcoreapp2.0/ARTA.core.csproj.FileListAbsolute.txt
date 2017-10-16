@@ -14,3 +14,9 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.AssemblyInfo.cs
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.dll
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.pdb
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.csprojResolveAssemblyReference.cache
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.csproj.CoreCompileInputs.cache
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.AssemblyInfoInputs.cache
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.AssemblyInfo.cs
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.dll
+\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\05_ARTA.core\ARTA.core\obj\Debug\netcoreapp2.0\ARTA.core.pdb

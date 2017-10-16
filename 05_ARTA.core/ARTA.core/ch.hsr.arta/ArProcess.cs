@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.arta
 {
-    class ArProcess
+    internal class ArProcess
     {
         private readonly double[] alphas;
         private readonly ValueHistory<Double> values;
