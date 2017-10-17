@@ -16,8 +16,6 @@ using Math3.distribution;
 using Math3.exception;
 using Math3.exception.util;
 using Math3.util;
-using Org.BouncyCastle.Crypto.Digests;
-using Org.BouncyCastle.Security;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;

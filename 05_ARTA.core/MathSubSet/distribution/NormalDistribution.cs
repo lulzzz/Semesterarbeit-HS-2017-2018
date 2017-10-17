@@ -18,6 +18,7 @@ using Math3.random;
 using Math3.special;
 using Math3.util;
 using System;
+using MathSubSet;
 
 namespace Math3.distribution
 {
@@ -59,6 +60,10 @@ namespace Math3.distribution
         /// Inverse cumulative probability accuracy.
         /// </summary>
         private readonly double solverAbsoluteAccuracy;
+        private MersenneTwister mt;
+        private double v1;
+        private double v2;
+        private double dEFAULT_INVERSE_ABSOLUTE_ACCURACY;
 
         /// <summary>
         /// Create a normal distribution with mean equal to zero and standard
@@ -131,6 +136,14 @@ namespace Math3.distribution
             standardDeviation = sd;
             logStandardDeviationPlusHalfLog2Pi = FastMath.log(sd) + 0.5 * FastMath.log(2 * FastMath.PI);
             solverAbsoluteAccuracy = inverseCumAccuracy;
+        }
+
+        public NormalDistribution(MersenneTwister mt, double v1, double v2, double dEFAULT_INVERSE_ABSOLUTE_ACCURACY)
+        {
+            this.mt = mt;
+            this.v1 = v1;
+            this.v2 = v2;
+            this.dEFAULT_INVERSE_ABSOLUTE_ACCURACY = dEFAULT_INVERSE_ABSOLUTE_ACCURACY;
         }
 
         /// <summary>

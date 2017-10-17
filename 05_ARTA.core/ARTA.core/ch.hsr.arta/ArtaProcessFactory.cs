@@ -4,9 +4,9 @@ using ARTA.core.ch.hsr.test;
 using Math3.distribution;
 using Math3.linear;
 using Math3.random;
+using MathSubSet;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using MathSubSet.random;
 
 namespace ARTA.core.ch.hsr.arta
 {
@@ -26,12 +26,12 @@ namespace ARTA.core.ch.hsr.arta
             Console.WriteLine("order" + order);
             double[] artaCorrelationCoefficients = new double[AutoCorrelation.CalculateAcfs(data, order).Length];
             Array.ConstrainedCopy(AutoCorrelation.CalculateAcfs(data, order), 1, artaCorrelationCoefficients , 1, order + 1);
-            return CreateArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new Well19937c()));
+            return CreateArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new MersenneTwister()));
         }
 
         public static IArtaProcess CreateArtaProcess(RealDistribution distribution, double[] artaCorrelationCoefficients)// throws NonFeasibleCorrelationException, NotStationaryException 
         {
-            return CreateArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new Well19937c()));
+            return CreateArtaProcess(distribution, artaCorrelationCoefficients, new RandomAdaptor(new MersenneTwister()));
         }
 
         public static IArtaProcess CreateArtaProcess(RealDistribution distribution, double[] artaCorrelationCoefficients, RandomGenerator random) //throws NonFeasibleCorrelationException, NotStationaryException 

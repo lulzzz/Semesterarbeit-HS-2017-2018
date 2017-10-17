@@ -19,7 +19,7 @@ namespace MathSubSet.regression
 
         public SimpleRegression()
         {
-            this(true);
+            //this(true);
         }
         public SimpleRegression(bool includeIntercept)
         {
@@ -123,7 +123,7 @@ namespace MathSubSet.regression
             {
                 if (data[i].Length < 2)
                 {
-                   // throw new ModelSpecificationException(LocalizedFormats.INVALID_REGRESSION_OBSERVATION, new Object[] { Integer.valueOf(data[i].Length), Integer.valueOf(2) });
+                    // throw new ModelSpecificationException(LocalizedFormats.INVALID_REGRESSION_OBSERVATION, new Object[] { Integer.valueOf(data[i].Length), Integer.valueOf(2) });
                 }
                 AddData(data[i][0], data[i][1]);
             }
@@ -298,7 +298,7 @@ namespace MathSubSet.regression
             }
             if ((alpha >= 1.0D) || (alpha <= 0.0D))
             {
-               // throw new OutOfRangeException(LocalizedFormats.SIGNIFICANCE_LEVEL, Double.valueOf(alpha), Integer.valueOf(0), Integer.valueOf(1));
+                // throw new OutOfRangeException(LocalizedFormats.SIGNIFICANCE_LEVEL, Double.valueOf(alpha), Integer.valueOf(0), Integer.valueOf(1));
             }
             TDistribution distribution = new TDistribution(this.n - 2L);
             return GetSlopeStdErr() * distribution.inverseCumulativeProbability(1.0D - alpha / 2.0D);
@@ -327,15 +327,49 @@ namespace MathSubSet.regression
         {
             return slope * slope * this.sumXX;
         }
-        /**
-            public RegressionResults Regress()
-                {
-                    throw new NotImplementedException();
-                }
 
-                public RegressionResults Regress(int[] paramArrayOfInt)
+        public RegressionResults Regress() //throws ModelSpecificationException, NoDataException
+        {/*
+            if (this.hasIntercept)
+            {
+                if (this.n < 3L)
                 {
-                    throw new NotImplementedException();
-                }**/
+                   // throw new NoDataException(LocalizedFormats.NOT_ENOUGH_DATA_REGRESSION);
+                }
+                if (Math.Abs(this.sumXX) > Precision.SAFE_MIN)
+                {
+                    double[] regParams = { GetIntercept(), GetSlope() };
+                    double mse = GetMeanSquareError();
+                    double _syy = this.sumYY + this.sumY * this.sumY / this.n;
+                    double[] vcv = { mse * (this.xbar * this.xbar / this.sumXX + 1.0D / this.n), -this.xbar * mse / this.sumXX, mse / this.sumXX };
+                    return new RegressionResults(regParams, new double[][] { vcv }, true, this.n, 2, this.sumY, _syy, GetSumSquaredErrors(), true, false);
+                }
+                double[] regParams = { this.sumY / this.n, Double.NaN };
+
+                double[] vcv = { this.ybar / (this.n - 1.0D), Double.NaN, Double.NaN };
+                return new RegressionResults(regParams, new double[][] { vcv }, true, this.n, 1, this.sumY, this.sumYY, GetSumSquaredErrors(), true, false);
+            }
+            if (this.n < 2L)
+            {
+                //throw new NoDataException(LocalizedFormats.NOT_ENOUGH_DATA_REGRESSION);
+            }
+            if (!Double.IsNaN(this.sumXX))
+            {
+                double[] vcv = { GetMeanSquareError() / this.sumXX };
+                double[] regParams = { this.sumXY / this.sumXX };
+                return new RegressionResults(regParams, new double[][] { vcv }, true, this.n, 1, this.sumY, this.sumYY, GetSumSquaredErrors(), false, false);
+            }
+            double[] vcv = { Double.NaN };
+            double[] regParams = { Double.NaN };
+            return new RegressionResults(regParams, new double[][] { vcv }, true, this.n, 1, Double.NaN, Double.NaN, Double.NaN, false, false);
+            */
+            return null;
+        }
+    
+
+        public RegressionResults Regress(int[] paramArrayOfInt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

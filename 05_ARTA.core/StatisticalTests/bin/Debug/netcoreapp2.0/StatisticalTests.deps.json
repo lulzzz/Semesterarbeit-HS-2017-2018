@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "StatisticalTests/1.0.0": {
+      "statisticaltests/1.0.0": {
         "runtime": {
           "StatisticalTests.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "StatisticalTests/1.0.0": {
+    "statisticaltests/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

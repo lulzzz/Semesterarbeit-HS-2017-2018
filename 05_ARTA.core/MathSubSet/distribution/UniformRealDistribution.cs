@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Math3.random;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

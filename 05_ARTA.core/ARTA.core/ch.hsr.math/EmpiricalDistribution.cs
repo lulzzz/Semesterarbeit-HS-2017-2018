@@ -1,4 +1,5 @@
 ﻿using Math3.distribution;
+using Math3.util;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,7 +23,7 @@ namespace ARTA.core.ch.hsr.math
             Array.Sort(points);
             this.lowerBound = points[0];
             this.upperBound = points[nPoints - 1];
-            this.mean = Math.Mean(values);
+            this.mean = FastMath.Mean(values);
             // populationVariance vs. Variance
             this.variance = StatUtils.variance(values);
 

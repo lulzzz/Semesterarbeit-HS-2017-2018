@@ -1,9 +1,8 @@
 ﻿using Math3.distribution;
 using Math3.linear;
+using MathSubSet.correlation;
 using MathSubSet.regression;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MathSubSet
 {
@@ -19,18 +18,18 @@ namespace MathSubSet
         }
         public PearsonsCorrelation(double[][] data)
         {
-            this(new BlockRealMatrix(data));
+            new BlockRealMatrix(data);
         }
 
         public PearsonsCorrelation(RealMatrix matrix)
         {
             this.nObs = matrix.getRowDimension();
-            this.correlationMatrix = computeCorrelationMatrix(matrix);
+            this.correlationMatrix = ComputeCorrelationMatrix(matrix);
         }
 
         public PearsonsCorrelation(Covariance covariance)
         {
-            RealMatrix covarianceMatrix = covariance.getCovarianceMatrix();
+            RealMatrix covarianceMatrix = covariance.GetCovarianceMatrix();
             if (covarianceMatrix == null)
             {
                 //throw new NullArgumentException(LocalizedFormats.COVARIANCE_MATRIX, new Object[0]);
@@ -53,9 +52,9 @@ namespace MathSubSet
         {
             int nVars = this.correlationMatrix.getColumnDimension();
             double[][] outVar = new double[nVars][];
-            for(int i = 0; i < nVars; i++)
+            for (int i = 0; i < nVars; i++)
             {
-                for(int j = 0; j < nVars; j++)
+                for (int j = 0; j < nVars; j++)
                 {
                     double r = this.correlationMatrix.getEntry(i, j);
                     outVar[i][j] = Math.Sqrt((1.0D - r * r) / (this.nObs - 2));
@@ -68,11 +67,11 @@ namespace MathSubSet
             TDistribution tDistribution = new TDistribution(this.nObs - 2);
             int nVars = this.correlationMatrix.getColumnDimension();
             double[][] outVar = new double[nVars][];
-            for(int i = 0; i < nVars; i++)
+            for (int i = 0; i < nVars; i++)
             {
-                for(int j = 0; j < nVars; j++)
+                for (int j = 0; j < nVars; j++)
                 {
-                    if(i == j)
+                    if (i == j)
                     {
                         outVar[i][j] = 0.0D;
                     }
@@ -91,9 +90,9 @@ namespace MathSubSet
             CheckSufficientData(matrix);
             int nVars = matrix.getColumnDimension();
             RealMatrix outMatrix = new BlockRealMatrix(nVars, nVars);
-            for(int i = 0; i < nVars; i++)
+            for (int i = 0; i < nVars; i++)
             {
-                for(int j = 0; j < i; j++)
+                for (int j = 0; j < i; j++)
                 {
                     double corr = Correlation(matrix.getColumn(i), matrix.getColumn(j));
                     outMatrix.setEntry(i, j, corr);
@@ -110,15 +109,15 @@ namespace MathSubSet
         public double Correlation(double[] xArray, double[] yArray)
         {
             SimpleRegression regression = new SimpleRegression();
-            if(xArray.Length != yArray.Length)
+            if (xArray.Length != yArray.Length)
             {
                 //TODO throw new DimensionMismatchException(xArray.length, yArray.length);
             }
-            if(xArray.Length < 2)
+            if (xArray.Length < 2)
             {
                 //TODO throw new MathIllegalArgumentException(LocalizedFormats.INSUFFICIENT_DIMENSION, new Object[] { Integer.valueOf(xArray.length), Integer.valueOf(2) });
             }
-            for(int i = 0; i < xArray.Length; i++)
+            for (int i = 0; i < xArray.Length; i++)
             {
                 regression.AddData(xArray[i], yArray[i]);
             }
@@ -128,11 +127,11 @@ namespace MathSubSet
         {
             int nVars = covarianceMatrix.getColumnDimension();
             RealMatrix outMatrix = new BlockRealMatrix(nVars, nVars);
-            for(int i = 0; i < nVars; i++)
+            for (int i = 0; i < nVars; i++)
             {
                 double sigma = Math.Sqrt(covarianceMatrix.getEntry(i, i));
                 outMatrix.setEntry(i, i, 1.0D);
-                for(int j = 0; j < i; j++)
+                for (int j = 0; j < i; j++)
                 {
                     double entry = covarianceMatrix.getEntry(i, j) / (sigma * Math.Sqrt(covarianceMatrix.getEntry(j, j)));
                     outMatrix.setEntry(i, j, entry);
@@ -145,7 +144,7 @@ namespace MathSubSet
         {
             int nRows = matrix.getRowDimension();
             int nCols = matrix.getColumnDimension();
-            if((nRows < 2) || (nCols < 2))
+            if ((nRows < 2) || (nCols < 2))
             {
                 //TODO Exception MathIllegalArgumentException(LocalizedFormats.INSUFFICIENT_ROWS_AND_COLUMNS, new Object[] { Integer.valueOf(nRows), Integer.valueOf(nCols) });
             }
