@@ -1,4 +1,5 @@
-﻿using Math3.random;
+﻿using Math3.distribution;
+using Math3.random;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,24 +13,22 @@ namespace MathSubSet
         private readonly double lower;
         private readonly double upper;
 
-        public UniformRealDistribution()
+        public UniformRealDistribution() : this(0.0D, 1.0D)
         {
-            this(0.0D, 1.0D);
         }
 
-        public UniformRealDistribution(double lower, double upper) //throws NumberIsTooLargeException
+        public UniformRealDistribution(double lower, double upper) : this(new Well19937c(), lower, upper) //throws NumberIsTooLargeException
         {
-            this(new Well19937c(), lower, upper);
         }
 
-        public UniformRealDistribution(double lower, double upper, double inverseCumAccuracy) //throws NumberIsTooLargeException
+        public UniformRealDistribution(double lower, double upper, double inverseCumAccuracy) : this(new Well19937c(), lower, upper) //throws NumberIsTooLargeException
         {
-            this(new Well19937c(), lower, upper);
+            
         }
 
-        public UniformRealDistribution(RandomGenerator rng, double lower, double upper, double inverseCumAccuracy)
+        public UniformRealDistribution(RandomGenerator rng, double lower, double upper, double inverseCumAccuracy) : this(rng, lower, upper)
         {
-            this(rng, lower, upper);
+            
         }
 
         public UniformRealDistribution(RandomGenerator rng, double lower, double upper) : base(rng) //throws NumberIsTooLargeException
@@ -42,7 +41,7 @@ namespace MathSubSet
             this.upper = upper;
         }
 
-        public double Density(double x)
+        public override double density(double x)
         {
             if ((x < this.lower) || (x > this.upper))
             {
@@ -51,7 +50,7 @@ namespace MathSubSet
             return 1.0D / (this.upper - this.lower);
         }
 
-        public double CumulativeProbability(double x)
+        public override double cumulativeProbability(double x)
         {
             if (x <= this.lower)
             {
@@ -64,7 +63,7 @@ namespace MathSubSet
             return (x - this.lower) / (this.upper - this.lower);
         }
 
-        public double InverseCumulativeProbability(double p) //throws OutOfRangeException
+        public new double inverseCumulativeProbability(double p) //throws OutOfRangeException
         {
             if ((p < 0.0D) || (p > 1.0D))
             {
@@ -73,43 +72,43 @@ namespace MathSubSet
             return p * (this.upper - this.lower) + this.lower;
         }
 
-        public double GetNumericalMean()
+        public override double getNumericalMean()
         {
             return 0.5D * (this.lower + this.upper);
         }
 
-        public double GetNumericalVariance()
+        public override double getNumericalVariance()
         {
             double ul = this.upper - this.lower;
             return ul * ul / 12.0D;
         }
 
-        public double GetSupportLowerBound()
+        public override double getSupportLowerBound()
         {
             return this.lower;
         }
 
-        public double GetSupportUpperBound()
+        public override double getSupportUpperBound()
         {
             return this.upper;
         }
 
-        public bool IsSupportLowerBoundInclusive()
+        public override bool isSupportLowerBoundInclusive()
         {
             return true;
         }
 
-        public bool IsSupportUpperBoundInclusive()
+        public override bool isSupportUpperBoundInclusive()
         {
             return true;
         }
 
-        public bool IsSupportConnected()
+        public override bool isSupportConnected()
         {
             return true;
         }
 
-        public double Sample()
+        public double sample()
         {
             double u = this.random.nextDouble();
             return u * this.upper + (1.0D - u) * this.lower;

@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MathNet.Numerics\**" />
+    <EmbeddedResource Remove="MathNet.Numerics\**" />
+    <None Remove="MathNet.Numerics\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CSharpTest.Net.Collections" Version="14.906.1403.1082" />
   </ItemGroup>
 

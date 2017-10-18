@@ -104,7 +104,7 @@ namespace MathSubSet
         }
         public RealMatrix ComputeCorrelationMatrix(double[][] data)
         {
-            return ComputeCorrelationMatrix(RealMatrix matrix);
+            return ComputeCorrelationMatrix(new BlockRealMatrix(data));
         }
         public double Correlation(double[] xArray, double[] yArray)
         {
