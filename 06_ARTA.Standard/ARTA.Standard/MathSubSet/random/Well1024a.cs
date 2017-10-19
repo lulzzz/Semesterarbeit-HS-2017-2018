@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MathSubSet
 {
-    class Well1024a : AbstractWell
+    public class Well1024a : AbstractWell
     {
         private static readonly int K = 1024;
         private static readonly int M1 = 3;

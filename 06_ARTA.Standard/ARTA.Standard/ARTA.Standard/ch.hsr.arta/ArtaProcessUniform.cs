@@ -17,7 +17,7 @@ namespace ARTA.core.ch.hsr.arta
 
         protected override double Transform(double value)
         {
-            double result = normal.CumulativeProbability(value);
+            double result = normal.cumulativeProbability(value);
             result = result * difference + lower;
             return result;
         }

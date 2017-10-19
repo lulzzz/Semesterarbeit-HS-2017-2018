@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ch.hsr.test\FeasibilityTest.cs" />
+    <Compile Remove="ch.hsr.test\NonFeasibleCorrelationException.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MathSubSet\MathSubSet.csproj" />
   </ItemGroup>
 

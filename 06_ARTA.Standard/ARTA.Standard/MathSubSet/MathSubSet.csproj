@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ArtaExtensions\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 

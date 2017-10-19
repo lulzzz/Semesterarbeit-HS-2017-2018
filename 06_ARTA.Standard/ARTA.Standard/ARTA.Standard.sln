@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTA.Standard", "ARTA.Stand
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathSubSet", "MathSubSet\MathSubSet.csproj", "{CBADF372-80AB-4A88-A339-F26E75D79953}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arta.Executable", "Arta.Executable\Arta.Executable.csproj", "{3A4762AA-11E8-47D3-A990-492F983D904D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CBADF372-80AB-4A88-A339-F26E75D79953}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBADF372-80AB-4A88-A339-F26E75D79953}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBADF372-80AB-4A88-A339-F26E75D79953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A4762AA-11E8-47D3-A990-492F983D904D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A4762AA-11E8-47D3-A990-492F983D904D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A4762AA-11E8-47D3-A990-492F983D904D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A4762AA-11E8-47D3-A990-492F983D904D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

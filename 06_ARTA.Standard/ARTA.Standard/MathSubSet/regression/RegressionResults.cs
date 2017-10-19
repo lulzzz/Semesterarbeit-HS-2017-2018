@@ -50,7 +50,11 @@ namespace MathSubSet.regression
             this.rank = rank;
             this.containsConstant = containsConstant;
             this.globalFitInfo = new double[5];
-            Array.Fill(this.globalFitInfo, Double.NaN);
+            for(int i = 0; i < globalFitInfo.Length; i ++)
+            {
+                globalFitInfo[i] = Double.NaN;
+            }
+            //Array.Fill(this.globalFitInfo, Double.NaN);
             if (rank > 0)
             {
                 this.globalFitInfo[1] = (containsConstant ? sumysq - sumy * sumy / nobs : sumysq);

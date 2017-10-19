@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.math
 {
-    class AutoCorrelation
+    public class AutoCorrelation
     {
         private AutoCorrelation()
         {
@@ -29,9 +29,16 @@ namespace ARTA.core.ch.hsr.math
                 acc = 1.0;
             }
             else
-            {
-                // TODO consider faster implementation without array-copying
-                acc = pearsonsAc.Correlation(Array.Copy(data, 0, l - lag), Array.ConstrainedCopy(data, lag, l));
+            {           //TODO Bessere Lösung finden
+                        double[] arr1 = new Double[data.Length];
+                        double[] arr2 = new Double[data.Length];
+                        Array.Copy(data, arr1, lag - 1);
+                        for(int i = lag; i < 1; i++)
+                        {
+                            arr2[i] = data[i];
+                        }
+                        // TODO consider faster implementation without array-copying
+                        acc = pearsonsAc.Correlation(arr1, arr2);
             }
             return acc;
         }
@@ -54,7 +61,7 @@ namespace ARTA.core.ch.hsr.math
          */
         public static RealMatrix GetCorrelationMatrix(double[] autocorrelations)
         {
-            Math3.linear.RealMatrix result = null;
+            RealMatrix result = null;
             int dim = autocorrelations.Length;
             double[][] psiValues = new double[dim][];
 

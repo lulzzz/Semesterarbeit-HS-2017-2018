@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.fitting
 {
-    class OrderEstimator
+    public class OrderEstimator
     {
         public const int DEFAULT_MAX_ORDER = 100;
 

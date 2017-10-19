@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ARTA.core.ch.hsr.arta
 {
-    abstract class AbstractArtaProcess : IArtaProcess
+    public abstract class AbstractArtaProcess : IArtaProcess
     {
         private readonly ArProcess ar;
         public AbstractArtaProcess(ArProcess ar)

@@ -11,7 +11,7 @@ using MathSubSet.ArtaExtensions;
 
 namespace ARTA.core.ch.hsr.arta
 {
-    class ArtaProcessFactory
+    public class ArtaProcessFactory
     {
         public const double DEFAULT_ERROR = 0.0001;
         private ArtaProcessFactory()

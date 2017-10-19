@@ -6,3 +6,5 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_ARTA.Standard\A
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_ARTA.Standard\ARTA.Standard\ARTA.Standard\obj\Debug\netstandard1.4\ARTA.Standard.dll
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_ARTA.Standard\ARTA.Standard\ARTA.Standard\obj\Debug\netstandard1.4\ARTA.Standard.pdb
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_ARTA.Standard\ARTA.Standard\ARTA.Standard\bin\Debug\netstandard1.4\MathSubSet.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_ARTA.Standard\ARTA.Standard\ARTA.Standard\bin\Debug\netstandard1.4\MathSubSet.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_ARTA.Standard\ARTA.Standard\ARTA.Standard\bin\Debug\netstandard1.4\fr-FR\MathSubSet.resources.dll

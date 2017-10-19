@@ -61,9 +61,9 @@ namespace ARTA.core.ch.hsr.fitting
                                                    0.0};
 
         private RealDistribution distribution;
-	    private NormalDistribution standardNormal = new NormalDistribution();
-        private LruCache<Double, Double> estimationsCache = new LruCache<Double, Double>(100);
-        private LruCache<Double, Double> transformationCache = new LruCache<Double, Double>(1000);
+        private NormalDistribution standardNormal = new NormalDistribution();
+        private Dictionary<Double, Double> estimationsCache = new Dictionary<Double, Double>(100);
+        private Dictionary<Double, Double> transformationCache = new Dictionary<Double, Double>(1000);
 
         private static double TOLERANCE_OUTER = 0.00001;
         private static double TOLERANCE_INNER = 0.00005;
@@ -74,14 +74,14 @@ namespace ARTA.core.ch.hsr.fitting
         }
         public double estimateArtaCorrelation(double arAutocorrelation)
         {
-            Double result = estimationsCache.get(arAutocorrelation);
-            if(result == null)
+            Double result = estimationsCache[arAutocorrelation];
+            if (result == null)
             {
                 double e = Integrate(-8, 8, arAutocorrelation);
                 double mean = distribution.getNumericalMean();
                 double variance = distribution.getNumericalVariance();
                 result = (e - mean * mean) / variance;
-                estimationsCache.put(arAutocorrelation, result);
+                estimationsCache.Add(arAutocorrelation, result);
             }
             return result;
         }
@@ -148,14 +148,14 @@ namespace ARTA.core.ch.hsr.fitting
 
         private double transform(double value)
         {
-            Double result = transformationCache.Get(value);
+            Double result = transformationCache[value];
             if (result == null)
             {
                 // Transform to uniform distribution U(0,1)
                 result = standardNormal.cumulativeProbability(value);
                 // Transform to desired distribution
                 result = distribution.inverseCumulativeProbability(result);
-                transformationCache.Put(value, result);
+                transformationCache.Add(value, result);
             }
             return result;
         }

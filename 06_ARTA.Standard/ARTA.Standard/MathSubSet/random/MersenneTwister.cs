@@ -15,33 +15,33 @@ namespace MathSubSet
         {
             long numOfTicks = DateTime.Now.Ticks;
             long numOfMilliseconds = numOfTicks / 10000;
-            this.mt = new int['?'];
+            mt = new int[] { };
             setSeed(numOfMilliseconds +  this.GetHashCode());
         }
-
+        /*
         public MersenneTwister(int seed)
         {
-            this.mt = new int['?'];
+            this.mt = new int[] { };
             setSeed(seed);
         }
         public MersenneTwister(int[] seed)
         {
-            this.mt = new int['?'];
+            this.mt = new int[] { };
             setSeed(seed);
         }
         public MersenneTwister(long seed)
         {
-            this.mt = new int['?'];
+            this.mt = new int[] { };
             setSeed(seed);
         }
-
+        */
         public override void setSeed(int seed)
         {
             long longMt = seed;
             this.mt[0] = ((int)longMt);
             for(this.mti = 1; this.mti < 624; this.mti += 1)
             {
-                longMt = 1812433253L * (longMt ^ longMt >> 30) + this.mti & 0xFFFFFFFF;
+                longMt = 1812433253L * (longMt ^ longMt >> 30) + this.mti & int.MaxValue;
                 this.mt[this.mti] = ((int)longMt);
             }
             clear();
