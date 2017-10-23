@@ -18,11 +18,23 @@ namespace ARTA.core.ch.hsr.arta
             return CreateArProcess(arAutocorrealtions, new Well19937c());
         }
 
+        ///<summary>
+        ///Erzeugt einen AR-Prozess mit den gegebenen Korrelationskoeffizienten.
+        ///Passt die errechneten Alpha-Werte in eine Normalverteilung ein, mit dem Mittelwert 0 und der Varianz kleiner 1
+        ///</summary>
+
         public static ArProcess CreateArProcess(double[] arAutocorrelations, RandomGenerator random)
-        {//TODO Exception-Handling
+        {
+                //Erzeugt eine Korrelationsmatrix und gibt die Reihe mit Index 0 als double[] zurück
                 double[] alphas = ArAutocorrelationsToAlphas(arAutocorrelations);
+                
+                //Errechnet die Varianz aus den gegebenen Korrelationskoeffizienten und den erzeugten Alpha-Werten
                 double variance = CalculateVariance(arAutocorrelations, alphas);
-                NormalDistribution whiteNoiseProcess = new NormalDistribution(random, 0.0, Math.Sqrt(variance), NormalDistribution.DEFAULT_INVERSE_ABSOLUTE_ACCURACY);
+
+                //Erzeugt eine Normalverteilung der zufällig erzeugten Werte des Zufallszahlengenerators, untere Grenze 0.0, obere Grenze @variance
+                //Wendet die Umkehrfunktion der Normalverteilung an um die gewünschte Randverteilung zu erhalten.
+                NormalDistribution whiteNoiseProcess = new NormalDistribution(random, 0.0, Math.Sqrt(variance), 
+                                                        NormalDistribution.DEFAULT_INVERSE_ABSOLUTE_ACCURACY);
           
             return new ArProcess(alphas, whiteNoiseProcess);
         }

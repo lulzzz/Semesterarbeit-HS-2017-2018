@@ -53,12 +53,6 @@ namespace ARTA.core.ch.hsr.math
             return accs;
         }
 
-
-        /**
-         * 
-         * @param autocorrelations
-         * @return
-         */
         public static RealMatrix GetCorrelationMatrix(double[] autocorrelations)
         {
             RealMatrix result = null;
