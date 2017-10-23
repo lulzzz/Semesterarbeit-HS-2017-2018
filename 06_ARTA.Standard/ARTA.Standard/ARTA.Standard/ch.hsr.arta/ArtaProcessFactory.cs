@@ -57,7 +57,7 @@ namespace ARTA.core.ch.hsr.arta
             }
             else if (distribution is UniformRealDistribution)
             {
-                arta = createArtaProcessU((UniformRealDistribution)distribution, artaCorrelationCoefficients, random);
+                arta = CreateArtaProcessU((UniformRealDistribution)distribution, artaCorrelationCoefficients, random);
             }
             else
             {
@@ -91,7 +91,7 @@ namespace ARTA.core.ch.hsr.arta
 
 
 
-        private static ArtaProcessUniform createArtaProcessU(UniformRealDistribution uniform, double[] artaCorrelationCoefficients, RandomGenerator random) //throws NotStationaryException
+        private static ArtaProcessUniform CreateArtaProcessU(UniformRealDistribution uniform, double[] artaCorrelationCoefficients, RandomGenerator random) //throws NotStationaryException
         {
             ArtaProcessUniform arta = null;
             int dim = artaCorrelationCoefficients.Length;
