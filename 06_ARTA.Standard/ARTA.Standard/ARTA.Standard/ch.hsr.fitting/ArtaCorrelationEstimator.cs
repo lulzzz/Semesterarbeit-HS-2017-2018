@@ -75,7 +75,7 @@ namespace ARTA.core.ch.hsr.fitting
         public double estimateArtaCorrelation(double arAutocorrelation)
         {
             Double result = estimationsCache[arAutocorrelation];
-            if (result == null)
+            if (result == 0.0)
             {
                 double e = Integrate(-8, 8, arAutocorrelation);
                 double mean = distribution.getNumericalMean();
