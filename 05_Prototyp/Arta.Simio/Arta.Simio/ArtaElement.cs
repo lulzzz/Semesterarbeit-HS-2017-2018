@@ -89,16 +89,7 @@ namespace Arta.Standard
 
         public void Initialize()
         {
-            /*
-            //CreateArtaProcess()
-            for (int i = 0; i < alphas.Length; i++)
-            {
-                _artaRunProp.Value = alphas[i].ToString();
-            }
-            */
-
-            _artaRunProp.Value = DateTime.Now.Second.ToString();
-            
+            _artaRunProp.Value = DateTime.Now.Second.ToString();   
         }
 
         public void Shutdown()
