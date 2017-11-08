@@ -64,7 +64,7 @@ namespace Arta.Standard
     {
         public string Name => "ArtaRun";
 
-        public string Value { get; set; }
+        public string Value { get { return DateTime.Now.Second.ToString(); } set { value = DateTime.Now.Second.ToString(); } }
 
         public IUnitBase Unit => throw new NotImplementedException();
     }
@@ -73,7 +73,7 @@ namespace Arta.Standard
     {
         IElementData _data;
         IProperty _artaRunProp;
-        double[] alphas = { 60, 120, 180, 240, 300 };
+        double[] alphas = { 3, 8, 2, 5, 10};
         double c1, c2;
 
         public ArtaElement(IElementData data)
@@ -89,12 +89,16 @@ namespace Arta.Standard
 
         public void Initialize()
         {
-
+            /*
             //CreateArtaProcess()
             for (int i = 0; i < alphas.Length; i++)
             {
                 _artaRunProp.Value = alphas[i].ToString();
             }
+            */
+
+            _artaRunProp.Value = DateTime.Now.Second.ToString();
+            
         }
 
         public void Shutdown()
