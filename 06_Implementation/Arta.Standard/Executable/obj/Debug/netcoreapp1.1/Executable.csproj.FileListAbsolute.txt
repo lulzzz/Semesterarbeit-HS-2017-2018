@@ -1,0 +1,11 @@
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.deps.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.runtimeconfig.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.runtimeconfig.dev.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Arta.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Arta.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.csprojResolveAssemblyReference.cache
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.AssemblyInfo.cs
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.pdb

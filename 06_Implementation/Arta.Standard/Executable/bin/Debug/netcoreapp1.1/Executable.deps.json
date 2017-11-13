@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.1",
+    "signature": "86a1c56258f1d68181b96aa410ba2557a64243ae"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.1": {
+      "executable/1.0.0": {
+        "dependencies": {
+          "Arta": "1.0.0",
+          "MathNet.Numerics.Core": "3.17.0"
+        },
+        "runtime": {
+          "Executable.dll": {}
+        }
+      },
+      "mathnet.numerics.core/3.17.0": {
+        "dependencies": {
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/MathNet.Numerics.Core.dll": {}
+        }
+      },
+      "system.runtime.serialization.primitives/4.3.0": {
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "arta/1.0.0": {
+        "dependencies": {
+          "MathNet.Numerics.Core": "3.17.0"
+        },
+        "runtime": {
+          "Arta.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "executable/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "mathnet.numerics.core/3.17.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2H9yk9u4e4CVCErlQb20RbUFkTCJSv/4fHJlw04kl+yRMcDYrDYpqaIFdvZImkH+bbzsVGduk1ZVU3vzqH3/Tw==",
+      "path": "mathnet.numerics.core/3.17.0",
+      "hashPath": "mathnet.numerics.core.3.17.0.nupkg.sha512"
+    },
+    "system.runtime.serialization.primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "path": "system.runtime.serialization.primitives/4.3.0",
+      "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
+    },
+    "arta/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
