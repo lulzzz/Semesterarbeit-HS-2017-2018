@@ -39,7 +39,7 @@ namespace Arta
             double[] alphas = new double[dim];
             Matrix<double> psi = AutoCorrelation.GetCorrelationMatrix(arAutocorrelations);
             Matrix<double> r = CreateMatrix.DenseOfColumnArrays(arAutocorrelations).Transpose();
-            Matrix<double> a = r.Multiply(cholesky.Solve(psi).Inverse());
+            Matrix<double> a = r.Multiply(psi.Cholesky().Solve(psi).Inverse());
             alphas = a.Row(0).AsArray();
             return alphas;
         }

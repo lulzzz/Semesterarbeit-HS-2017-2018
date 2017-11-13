@@ -14,7 +14,7 @@ namespace Arta.Executable
 
 
 
-            ContinuousUniform distribution = new ContinuousUniform(-1.0, 1.0);
+            ContinuousUniform distribution = new ContinuousUniform(-0.8, 0.5);
             double[] artaCorrelationCoefficients = { 0.3, 0.3, -0.1 };
             IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distribution, artaCorrelationCoefficients);
 

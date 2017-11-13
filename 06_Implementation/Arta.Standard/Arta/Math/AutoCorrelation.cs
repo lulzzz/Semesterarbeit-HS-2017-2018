@@ -47,23 +47,23 @@ namespace Arta.Math
         {
             Matrix<double> result = null;
             int dim = autocorrelations.Length;
-            double[][] psivalues = new double[dim][];
+            double[,] psivalues = new double[dim, dim];
             for (int row = 0; row < dim; row++)
             {
                 for (int col = row; col < dim; col++)
                 {
                     if (row == col)
                     {
-                        psivalues[col][row] = 1.0;
+                        psivalues[col, row] = 1.0;
                     }
                     else
                     {
-                        psivalues[col][row] = autocorrelations[col - row - 1];
-                        psivalues[row][col] = autocorrelations[col - row - 1];
+                        psivalues[col, row] = autocorrelations[col - row - 1];
+                        psivalues[row, col] = autocorrelations[col - row - 1];
                     }
                 }
             }
-            result = CreateMatrix.DenseOfColumnArrays<double>(psivalues);
+            result = CreateMatrix.DenseOfArray<double>(psivalues);
             return result;
         }
 
