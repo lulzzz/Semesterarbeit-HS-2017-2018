@@ -7,7 +7,7 @@ namespace Arta.Fitting
 {
     class AutocorrelationFitter
     {
-        private readonly ArtaCorrelationEstimator artaCorrelationEstimator;
+        private ArtaCorrelationEstimator artaCorrelationEstimator;
 
         public AutocorrelationFitter(ContinuousUniform distribution)
         {

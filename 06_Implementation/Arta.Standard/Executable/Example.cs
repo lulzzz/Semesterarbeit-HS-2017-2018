@@ -4,6 +4,7 @@ using MathNet.Numerics.Distributions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Arta.Executable
 {
@@ -11,10 +12,15 @@ namespace Arta.Executable
     {
         public static void Main(String[] args)
         {
+            double[] values = { 1, 2, 3, 2 };
+            EmpiricalDistribution dist = new EmpiricalDistribution(values);
 
+            for (double d = 0; d <= 10; d++)
+            {
+                Console.WriteLine(dist.InverseCumulativeProbability(d / 10));
+            }
 
-
-            ContinuousUniform distribution = new ContinuousUniform(-0.8, 0.5);
+            ContinuousUniform distribution = new ContinuousUniform();
             double[] artaCorrelationCoefficients = { 0.3, 0.3, -0.1 };
             IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distribution, artaCorrelationCoefficients);
 
@@ -23,7 +29,6 @@ namespace Arta.Executable
             {
                 data[i] = arta.Next();
             }
-
 
             int maxLag = 10;
             double[] acfs = AutoCorrelation.CalculateAcfs(data, maxLag);

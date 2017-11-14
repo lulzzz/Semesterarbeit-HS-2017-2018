@@ -1,20 +1,22 @@
 ﻿using MathNet.Numerics.Distributions;
+using MathNet.Numerics.Random;
 using MathNet.Numerics.Statistics;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta.Math
 {
-    class EmpiricalDistribution : ContinuousUniform
+    public class EmpiricalDistribution : ContinuousUniform
     {
-        private readonly int nPoints;
-        private readonly double[] points;
-        private readonly double mean, variance, lowerBound, upperBound;
+        private  int nPoints;
+        private  double[] points;
+        private  double mean, variance, lowerBound, upperBound;
+        System.Random random;
 
-        public EmpiricalDistribution(double[] values) : base()
+        public EmpiricalDistribution(double[] values)
         {
+            random = SystemRandomSource.Default;
             this.nPoints = values.Length;
+            points = new double[values.Length];
             Array.Copy(values, points, nPoints);
             Array.Sort(points);
             this.lowerBound = points[0];
@@ -31,10 +33,11 @@ namespace Arta.Math
                 {
                     return upperBound;
                 }
+                /*
                 if(p == 0.0)
                 {
                     throw new IndexOutOfRangeException("p was 0.0");
-                }
+                }*/
             }
             int index = (int)(p * nPoints);
             return points[index];

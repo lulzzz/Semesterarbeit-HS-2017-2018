@@ -7,7 +7,7 @@ namespace Arta.Fitting
 {
     public class OrderEstimator
     {
-        public readonly static int Default_Max_Order = 100;
+        public const int Default_Max_Order = 100;
         public static int EstimateOrder(double[] data, int maxOrder)
         {
             double significanceLevel = 2 / System.Math.Sqrt(data.Length);

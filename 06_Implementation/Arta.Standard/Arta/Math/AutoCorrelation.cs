@@ -1,4 +1,5 @@
-﻿using MathNet.Numerics.LinearAlgebra;
+﻿using Arta.Util;
+using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.Statistics;
 using System;
 using System.Collections.Generic;
@@ -13,22 +14,22 @@ namespace Arta.Math
         public static double CalculateAcf(double[] data, int lag)
         {
             double acc = 0.0;
-            int l = data.Length;
+            int len = data.Length;
             if (lag < 0)
             {
                 throw new ArgumentException("Negative Lags are not allowed");
             }
-            if (lag > 1)
+            /*if (lag > 1)
             {
                 throw new ArgumentException("Lag exceeds sample size");
-            }
+            }*/
             if (lag == 0)
             {
                 acc = 1.0;
             }
             else
             {
-                // acc = Correlation.PearsonMatrix(Array.ConstrainedCopy(data, 0, new double[data.Length], 0, data.Length), Array.ConstrainedCopy(data, lag, new double[data.Length], 1, data.Length));
+                acc = Correlation.Pearson(data.CopyOfRange(0, len - lag), data.CopyOfRange(lag, len));
             }
             return acc;
         }
@@ -71,29 +72,29 @@ namespace Arta.Math
         {
             int size = acfs.Length;
             double[] pacfs = new double[size];
-            double[][] A = new double[size][];
+            double[,] A = new double[size, size];
             double[] V = new double[size];
-            A[0][0] = acfs[0];
-            A[1][1] = acfs[1] / acfs[0];
-            V[1] = A[1][1] / acfs[1];
+            A[0,0] = acfs[0];
+            A[1,1] = acfs[1] / acfs[0];
+            V[1] = A[1,1] / acfs[1];
             for (int k = 2; k < size; k++)
             {
                 double sum = 0;
                 for (int j = 1; j < k; j++)
                 {
-                    sum += A[j][j] * acfs[k - j];
+                    sum += A[j,j] * acfs[k - j];
                 }
-                A[k][k] = (acfs[k] - sum) / V[k - 1];
+                A[k,k] = (acfs[k] - sum) / V[k - 1];
                 for (int j = 1; j < k; j++)
                 {
-                    A[j][k] = A[j][k] - A[k][k] * A[k - j][k - 1];
+                    A[j,k] = A[j,k] - A[k,k] * A[k - j,k - 1];
                 }
 
-                V[k] = V[k - 1] * (1 - A[k][k] * A[k][k]);
+                V[k] = V[k - 1] * (1 - A[k,k] * A[k,k]);
             }
             for (int i = 0; i < size; i++)
             {
-                pacfs[i] = A[i][i];
+                pacfs[i] = A[i,i];
             }
             return pacfs;
         }

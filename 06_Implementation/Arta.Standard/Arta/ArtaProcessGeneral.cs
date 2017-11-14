@@ -7,7 +7,7 @@ namespace Arta
 {
     class ArtaProcessGeneral : AbstractArtaProcess
     {
-        private readonly ContinuousUniform dist;
+        private ContinuousUniform dist;
         private readonly Normal normal = new Normal();
         public ArtaProcessGeneral(ArProcess ar, ContinuousUniform dist) : base(ar)
         {

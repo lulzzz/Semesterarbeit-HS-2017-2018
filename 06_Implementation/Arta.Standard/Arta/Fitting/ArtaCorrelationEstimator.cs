@@ -63,22 +63,22 @@ namespace Arta.Fitting
         private readonly Normal standardNormal = new Normal();
         private readonly ContinuousUniform distribution;
 
-        private static readonly double Tolerance_Outer = 0.00001;
-        private static readonly double Tolerance_Inner = 0.00005;
+        private const double Tolerance_Outer = 0.00001;
+        private const double Tolerance_Inner = 0.00005;
 
-        //TODO replace Dictionaries with LruCache
         private LruCache<double, double> estimationsCache = new LruCache<double, double>(100);
         private LruCache<double, double> transformationCache = new LruCache<double, double>(1000);
 
-        public ArtaCorrelationEstimator(ContinuousUniform dist)
+        public ArtaCorrelationEstimator(ContinuousUniform distribution)
         {
-            this.distribution = dist;
+            this.distribution = distribution;
         }
 
         public double EstimateArtaCorrelation(double arCorrealtion)
         {
-            Double result = estimationsCache.Get(arCorrealtion);
-            if(result == null)
+            double? nullable = estimationsCache.Get(arCorrealtion);
+            double result = estimationsCache.Get(arCorrealtion);
+            if (nullable == null)
             {
                 double e = Integrate(-8, 8, arCorrealtion);
                 double mean = distribution.Mean;
@@ -109,7 +109,7 @@ namespace Arta.Fitting
             kronrodSum = halfDistance * kronrodSum;
             gaussSum = halfDistance * gaussSum;
 
-            if(System.Math.Abs(kronrodSum - gaussSum) > Tolerance_Outer)
+            if (System.Math.Abs(kronrodSum - gaussSum) > Tolerance_Outer)
             {
                 kronrodSum = Integrate(from, center, rho) + Integrate(center, to, rho);
             }
@@ -126,7 +126,7 @@ namespace Arta.Fitting
             double center = (from + to) / 2.0;
             double halfDistance = to - center;
 
-            for(int i = 0; i < abscissae.Length; i++)
+            for (int i = 0; i < abscissae.Length; i++)
             {
                 y = abscissae[i] * halfDistance + center;
                 yt = Transform(y);
@@ -138,7 +138,7 @@ namespace Arta.Fitting
             kronrodSum = halfDistance * kronrodSum;
             gaussSum = halfDistance * gaussSum;
 
-            if(System.Math.Abs(kronrodSum - gaussSum) > Tolerance_Inner)
+            if (System.Math.Abs(kronrodSum - gaussSum) > Tolerance_Inner)
             {
                 kronrodSum = IntegrateInner(from, center, rho, x) + IntegrateInner(center, to, rho, x);
             }
@@ -147,8 +147,9 @@ namespace Arta.Fitting
 
         private double Transform(double value)
         {
-            Double result = transformationCache.Get(value);
-            if(result == null)
+            double? nullable = transformationCache.Get(value);
+            double result = transformationCache.Get(value);
+            if (nullable == null)
             {
                 result = standardNormal.CumulativeDistribution(value);
                 result = distribution.InverseCumulativeDistribution(result);
