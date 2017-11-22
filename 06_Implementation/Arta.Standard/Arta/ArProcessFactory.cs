@@ -35,7 +35,7 @@ namespace Arta
 
         public static double[] ArAutocorrelationsToAlphas(double[] arAutocorrelations)
         {
-            int dim = arAutocorrelations.Length;
+            var dim = arAutocorrelations.Length;
             double[] alphas = new double[dim];
             Matrix<double> psi = AutoCorrelation.GetCorrelationMatrix(arAutocorrelations);
             Matrix<double> r = CreateMatrix.DenseOfColumnArrays(arAutocorrelations).Transpose();
@@ -46,8 +46,8 @@ namespace Arta
 
         public static double CalculateVariance(double[] arAutoCorrelations, double[] alphas)
         {
-            double variance = 1.0;
-            for(int i = 0; i < alphas.Length; i++)
+            var variance = 1.0;
+            for(var i = 0; i < alphas.Length; i++)
             {
                 variance = variance - alphas[i] * arAutoCorrelations[i];
             }

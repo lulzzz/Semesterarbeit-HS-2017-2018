@@ -15,14 +15,14 @@ namespace Arta.Math
         public EmpiricalDistribution(double[] values)
         {
             random = SystemRandomSource.Default;
-            this.nPoints = values.Length;
+            nPoints = values.Length;
             points = new double[values.Length];
             Array.Copy(values, points, nPoints);
             Array.Sort(points);
-            this.lowerBound = points[0];
-            this.upperBound = points[nPoints - 1];
-            this.mean = Statistics.Mean(values);
-            this.variance = Statistics.Variance(values);
+            lowerBound = points[0];
+            upperBound = points[nPoints - 1];
+            mean = Statistics.Mean(values);
+            variance = Statistics.Variance(values);
         }
 
         public double InverseCumulativeProbability(double p)
@@ -33,11 +33,11 @@ namespace Arta.Math
                 {
                     return upperBound;
                 }
-                /*
                 if(p == 0.0)
                 {
-                    throw new IndexOutOfRangeException("p was 0.0");
-                }*/
+                    return lowerBound;
+                }
+                throw new IndexOutOfRangeException("p was out of Range");
             }
             int index = (int)(p * nPoints);
             return points[index];

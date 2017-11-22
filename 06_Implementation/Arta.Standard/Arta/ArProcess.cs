@@ -16,13 +16,13 @@ namespace Arta
         {
             this.alphas = alphas;
             this.whiteNoiseProcess = whiteNoiseProcess;
-            this.vals = new DoubleHistory(alphas.Length);
+            vals = new DoubleHistory(alphas.Length);
         }
 
         public double Next()
         {
             double value = whiteNoiseProcess.Sample();
-            for(int i = 0; i < alphas.Length; i++)
+            for(var i = 0; i < alphas.Length; i++)
             {
                 value = value + alphas[i] * vals.Get(i);
             }

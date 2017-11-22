@@ -13,23 +13,23 @@ namespace Arta.Math
 
         public static double CalculateAcf(double[] data, int lag)
         {
-            double acc = 0.0;
-            int len = data.Length;
+            var acc = 0.0;
+            var length = data.Length;
             if (lag < 0)
             {
                 throw new ArgumentException("Negative Lags are not allowed");
             }
-            /*if (lag > 1)
+            if (lag > length)
             {
                 throw new ArgumentException("Lag exceeds sample size");
-            }*/
+            }
             if (lag == 0)
             {
                 acc = 1.0;
             }
             else
             {
-                acc = Correlation.Pearson(data.CopyOfRange(0, len - lag), data.CopyOfRange(lag, len));
+                acc = Correlation.Pearson(data.CopyOfRange(0, length - lag), data.CopyOfRange(lag, length));
             }
             return acc;
         }
@@ -37,7 +37,7 @@ namespace Arta.Math
         public static double[] CalculateAcfs(double[] data, int maxLag)
         {
             double[] accs = new double[maxLag + 1];
-            for (int lag = 0; lag <= maxLag; lag++)
+            for (var lag = 0; lag <= maxLag; lag++)
             {
                 accs[lag] = CalculateAcf(data, lag);
             }
@@ -47,11 +47,11 @@ namespace Arta.Math
         public static Matrix<double> GetCorrelationMatrix(double[] autocorrelations)
         {
             Matrix<double> result = null;
-            int dim = autocorrelations.Length;
+            var dim = autocorrelations.Length;
             double[,] psivalues = new double[dim, dim];
             for (int row = 0; row < dim; row++)
             {
-                for (int col = row; col < dim; col++)
+                for (var col = row; col < dim; col++)
                 {
                     if (row == col)
                     {
@@ -70,29 +70,29 @@ namespace Arta.Math
 
         public static double[] CalculatePacfs(double[] acfs)
         {
-            int size = acfs.Length;
+            var size = acfs.Length;
             double[] pacfs = new double[size];
             double[,] A = new double[size, size];
             double[] V = new double[size];
             A[0,0] = acfs[0];
             A[1,1] = acfs[1] / acfs[0];
             V[1] = A[1,1] / acfs[1];
-            for (int k = 2; k < size; k++)
+            for (var k = 2; k < size; k++)
             {
                 double sum = 0;
-                for (int j = 1; j < k; j++)
+                for (var j = 1; j < k; j++)
                 {
                     sum += A[j,j] * acfs[k - j];
                 }
                 A[k,k] = (acfs[k] - sum) / V[k - 1];
-                for (int j = 1; j < k; j++)
+                for (var j = 1; j < k; j++)
                 {
                     A[j,k] = A[j,k] - A[k,k] * A[k - j,k - 1];
                 }
 
                 V[k] = V[k - 1] * (1 - A[k,k] * A[k,k]);
             }
-            for (int i = 0; i < size; i++)
+            for (var i = 0; i < size; i++)
             {
                 pacfs[i] = A[i,i];
             }

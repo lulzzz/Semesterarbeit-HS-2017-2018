@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Arta.Util
+﻿namespace Arta.Util
 {
     interface IValueHistory<T>
     {

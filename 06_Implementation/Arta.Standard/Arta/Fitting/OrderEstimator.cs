@@ -10,12 +10,12 @@ namespace Arta.Fitting
         public const int Default_Max_Order = 100;
         public static int EstimateOrder(double[] data, int maxOrder)
         {
-            double significanceLevel = 2 / System.Math.Sqrt(data.Length);
-            int order = maxOrder;
+            var significanceLevel = 2 / System.Math.Sqrt(data.Length);
+            var order = maxOrder;
             double[] acfs = AutoCorrelation.CalculateAcfs(data, maxOrder);
             double[] pacfs = AutoCorrelation.CalculatePacfs(acfs);
 
-            for (int i = 0; i < maxOrder; i++)
+            for (var i = 0; i < maxOrder; i++)
             {
                 if (System.Math.Abs(pacfs[i + 1]) < significanceLevel)
                 {
@@ -27,7 +27,7 @@ namespace Arta.Fitting
 
         public static int EstimateOrder(double[] data)
         {
-            int maxOrder = System.Math.Min(data.Length / 4, Default_Max_Order);
+            var maxOrder = System.Math.Min(data.Length / 4, Default_Max_Order);
             return EstimateOrder(data, maxOrder);
         }
     }

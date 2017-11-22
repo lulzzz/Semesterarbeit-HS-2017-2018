@@ -1,7 +1,4 @@
 ﻿using MathNet.Numerics.Distributions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta.Fitting
 {
@@ -11,14 +8,14 @@ namespace Arta.Fitting
 
         public AutocorrelationFitter(ContinuousUniform distribution)
         {
-            this.artaCorrelationEstimator = new ArtaCorrelationEstimator(distribution);
+            artaCorrelationEstimator = new ArtaCorrelationEstimator(distribution);
         }
 
         public double[] FitArAutocorrelations(double[] desiredArtaAutoCorrealtions, double maxError)
         {
-            int dim = desiredArtaAutoCorrealtions.Length;
+            var dim = desiredArtaAutoCorrealtions.Length;
             double[] maxErrors = new double[dim];
-            for(int i = 0; i < dim; i++)
+            for(var i = 0; i < dim; i++)
             {
                 maxErrors[i] = maxError;
             }
@@ -27,9 +24,9 @@ namespace Arta.Fitting
 
         public double[] FitArAutocorrelations(double[] desiredArtaAutocorrelations, double[] maxErrors)
         {
-            int dim = desiredArtaAutocorrelations.Length;
+            var dim = desiredArtaAutocorrelations.Length;
             double[] result = new double[dim];
-            for(int i = 0; i < dim; i++)
+            for(var i = 0; i < dim; i++)
             {
                 result[i] = FitArAutocorrelations(desiredArtaAutocorrelations[i], maxErrors[i]);
             }
@@ -38,8 +35,8 @@ namespace Arta.Fitting
 
         public double FitArAutocorrelations(double desiredArtaAutocorrelation, double maxError)
         {
-            double lowerBound = -1.0;
-            double upperBound = 1.0;
+            var lowerBound = -1.0;
+            var upperBound = 1.0;
             double centerPoint;
             double estimatedCorrelation;
 

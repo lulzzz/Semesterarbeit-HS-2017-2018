@@ -15,7 +15,7 @@ namespace Arta
         }
         protected override double Transform(double value)
         {
-            double result = normal.CumulativeDistribution(value);
+            var result = normal.CumulativeDistribution(value);
             result = dist.InverseCumulativeDistribution(result);
             return result;
         }

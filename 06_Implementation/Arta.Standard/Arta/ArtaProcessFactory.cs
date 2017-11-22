@@ -19,7 +19,7 @@ namespace Arta
         public static IArtaProcess CreateArtaProcess(double[] data)
         {
             EmpiricalDistribution distribution = new EmpiricalDistribution(data);
-            int order = OrderEstimator.EstimateOrder(data);
+            var order = OrderEstimator.EstimateOrder(data);
             double[] artaCorrelationCoefficients = new double[order + 1];
             Array.Copy(AutoCorrelation.CalculateAcfs(data, order), artaCorrelationCoefficients, order + 1);
             return CreateArtaProcess(distribution, artaCorrelationCoefficients, new MersenneTwister());

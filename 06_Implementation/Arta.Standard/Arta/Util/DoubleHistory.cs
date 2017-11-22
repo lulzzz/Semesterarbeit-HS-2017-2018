@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta.Util
 {
@@ -13,12 +11,12 @@ namespace Arta.Util
         public DoubleHistory(int size)
         {
             this.size = size;
-            this.values = new double[size];
-            for(int i = 0; i < size; i++)
+            values = new double[size];
+            for(var i = 0; i < size; i++)
             {
                 values[i] = 0.0;
             }
-            this.addIndex = 0;
+            addIndex = 0;
         }
 
         public void Add(double item)
@@ -33,7 +31,7 @@ namespace Arta.Util
 
         public double Get(int index)
         {
-            int i = addIndex + size - index - 1;
+            var i = addIndex + size - index - 1;
             if(i >= size)
             {
                 i = i - size;

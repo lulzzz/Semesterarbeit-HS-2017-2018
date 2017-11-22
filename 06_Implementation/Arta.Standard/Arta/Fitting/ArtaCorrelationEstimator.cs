@@ -27,7 +27,7 @@ namespace Arta.Fitting
                                                -0.991455371120812639206854697526329};
 
         /** The Kronrod weights corresponding to the defined abscissae */
-        private double[] kronrodWeights = { 0.022935322010529224963732008058970,
+        private readonly double[] kronrodWeights = { 0.022935322010529224963732008058970,
                                             0.063092092629978553290700663189204,
                                             0.104790010322250183839876322541518,
                                             0.140653259715525918745189590510238,
@@ -76,29 +76,28 @@ namespace Arta.Fitting
 
         public double EstimateArtaCorrelation(double arCorrealtion)
         {
-            double? nullable = estimationsCache.Get(arCorrealtion);
-            double result = estimationsCache.Get(arCorrealtion);
-            if (nullable == null)
+            double? result = estimationsCache.Get(arCorrealtion);
+            if (result == null)
             {
                 double e = Integrate(-8, 8, arCorrealtion);
                 double mean = distribution.Mean;
                 double variance = distribution.Variance;
                 result = (e - mean * mean) / variance;
-                estimationsCache.Add(arCorrealtion, result);
+                estimationsCache.Add(arCorrealtion, (double)result);
             }
-            return result;
+            return (double)result;
         }
 
         private double Integrate(double from, double to, double rho)
         {
-            double kronrodSum = 0.0;
-            double gaussSum = 0.0;
-            double x = 0.0;
-            double xt = 0.0;
-            double center = (from + to) / 2.0;
-            double halfDistance = to - center;
+            var kronrodSum = 0.0;
+            var gaussSum = 0.0;
+            var x = 0.0;
+            var xt = 0.0;
+            var center = (from + to) / 2.0;
+            var halfDistance = to - center;
 
-            for (int i = 0; i < abscissae.Length; i++)
+            for (var i = 0; i < abscissae.Length; i++)
             {
                 x = abscissae[i] * halfDistance + center;
                 xt = Transform(x);
@@ -118,15 +117,15 @@ namespace Arta.Fitting
 
         private double IntegrateInner(double from, double to, double rho, double x)
         {
-            double kronrodSum = 0.0;
-            double gaussSum = 0.0;
-            double y = 0.0;
-            double yt = 0.0;
-            double densityBN = 0.0;
-            double center = (from + to) / 2.0;
-            double halfDistance = to - center;
+            var kronrodSum = 0.0;
+            var gaussSum = 0.0;
+            var y = 0.0;
+            var yt = 0.0;
+            var densityBN = 0.0;
+            var center = (from + to) / 2.0;
+            var halfDistance = to - center;
 
-            for (int i = 0; i < abscissae.Length; i++)
+            for (var i = 0; i < abscissae.Length; i++)
             {
                 y = abscissae[i] * halfDistance + center;
                 yt = Transform(y);
@@ -147,15 +146,15 @@ namespace Arta.Fitting
 
         private double Transform(double value)
         {
-            double? nullable = transformationCache.Get(value);
-            double result = transformationCache.Get(value);
-            if (nullable == null)
+        
+            double? result = transformationCache.Get(value);
+            if (result == null)
             {
                 result = standardNormal.CumulativeDistribution(value);
-                result = distribution.InverseCumulativeDistribution(result);
-                transformationCache.Add(value, result);
+                result = distribution.InverseCumulativeDistribution((double)result);
+                transformationCache.Add(value, (double)result);
             }
-            return result;
+            return (double)result;
         }
     }
 }
