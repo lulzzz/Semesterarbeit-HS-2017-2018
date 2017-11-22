@@ -19,10 +19,11 @@ namespace Arta.Executable
             {
                 Console.WriteLine(dist.InverseCumulativeProbability(d / 10));
             }
-
-            ContinuousUniform distribution = new ContinuousUniform();
+            
+            var distributionType = nameof(ContinuousUniformDistribution);
+            
             double[] artaCorrelationCoefficients = { 0.3, 0.3, -0.1 };
-            IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distribution, artaCorrelationCoefficients);
+            IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distributionType, artaCorrelationCoefficients);
 
             double[] data = new double[10000];
             for (int i = 0; i < data.Length; i++)

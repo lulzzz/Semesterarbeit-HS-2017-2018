@@ -4,8 +4,6 @@ using MathNet.Numerics.Distributions;
 using MathNet.Numerics.LinearAlgebra.Factorization;
 using MathNet.Numerics.Random;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta
 {
@@ -16,21 +14,21 @@ namespace Arta
 
         private ArtaProcessFactory() { }
 
-        public static IArtaProcess CreateArtaProcess(double[] data)
+    /*    public static IArtaProcess CreateArtaProcess(double[] data)
         {
             EmpiricalDistribution distribution = new EmpiricalDistribution(data);
             var order = OrderEstimator.EstimateOrder(data);
             double[] artaCorrelationCoefficients = new double[order + 1];
             Array.Copy(AutoCorrelation.CalculateAcfs(data, order), artaCorrelationCoefficients, order + 1);
             return CreateArtaProcess(distribution, artaCorrelationCoefficients, new MersenneTwister());
-        }
+        }*/
 
-        public static IArtaProcess CreateArtaProcess(ContinuousUniform distribution, double[] artaCorrelationCoefficients)
+        public static IArtaProcess CreateArtaProcess(string distributionType, double[] artaCorrelationCoefficients)
         {
-            return CreateArtaProcess(distribution, artaCorrelationCoefficients, new MersenneTwister());
+            return CreateArtaProcess(distributionType, artaCorrelationCoefficients, new MersenneTwister());
         }
 
-        public static IArtaProcess CreateArtaProcess(ContinuousUniform distribution, double[] artaCorrelationCoefficients, RandomSource random)
+        public static IArtaProcess CreateArtaProcess(string distributionType, double[] artaCorrelationCoefficients, RandomSource random)
         {
             AbstractArtaProcess arta = null;
             if(artaCorrelationCoefficients == null)
@@ -45,11 +43,12 @@ namespace Arta
             if(distribution is Normal)
             {
                 arta = CreateArtaProcessN((Normal)distribution, artaCorrelationCoefficients, random);
-            } else */if(distribution is ContinuousUniform){
-                arta = CreateArtaProcessU((ContinuousUniform)distribution, artaCorrelationCoefficients, random);
+            } else */if(distributionType == nameof(ContinuousUniformDistribution)){
+                arta = CreateArtaProcessU(new ContinuousUniform(), artaCorrelationCoefficients, random);
             }
             else{
-                arta = CreateArtaProcessG(distribution, artaCorrelationCoefficients, random);
+                throw new NotImplementedException();
+                //arta = CreateArtaProcessG(distribution, artaCorrelationCoefficients, random);
             }
             return arta;
         }
@@ -75,9 +74,9 @@ namespace Arta
         private static ArtaProcessUniform CreateArtaProcessU(ContinuousUniform uniform, double[] artaCorrelationCoefficients, RandomSource random)
         {
             ArtaProcessUniform arta = null;
-            int dim = artaCorrelationCoefficients.Length;
+            var dim = artaCorrelationCoefficients.Length;
             double[] arCorrelationCoefficients = new double[dim];
-            for(int i= 0; i < dim; i++)
+            for(var i= 0; i < dim; i++)
             {
                 arCorrelationCoefficients[i] = 2 * System.Math.Sin(System.Math.PI * artaCorrelationCoefficients[i] / 6);
             }
