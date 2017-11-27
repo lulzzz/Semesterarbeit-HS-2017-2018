@@ -3,7 +3,7 @@ using System;
 
 namespace Arta.Math
 {
-    public class ExponentialDistribution : State
+    public class ExponentialDistribution : DistributionState
     {
         Exponential exponential;
 

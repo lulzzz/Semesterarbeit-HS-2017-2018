@@ -23,12 +23,12 @@ namespace Arta
                 return CreateArtaProcess(distribution, artaCorrelationCoefficients, new MersenneTwister());
             }*/
 
-        public static IArtaProcess CreateArtaProcess(State distributionType, double[] artaCorrelationCoefficients)
+        public static IArtaProcess CreateArtaProcess(DistributionState distributionType, double[] artaCorrelationCoefficients)
         {
             return CreateArtaProcess(distributionType, artaCorrelationCoefficients, new MersenneTwister());
         }
 
-        public static IArtaProcess CreateArtaProcess(State distributionType, double[] artaCorrelationCoefficients, RandomSource random)
+        public static IArtaProcess CreateArtaProcess(DistributionState distributionType, double[] artaCorrelationCoefficients, RandomSource random)
         {
             AbstractArtaProcess arta = null;
             if (artaCorrelationCoefficients == null)
@@ -57,7 +57,7 @@ namespace Arta
 
 
 
-        private static ArtaProcessNormal CreateArtaProcessN(State distributionType, double[] artaCorrelationCoefficients, RandomSource random)
+        private static ArtaProcessNormal CreateArtaProcessN(DistributionState distributionType, double[] artaCorrelationCoefficients, RandomSource random)
         {
             ArtaProcessNormal arta = null;
             ArProcess ar = ArProcessFactory.CreateArProcess(artaCorrelationCoefficients, random);
@@ -65,7 +65,7 @@ namespace Arta
             return arta;
         }
 
-        private static ArtaProcessUniform CreateArtaProcessU(State distribution, double[] artaCorrelationCoefficients, RandomSource random)
+        private static ArtaProcessUniform CreateArtaProcessU(DistributionState distribution, double[] artaCorrelationCoefficients, RandomSource random)
         {
             ArtaProcessUniform arta = null;
 
@@ -79,7 +79,7 @@ namespace Arta
             arta = new ArtaProcessUniform(ar, distribution.GetLowerBound(), distribution.GetUpperBound());
             return arta;
         }
-        private static ArtaProcessGeneral CreateArtaProcessG(State distribution, double[] artaCorrelationCoefficients, RandomSource random)
+        private static ArtaProcessGeneral CreateArtaProcessG(DistributionState distribution, double[] artaCorrelationCoefficients, RandomSource random)
         {
             ArtaProcessGeneral arta = null;
             AutocorrelationFitter fitter = new AutocorrelationFitter(distribution);

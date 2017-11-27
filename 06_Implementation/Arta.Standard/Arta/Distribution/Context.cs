@@ -2,13 +2,13 @@
 {
     public class Context
     {
-        private State _state;
-        public Context(State state)
+        private DistributionState _state;
+        public Context(DistributionState state)
         {
             State = state;
         }
 
-        public State State
+        public DistributionState State
         {
             get { return _state; }
             set

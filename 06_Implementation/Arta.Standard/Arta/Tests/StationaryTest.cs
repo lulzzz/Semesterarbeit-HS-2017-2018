@@ -13,14 +13,14 @@ namespace Arta.Tests
             double[] b = new double[dim + 1];
 
             a[0] = -1.0;
-            for(int i = 0; i < dim; i++)
+            for(var i = 0; i < dim; i++)
             {
                 a[i + 1] = alphas[i];
             }
 
-            for(int k = dim; k > 0; k--)
+            for(var k = dim; k > 0; k--)
             {
-                for(int j = 0; j < k; j++)
+                for(var j = 0; j < k; j++)
                 {
                     b[j] = a[0] * a[j] - a[k] * a[k - j];
                 }
@@ -30,7 +30,7 @@ namespace Arta.Tests
                     return false;
                 }
 
-                for(int i = 0; i < dim + 1; i++)
+                for(var i = 0; i < dim + 1; i++)
                 {
                     a[i] = b[i];
                 }

@@ -61,7 +61,7 @@ namespace Arta.Fitting
                                                    0.0};
 
         private readonly Normal standardNormal = new Normal();
-        private readonly State distribution;
+        private readonly DistributionState distribution;
 
         private const double Tolerance_Outer = 0.00001;
         private const double Tolerance_Inner = 0.00005;
@@ -69,7 +69,7 @@ namespace Arta.Fitting
         private LruCache<double, double> estimationsCache = new LruCache<double, double>(100);
         private LruCache<double, double> transformationCache = new LruCache<double, double>(1000);
 
-        public ArtaCorrelationEstimator(State distribution)
+        public ArtaCorrelationEstimator(DistributionState distribution)
         {
             this.distribution = distribution;
         }

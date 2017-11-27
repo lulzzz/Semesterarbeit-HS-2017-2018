@@ -17,8 +17,8 @@ namespace Arta.Executable
             //      var distributionType = nameof(ContinuousUniformDistribution);
             var distributionType = new Context(new NormalDistribution());
             distributionType.Request();
-            distributionType.State.Rate = 0.1;
-            double[] artaCorrelationCoefficients = { 0.3, 0.3, -0.1 };
+            distributionType.State.Rate = 0.5;
+            double[] artaCorrelationCoefficients = { -0.2, 0.5 };
             IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distributionType.State, artaCorrelationCoefficients);
 
             double[] data = new double[10000];

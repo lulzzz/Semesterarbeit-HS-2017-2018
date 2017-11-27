@@ -5,8 +5,6 @@ using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Factorization;
 using MathNet.Numerics.Random;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta
 {

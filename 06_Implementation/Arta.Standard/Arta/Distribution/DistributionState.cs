@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Arta.Math
 {
-    public abstract class State
+    public abstract class DistributionState
     {
         public abstract void Handle(Context context);
         public double Rate { get; set; }
