@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.12
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arta", "Arta\Arta.csproj", "{1175A143-CED2-4838-BAA3-C5581733FAE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arta", "Arta\Arta.csproj", "{1175A143-CED2-4838-BAA3-C5581733FAE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Executable", "Executable\Executable.csproj", "{232D9877-1EE0-40D6-8B0E-1BBFCB6EE56A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Executable", "Executable\Executable.csproj", "{232D9877-1EE0-40D6-8B0E-1BBFCB6EE56A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatisticalTests", "StatisticalTests\StatisticalTests.csproj", "{0435F5E4-9B88-48E8-8A08-C14DE06E7ED7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatisticalTests", "StatisticalTests\StatisticalTests.csproj", "{0435F5E4-9B88-48E8-8A08-C14DE06E7ED7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,5 +72,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6419E94-8394-41EE-BE2A-633F273791F6}
 	EndGlobalSection
 EndGlobal

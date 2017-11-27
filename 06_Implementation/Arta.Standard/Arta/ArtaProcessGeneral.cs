@@ -1,22 +1,21 @@
-﻿using MathNet.Numerics.Distributions;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Arta.Math;
+using MathNet.Numerics.Distributions;
 
 namespace Arta
 {
     class ArtaProcessGeneral : AbstractArtaProcess
     {
-        private ContinuousUniform dist;
+        private State distribution;
         private readonly Normal normal = new Normal();
-        public ArtaProcessGeneral(ArProcess ar, ContinuousUniform dist) : base(ar)
+        public ArtaProcessGeneral(ArProcess ar, State distribution) : base(ar)
         {
-            this.dist = dist;
+            this.distribution = distribution;
         }
         protected override double Transform(double value)
         {
             var result = normal.CumulativeDistribution(value);
-            result = dist.InverseCumulativeDistribution(result);
+            
+            result = distribution.InverseCumulativeDistribution(result);
             return result;
         }
     }

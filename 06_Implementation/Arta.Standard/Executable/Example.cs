@@ -12,18 +12,14 @@ namespace Arta.Executable
     {
         public static void Main(String[] args)
         {
-            double[] values = { 1, 2, 3, 2 };
-            EmpiricalDistribution dist = new EmpiricalDistribution(values);
+       
 
-            for (double d = 0; d <= 10; d++)
-            {
-                Console.WriteLine(dist.InverseCumulativeProbability(d / 10));
-            }
-            
-            var distributionType = nameof(ContinuousUniformDistribution);
-            
+            //      var distributionType = nameof(ContinuousUniformDistribution);
+            var distributionType = new Context(new NormalDistribution());
+            distributionType.Request();
+            distributionType.State.Rate = 0.1;
             double[] artaCorrelationCoefficients = { 0.3, 0.3, -0.1 };
-            IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distributionType, artaCorrelationCoefficients);
+            IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distributionType.State, artaCorrelationCoefficients);
 
             double[] data = new double[10000];
             for (int i = 0; i < data.Length; i++)
@@ -54,6 +50,7 @@ namespace Arta.Executable
             Console.WriteLine("#########################");
             Console.WriteLine("Order");
             Console.WriteLine(OrderEstimator.EstimateOrder(data, maxLag));
+            Console.ReadKey();
         }
     }
 }

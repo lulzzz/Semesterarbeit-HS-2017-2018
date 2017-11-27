@@ -11,7 +11,7 @@ namespace Arta
         public ArtaProcessNormal(ArProcess ar, double mean, double variance) : base(ar)
         {
             this.mean = mean;
-            this.stdev = System.Math.Sqrt(variance);
+            stdev = System.Math.Sqrt(variance);
         }
 
         protected override double Transform(double value)

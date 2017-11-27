@@ -61,7 +61,7 @@ namespace Arta.Fitting
                                                    0.0};
 
         private readonly Normal standardNormal = new Normal();
-        private readonly ContinuousUniform distribution;
+        private readonly State distribution;
 
         private const double Tolerance_Outer = 0.00001;
         private const double Tolerance_Inner = 0.00005;
@@ -69,7 +69,7 @@ namespace Arta.Fitting
         private LruCache<double, double> estimationsCache = new LruCache<double, double>(100);
         private LruCache<double, double> transformationCache = new LruCache<double, double>(1000);
 
-        public ArtaCorrelationEstimator(ContinuousUniform distribution)
+        public ArtaCorrelationEstimator(State distribution)
         {
             this.distribution = distribution;
         }
@@ -80,8 +80,8 @@ namespace Arta.Fitting
             if (result == null)
             {
                 double e = Integrate(-8, 8, arCorrealtion);
-                double mean = distribution.Mean;
-                double variance = distribution.Variance;
+                double mean = distribution.GetMean();
+                double variance = distribution.GetVariance();
                 result = (e - mean * mean) / variance;
                 estimationsCache.Add(arCorrealtion, (double)result);
             }

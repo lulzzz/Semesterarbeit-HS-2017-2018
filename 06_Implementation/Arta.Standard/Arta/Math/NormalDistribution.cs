@@ -2,38 +2,39 @@
 
 namespace Arta.Math
 {
-    public class ContinuousUniformDistribution : State
+    public class NormalDistribution : State
     {
-        ContinuousUniform continuousUniform;
+        Normal normal;
         public override void Handle(Context context)
-        {
-            continuousUniform = new ContinuousUniform();
+        {            
+            normal = new Normal();
         }
 
         public override double InverseCumulativeDistribution(double p)
         {
-            return continuousUniform.InverseCumulativeDistribution(p);
+            return normal.InverseCumulativeDistribution(p);
         }
+
         public override double GetLowerBound()
         {
-            return continuousUniform.LowerBound;
+            throw new System.NotImplementedException();
         }
 
         public override double GetMean()
         {
-            return continuousUniform.Mean;
+            return normal.Mean;
         }
 
         public override double GetUpperBound()
         {
-            return continuousUniform.UpperBound;
+            throw new System.NotImplementedException();
         }
 
         public override double GetVariance()
         {
-            return continuousUniform.Variance;
+            return normal.Variance;
         }
 
-     
+
     }
 }

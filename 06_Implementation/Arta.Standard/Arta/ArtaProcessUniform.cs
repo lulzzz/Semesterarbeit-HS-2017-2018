@@ -1,7 +1,4 @@
 ﻿using MathNet.Numerics.Distributions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta
 {
@@ -13,7 +10,7 @@ namespace Arta
         public ArtaProcessUniform(ArProcess ar, double lower, double upper) : base(ar)
         {
             this.lower = lower;
-            this.difference = upper - lower;
+            difference = upper - lower;
         }
         protected override double Transform(double value)
         {

@@ -1,4 +1,4 @@
-﻿using MathNet.Numerics.Distributions;
+﻿using Arta.Math;
 
 namespace Arta.Fitting
 {
@@ -6,7 +6,7 @@ namespace Arta.Fitting
     {
         private ArtaCorrelationEstimator artaCorrelationEstimator;
 
-        public AutocorrelationFitter(ContinuousUniform distribution)
+        public AutocorrelationFitter(State distribution)
         {
             artaCorrelationEstimator = new ArtaCorrelationEstimator(distribution);
         }
