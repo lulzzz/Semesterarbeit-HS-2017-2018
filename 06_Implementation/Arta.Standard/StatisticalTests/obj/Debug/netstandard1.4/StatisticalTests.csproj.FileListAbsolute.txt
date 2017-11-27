@@ -7,3 +7,10 @@
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.AssemblyInfo.cs
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.dll
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.4\StatisticalTests.deps.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.4\StatisticalTests.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.4\StatisticalTests.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.csprojResolveAssemblyReference.cache
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.AssemblyInfo.cs
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.pdb

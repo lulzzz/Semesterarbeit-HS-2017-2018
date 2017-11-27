@@ -1,10 +1,3 @@
-C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.deps.json
-C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.dll
-C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.csprojResolveAssemblyReference.cache
-C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.AssemblyInfo.cs
-C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.pdb
-C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.dll
-C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.pdb
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.deps.json
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.dll
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.pdb
@@ -14,3 +7,10 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.AssemblyInfo.cs
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.dll
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.deps.json
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Debug\netstandard1.6\Arta.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.csprojResolveAssemblyReference.cache
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.AssemblyInfo.cs
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Debug\netstandard1.6\Arta.pdb

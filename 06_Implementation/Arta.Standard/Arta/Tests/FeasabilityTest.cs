@@ -6,5 +6,6 @@ namespace Arta.Tests
 {
     class FeasabilityTest
     {
+
     }
 }
