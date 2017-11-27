@@ -1,7 +1,6 @@
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.4\StatisticalTests.deps.json
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.4\StatisticalTests.dll
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.4\StatisticalTests.pdb
-\\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.csprojResolveAssemblyReference.cache
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.csproj.CoreCompileInputs.cache
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.AssemblyInfoInputs.cache
 \\svm-c113.hsr.ch\adelay\Documents\SemesterArbeit\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.4\StatisticalTests.AssemblyInfo.cs

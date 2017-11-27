@@ -5,6 +5,7 @@ namespace Arta.Math
     public class ContinuousUniformDistribution : DistributionState
     {
         ContinuousUniform continuousUniform;
+
         public override void Handle(Context context)
         {
             continuousUniform = new ContinuousUniform();

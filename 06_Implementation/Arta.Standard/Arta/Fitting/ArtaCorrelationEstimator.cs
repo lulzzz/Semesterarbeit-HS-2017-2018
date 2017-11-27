@@ -74,16 +74,16 @@ namespace Arta.Fitting
             this.distribution = distribution;
         }
 
-        public double EstimateArtaCorrelation(double arCorrealtion)
+        public double EstimateArtaCorrelation(double arAutocorrelation)
         {
-            double? result = estimationsCache.Get(arCorrealtion);
-            if (result == null)
+            double? result = estimationsCache.Get(arAutocorrelation);
+            if (result == 0)
             {
-                double e = Integrate(-8, 8, arCorrealtion);
+                double e = Integrate(-8, 8, arAutocorrelation);
                 double mean = distribution.GetMean();
                 double variance = distribution.GetVariance();
                 result = (e - mean * mean) / variance;
-                estimationsCache.Add(arCorrealtion, (double)result);
+                estimationsCache.Add(arAutocorrelation, (double)result);
             }
             return (double)result;
         }
@@ -148,7 +148,7 @@ namespace Arta.Fitting
         {
         
             double? result = transformationCache.Get(value);
-            if (result == null)
+            if (result == 0)
             {
                 result = standardNormal.CumulativeDistribution(value);
                 result = distribution.InverseCumulativeDistribution((double)result);

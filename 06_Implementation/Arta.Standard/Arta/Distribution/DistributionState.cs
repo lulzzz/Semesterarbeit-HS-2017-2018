@@ -6,8 +6,9 @@ namespace Arta.Math
 {
     public abstract class DistributionState
     {
-        public abstract void Handle(Context context);
         public double Rate { get; set; }
+        public abstract void Handle(Context context);
+    
         public abstract double InverseCumulativeDistribution(double p);
         public abstract double GetLowerBound();
         public abstract double GetUpperBound();

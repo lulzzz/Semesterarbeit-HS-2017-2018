@@ -5,10 +5,11 @@ namespace Arta.Math
     public class NormalDistribution : DistributionState
     {
         Normal normal;
+
+      
         public override void Handle(Context context)
         {            
             normal = new Normal();
-            
         }
 
         public override double InverseCumulativeDistribution(double p)
@@ -36,6 +37,6 @@ namespace Arta.Math
             return normal.Variance;
         }
 
-
+  
     }
 }
