@@ -8,7 +8,7 @@ namespace Arta.Math
     {
         public double Rate { get; set; }
         public abstract void Handle(Context context);
-    
+       
         public abstract double InverseCumulativeDistribution(double p);
         public abstract double GetLowerBound();
         public abstract double GetUpperBound();

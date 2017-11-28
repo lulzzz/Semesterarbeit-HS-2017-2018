@@ -76,7 +76,7 @@ namespace Arta.Fitting
 
         public double EstimateArtaCorrelation(double arAutocorrelation)
         {
-            double? result = estimationsCache.Get(arAutocorrelation);
+            double result = estimationsCache.Get(arAutocorrelation);
             if (result == 0)
             {
                 double e = Integrate(-8, 8, arAutocorrelation);
@@ -147,7 +147,7 @@ namespace Arta.Fitting
         private double Transform(double value)
         {
         
-            double? result = transformationCache.Get(value);
+            double result = transformationCache.Get(value);
             if (result == 0)
             {
                 result = standardNormal.CumulativeDistribution(value);

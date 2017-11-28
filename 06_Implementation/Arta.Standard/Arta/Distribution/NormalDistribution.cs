@@ -9,7 +9,7 @@ namespace Arta.Math
       
         public override void Handle(Context context)
         {            
-            normal = new Normal();
+            normal = new Normal(0, 1);
         }
 
         public override double InverseCumulativeDistribution(double p)

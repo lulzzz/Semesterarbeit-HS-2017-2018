@@ -13,16 +13,16 @@ namespace Arta
         public static Cholesky<double> cholesky;
 
         private ArtaProcessFactory() { }
-
-        /*    public static IArtaProcess CreateArtaProcess(double[] data)
+        /*
+            public static IArtaProcess CreateArtaProcess(double[] data)
             {
                 EmpiricalDistribution distribution = new EmpiricalDistribution(data);
                 var order = OrderEstimator.EstimateOrder(data);
                 double[] artaCorrelationCoefficients = new double[order + 1];
                 Array.Copy(AutoCorrelation.CalculateAcfs(data, order), artaCorrelationCoefficients, order + 1);
                 return CreateArtaProcess(distribution, artaCorrelationCoefficients, new MersenneTwister());
-            }*/
-
+            }
+        */
         public static IArtaProcess CreateArtaProcess(DistributionState distributionType, double[] artaCorrelationCoefficients)
         {
             return CreateArtaProcess(distributionType, artaCorrelationCoefficients, new MersenneTwister());
@@ -37,8 +37,8 @@ namespace Arta
                 artaCorrelationCoefficients = noCorrelation;
             }
             //TODO Cholesky Check
-            //TODO Feasabilitycheck
 
+            AutoCorrelation.GetCorrelationMatrix(artaCorrelationCoefficients).Cholesky();
 
             if (distributionType is NormalDistribution)
             {

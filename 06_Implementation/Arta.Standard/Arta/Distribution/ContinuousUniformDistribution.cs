@@ -8,7 +8,7 @@ namespace Arta.Math
 
         public override void Handle(Context context)
         {
-            continuousUniform = new ContinuousUniform();
+            continuousUniform = new ContinuousUniform(-1, 1);
         }
 
         public override double InverseCumulativeDistribution(double p)

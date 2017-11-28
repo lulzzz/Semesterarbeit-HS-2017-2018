@@ -9,7 +9,7 @@ namespace Arta.Math
 
         public override void Handle(Context context)
         {
-            exponential = new Exponential(Rate);
+            exponential = new Exponential(1);
         }
         public override double GetLowerBound()
         {
