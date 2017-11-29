@@ -1,12 +1,12 @@
 ﻿namespace Arta
 {
-    abstract class AbstractArtaProcess : IArtaProcess
+    public abstract class AbstractArtaProcess : IArtaProcess
     {
         private readonly ArProcess ar;
         /*
          * Generates an Arta-Process with the underlying Ar-Process.
          */
-         public AbstractArtaProcess(ArProcess ar)
+        public AbstractArtaProcess(ArProcess ar)
         {
             this.ar = ar;
         }

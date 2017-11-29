@@ -6,7 +6,7 @@ namespace Arta.Fitting
     {
         private ArtaCorrelationEstimator artaCorrelationEstimator;
 
-        public AutocorrelationFitter(DistributionState distribution)
+        public AutocorrelationFitter(IDistribution distribution)
         {
             artaCorrelationEstimator = new ArtaCorrelationEstimator(distribution);
         }

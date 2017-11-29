@@ -2,14 +2,11 @@
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.Statistics;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta.Math
 {
-    public class AutoCorrelation
+    public static class AutoCorrelation
     {
-        private AutoCorrelation() { }
 
         public static double CalculateAcf(double[] data, int lag)
         {
