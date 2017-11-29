@@ -1,25 +1,27 @@
 ﻿using Arta.Fitting;
 using Arta.Math;
+using MathNet.Numerics.Distributions;
 using System;
+using System.IO;
+using System.Text;
 
 namespace Arta.Executable
 {
     class Example
     {
         public static void Main(String[] args)
-        {
+        {      
+      
+            var distributionType = new Context(new ContinuousUniformDistribution());
+            distributionType.Request();
 
-
-            var executionContext = new ArtaExecutionContext(new ExponentialDistribution(), new double[] { -0.4, 0.5 });
-            var artaProcess = executionContext.CreateArtaProcess();
-
-
-
+            double[] artaCorrelationCoefficients = { -0.4 , 0.5 };
+            IArtaProcess arta = ArtaProcessFactory.CreateArtaProcess(distributionType.State, artaCorrelationCoefficients);
 
             double[] data = new double[10000];
             for (int i = 0; i < data.Length; i++)
             {
-                data[i] = artaProcess.Next();
+                data[i] = arta.Next();
             }
 
             int maxLag = 10;
@@ -46,8 +48,7 @@ namespace Arta.Executable
             Console.WriteLine("Order");
             Console.WriteLine(OrderEstimator.EstimateOrder(data, maxLag));
 
-            /*
-            Console.WriteLine(executionContext.State.GetMean());
+            Console.WriteLine(distributionType.State.GetMean());
 
 
             double[] test = new double[100];
@@ -93,7 +94,6 @@ namespace Arta.Executable
                 File.AppendAllText(artaAcfsPath, acfsOut.ToString());
 
             }
-            */
             Console.ReadKey();
         }
     }

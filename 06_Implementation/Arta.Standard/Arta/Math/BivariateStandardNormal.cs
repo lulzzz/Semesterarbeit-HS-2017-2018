@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Arta.Math
 {
-    static class BivariateStandardNormal
+    class BivariateStandardNormal
     {
+        private BivariateStandardNormal() { }
+
         public static double GetDensity(double x, double y, double rho)
         {
             var d = 1.0 - rho * rho;
