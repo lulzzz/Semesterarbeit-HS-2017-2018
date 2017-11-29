@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETStandard,Version=v1.6": {
       "MathNet.Numerics.Core/3.17.0": {
@@ -4530,23 +4530,44 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Philipp\\.nuget\\packages\\": {}
+    "C:\\Users\\adelay\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
+      "projectUniqueName": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
       "projectName": "Arta",
-      "projectPath": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
-      "outputPath": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\obj\\",
+      "projectPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
+      "packagesPath": "C:\\Users\\adelay\\.nuget\\packages\\",
+      "outputPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\adelay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netstandard1.6"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netstandard1.6": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
