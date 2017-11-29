@@ -2,11 +2,10 @@
 
 namespace Arta.Math
 {
-    public interface IDistribution
+    public interface IBaseDistribution
     {
-        void Handle(ArtaExecutionContext context);
+      
         AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random);
-
         double InverseCumulativeDistribution(double p);
         double GetMean();
         double GetVariance();

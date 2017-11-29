@@ -20,24 +20,24 @@ namespace Arta
 
         public static ArProcess CreateArProcess(double[] arAutocorrelations, RandomSource random)
         {
-            double[] alphas = ArAutocorrelationsToAlphas(arAutocorrelations);
+            var alphas = ArAutocorrelationsToAlphas(arAutocorrelations);
             if (!StationaryTest.IsStationary(alphas))
             {
                 throw new NotStationaryException("Underlying ar-process is not stationary");
             }
 
-            double variance = CalculateVariance(arAutocorrelations, alphas);
-            Normal whiteNoiseProcess = new Normal(random);
+            var variance = CalculateVariance(arAutocorrelations, alphas);
+            var whiteNoiseProcess = new Normal(random);
             return new ArProcess(alphas, whiteNoiseProcess);
         }
 
         public static double[] ArAutocorrelationsToAlphas(double[] arAutocorrelations)
         {
             var dim = arAutocorrelations.Length;
-            double[] alphas = new double[dim];
-            Matrix<double> psi = AutoCorrelation.GetCorrelationMatrix(arAutocorrelations);
-            Matrix<double> r = CreateMatrix.DenseOfColumnArrays(arAutocorrelations).Transpose();
-            Matrix<double> a = r.Multiply(psi.Cholesky().Solve(psi).Inverse());
+            var alphas = new double[dim];
+            var psi = AutoCorrelation.GetCorrelationMatrix(arAutocorrelations);
+            var r = CreateMatrix.DenseOfColumnArrays(arAutocorrelations).Transpose();
+            var a = r.Multiply(psi.Cholesky().Solve(psi).Inverse());
             alphas = a.Row(0).AsArray();
             return alphas;
         }

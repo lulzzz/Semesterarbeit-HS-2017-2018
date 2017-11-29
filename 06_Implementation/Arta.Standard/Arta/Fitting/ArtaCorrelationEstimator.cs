@@ -1,9 +1,6 @@
 ﻿using Arta.Math;
 using Arta.Util;
 using MathNet.Numerics.Distributions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta.Fitting
 {
@@ -61,7 +58,7 @@ namespace Arta.Fitting
                                                    0.0};
 
         private readonly Normal standardNormal = new Normal();
-        private readonly Math.IDistribution distribution;
+        private readonly IBaseDistribution distribution;
 
         private const double Tolerance_Outer = 0.00001;
         private const double Tolerance_Inner = 0.00005;
@@ -69,19 +66,19 @@ namespace Arta.Fitting
         private LruCache<double, double> estimationsCache = new LruCache<double, double>(100);
         private LruCache<double, double> transformationCache = new LruCache<double, double>(1000);
 
-        public ArtaCorrelationEstimator(Math.IDistribution distribution)
+        public ArtaCorrelationEstimator(IBaseDistribution distribution)
         {
             this.distribution = distribution;
         }
 
         public double EstimateArtaCorrelation(double arAutocorrelation)
         {
-            double result = estimationsCache.Get(arAutocorrelation);
+            var result = estimationsCache.Get(arAutocorrelation);
             if (result == 0)
             {
-                double e = Integrate(-8, 8, arAutocorrelation);
-                double mean = distribution.GetMean();
-                double variance = distribution.GetVariance();
+                var e = Integrate(-8, 8, arAutocorrelation);
+                var mean = distribution.GetMean();
+                var variance = distribution.GetVariance();
                 result = (e - mean * mean) / variance;
                 estimationsCache.Add(arAutocorrelation, result);
             }
@@ -146,13 +143,13 @@ namespace Arta.Fitting
 
         private double Transform(double value)
         {
-        
-            double result = transformationCache.Get(value);
+
+            var result = transformationCache.Get(value);
             if (result == 0)
             {
                 result = standardNormal.CumulativeDistribution(value);
-                result = distribution.InverseCumulativeDistribution((double)result);
-                transformationCache.Add(value, (double)result);
+                result = distribution.InverseCumulativeDistribution(result);
+                transformationCache.Add(value, result);
             }
             return result;
         }

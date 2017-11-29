@@ -19,7 +19,7 @@ namespace Arta
 
         public double Next()
         {
-            double value = whiteNoiseProcess.Sample();
+            var value = whiteNoiseProcess.Sample();
             for(var i = 0; i < alphas.Length; i++)
             {
                 value = value + alphas[i] * vals.Get(i);

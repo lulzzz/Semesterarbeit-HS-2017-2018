@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETStandard,Version=v1.4": {
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -3703,23 +3703,44 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Philipp\\.nuget\\packages\\": {}
+    "C:\\Users\\Delay\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
+      "projectUniqueName": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
       "projectName": "StatisticalTests",
-      "projectPath": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
-      "outputPath": "C:\\Users\\Philipp\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\obj\\",
+      "projectPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
+      "packagesPath": "C:\\Users\\Delay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Delay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netstandard1.4"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netstandard1.4": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {

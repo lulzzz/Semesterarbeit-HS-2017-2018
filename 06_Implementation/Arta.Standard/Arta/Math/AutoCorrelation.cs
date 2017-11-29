@@ -33,7 +33,7 @@ namespace Arta.Math
 
         public static double[] CalculateAcfs(double[] data, int maxLag)
         {
-            double[] accs = new double[maxLag + 1];
+            var accs = new double[maxLag + 1];
             for (var lag = 0; lag <= maxLag; lag++)
             {
                 accs[lag] = CalculateAcf(data, lag);
@@ -43,10 +43,10 @@ namespace Arta.Math
 
         public static Matrix<double> GetCorrelationMatrix(double[] autocorrelations)
         {
-            Matrix<double> result = null;
+          
             var dim = autocorrelations.Length;
-            double[,] psivalues = new double[dim, dim];
-            for (int row = 0; row < dim; row++)
+            var psivalues = new double[dim, dim];
+            for (var row = 0; row < dim; row++)
             {
                 for (var col = row; col < dim; col++)
                 {
@@ -61,16 +61,16 @@ namespace Arta.Math
                     }
                 }
             }
-            result = CreateMatrix.DenseOfArray<double>(psivalues);
-            return result;
+            
+            return CreateMatrix.DenseOfArray<double>(psivalues); 
         }
 
         public static double[] CalculatePacfs(double[] acfs)
         {
             var size = acfs.Length;
-            double[] pacfs = new double[size];
-            double[,] A = new double[size, size];
-            double[] V = new double[size];
+            var pacfs = new double[size];
+            var A = new double[size, size];
+            var V = new double[size];
             A[0,0] = acfs[0];
             A[1,1] = acfs[1] / acfs[0];
             V[1] = A[1,1] / acfs[1];

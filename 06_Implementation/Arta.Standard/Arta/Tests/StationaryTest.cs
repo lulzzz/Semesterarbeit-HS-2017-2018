@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Arta.Tests
+﻿namespace Arta.Tests
 {
     class StationaryTest
     {
         public static bool IsStationary(double[] alphas)
         {
-            int dim = alphas.Length;
-            double[] a = new double[dim + 1];
-            double[] b = new double[dim + 1];
+            var dim = alphas.Length;
+            var a = new double[dim + 1];
+            var b = new double[dim + 1];
 
             a[0] = -1.0;
             for(var i = 0; i < dim; i++)

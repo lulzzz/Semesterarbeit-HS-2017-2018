@@ -3,15 +3,14 @@ using MathNet.Numerics.Random;
 
 namespace Arta.Math
 {
-    public class ContinuousUniformDistribution : IDistribution
+    public class ContinuousUniformDistribution : IBaseDistribution
     {
-        ContinuousUniform continuousUniform;
+        private readonly ContinuousUniform continuousUniform;
 
-        public void Handle(ArtaExecutionContext context)
+        public ContinuousUniformDistribution()
         {
             continuousUniform = new ContinuousUniform(-1, 1);
         }
-
         public double InverseCumulativeDistribution(double p)
         {
             return continuousUniform.InverseCumulativeDistribution(p);
@@ -39,7 +38,7 @@ namespace Arta.Math
         public AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
         {
             var dim = artaCorrelationCoefficients.Length;
-            double[] arCorrelationCoefficients = new double[dim];
+            var arCorrelationCoefficients = new double[dim];
             for (var i = 0; i < dim; i++)
             {
                 arCorrelationCoefficients[i] = 2 * System.Math.Sin(System.Math.PI * artaCorrelationCoefficients[i] / 6);

@@ -3,10 +3,9 @@ using MathNet.Numerics.Random;
 
 namespace Arta.Math
 {
-    public class NormalDistribution : IDistribution
+    public class NormalDistribution : IBaseDistribution
     {
-        Normal normal;
-
+        private Normal normal;
 
         public void Handle(ArtaExecutionContext context)
         {

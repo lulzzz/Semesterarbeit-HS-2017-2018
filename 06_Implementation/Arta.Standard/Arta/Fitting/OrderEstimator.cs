@@ -1,7 +1,4 @@
 ﻿using Arta.Math;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Arta.Fitting
 {
@@ -12,8 +9,8 @@ namespace Arta.Fitting
         {
             var significanceLevel = 2 / System.Math.Sqrt(data.Length);
             var order = maxOrder;
-            double[] acfs = AutoCorrelation.CalculateAcfs(data, maxOrder);
-            double[] pacfs = AutoCorrelation.CalculatePacfs(acfs);
+            var acfs = AutoCorrelation.CalculateAcfs(data, maxOrder);
+            var pacfs = AutoCorrelation.CalculatePacfs(acfs);
 
             for (var i = 0; i < maxOrder; i++)
             {

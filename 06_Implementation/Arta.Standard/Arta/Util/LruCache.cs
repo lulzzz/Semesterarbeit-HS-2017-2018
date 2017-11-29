@@ -28,7 +28,7 @@ namespace Arta.Util
         {
             lock (_syncRoot)
             {
-                int count = _dict.Count;                        //O(1)
+                var count = _dict.Count;                        //O(1)
                 if (count == _max)
                 {
                     // cache full, so re-use the oldest node

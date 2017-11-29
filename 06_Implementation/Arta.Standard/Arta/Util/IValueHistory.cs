@@ -1,6 +1,6 @@
 ﻿namespace Arta.Util
 {
-    interface IValueHistory<T>
+    public interface IValueHistory<T>
     {
         T Get(int index);
         void Add(T item);

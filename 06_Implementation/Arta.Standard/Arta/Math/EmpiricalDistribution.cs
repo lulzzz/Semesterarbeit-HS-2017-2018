@@ -7,10 +7,10 @@ namespace Arta.Math
 {
     public class EmpiricalDistribution : ContinuousUniform
     {
-        private  int nPoints;
-        private  double[] points;
-        private  double mean, variance, lowerBound, upperBound;
-        System.Random random;
+        private int nPoints;
+        private double[] points;
+        private double mean, variance, lowerBound, upperBound;
+        Random random;
 
         public EmpiricalDistribution(double[] values)
         {
@@ -27,19 +27,19 @@ namespace Arta.Math
 
         public double InverseCumulativeProbability(double p)
         {
-            if(p <= 0.0 || p >= 1.0)
+            if (p <= 0.0 || p >= 1.0)
             {
-                if(p == 1.0)
+                if (p == 1.0)
                 {
                     return upperBound;
                 }
-                if(p == 0.0)
+                if (p == 0.0)
                 {
                     return lowerBound;
                 }
                 throw new IndexOutOfRangeException("p was out of Range");
             }
-            int index = (int)(p * nPoints);
+            var index = (int)(p * nPoints);
             return points[index];
         }
     }

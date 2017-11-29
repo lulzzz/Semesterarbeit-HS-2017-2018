@@ -6,7 +6,7 @@ namespace Arta.Fitting
     {
         private ArtaCorrelationEstimator artaCorrelationEstimator;
 
-        public AutocorrelationFitter(IDistribution distribution)
+        public AutocorrelationFitter(IBaseDistribution distribution)
         {
             artaCorrelationEstimator = new ArtaCorrelationEstimator(distribution);
         }
@@ -14,7 +14,7 @@ namespace Arta.Fitting
         public double[] FitArAutocorrelations(double[] desiredArtaAutoCorrealtions, double maxError)
         {
             var dim = desiredArtaAutoCorrealtions.Length;
-            double[] maxErrors = new double[dim];
+            var maxErrors = new double[dim];
             for(var i = 0; i < dim; i++)
             {
                 maxErrors[i] = maxError;
@@ -25,7 +25,7 @@ namespace Arta.Fitting
         public double[] FitArAutocorrelations(double[] desiredArtaAutocorrelations, double[] maxErrors)
         {
             var dim = desiredArtaAutocorrelations.Length;
-            double[] result = new double[dim];
+            var result = new double[dim];
             for(var i = 0; i < dim; i++)
             {
                 result[i] = FitArAutocorrelations(desiredArtaAutocorrelations[i], maxErrors[i]);
