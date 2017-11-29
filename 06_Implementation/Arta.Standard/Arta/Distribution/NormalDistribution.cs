@@ -1,42 +1,47 @@
 ﻿using MathNet.Numerics.Distributions;
+using MathNet.Numerics.Random;
 
 namespace Arta.Math
 {
-    public class NormalDistribution : DistributionState
+    public class NormalDistribution : IDistribution
     {
         Normal normal;
 
-      
-        public override void Handle(Context context)
-        {            
+
+        public void Handle(ArtaExecutionContext context)
+        {
             normal = new Normal(0, 1);
         }
 
-        public override double InverseCumulativeDistribution(double p)
+        public double InverseCumulativeDistribution(double p)
         {
             return normal.InverseCumulativeDistribution(p);
         }
 
-        public override double GetLowerBound()
+        public double GetLowerBound()
         {
             throw new System.NotImplementedException();
         }
 
-        public override double GetMean()
+        public double GetMean()
         {
             return normal.Mean;
         }
 
-        public override double GetUpperBound()
+        public double GetUpperBound()
         {
             throw new System.NotImplementedException();
         }
 
-        public override double GetVariance()
+        public double GetVariance()
         {
             return normal.Variance;
         }
 
-  
+        public AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
+        {
+            ArProcess arProcess = ArProcessFactory.CreateArProcess(artaCorrelationCoefficients, random);
+            return new ArtaProcessNormal(arProcess, normal.Mean, normal.Variance);
+        }
     }
 }
