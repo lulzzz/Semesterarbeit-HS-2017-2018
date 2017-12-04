@@ -1,8 +1,6 @@
 ﻿using Arta.Math;
-using MathNet.Numerics.Distributions;
 using StatisticalTests;
 using System;
-using System.Text;
 
 namespace Arta.Executable
 {
@@ -10,7 +8,7 @@ namespace Arta.Executable
     {
         public static void Main(String[] args)
         {           
-            var executionContext = new ArtaExecutionContext(new ExponentialDistribution(), new double[] { -0.4, 0.5 });
+            var executionContext = new ArtaExecutionContext(BaseDistribution.Distribution.ContinousUniformDistribution, new double[] { -0.4, 0.5 });
             var artaProcess = executionContext.CreateArtaProcess();
 
             ArtaStatistics arta = new ArtaStatistics(executionContext).Initialize(10).Iterations(1000).ArtaNumbers().Acfs().Pacfs().Excecute();

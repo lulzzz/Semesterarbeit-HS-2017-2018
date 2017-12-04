@@ -7,7 +7,7 @@ namespace StatisticalTests
     public class ArtaStatistics
     {
         private int lag, iterations, order;
-        private ArtaExecutionContext context;
+        private readonly ArtaExecutionContext context;
         private double[] artaNumbers, pacfs, acfs, correlationCoefficients;
         private bool printOrder, printArtaNumbers, printAcfs, printPacfs;
 
@@ -92,7 +92,7 @@ namespace StatisticalTests
         {
             Console.WriteLine("###############################################\n");
             Console.WriteLine("Arta Numbers: ");
-            foreach(var num in artaNumbers)
+            foreach (var num in artaNumbers)
             {
                 Console.WriteLine(num);
             }
@@ -103,7 +103,7 @@ namespace StatisticalTests
             Console.WriteLine("###############################################\n");
             Console.WriteLine("ARTA-Statistics\n");
             Console.WriteLine("Inputvalues:\n");
-            Console.WriteLine("Distribution: {0}\n" /*Add Context*/);
+            Console.WriteLine("Distribution: {0}\n", context.distribution.ToString());
             Console.WriteLine("Correlationcoefficients: {0}, {1}\n", correlationCoefficients[0], correlationCoefficients[1]);
             Console.WriteLine("Lag: {0}\n", lag);
             Console.WriteLine("Iterations: {0}", iterations);
@@ -123,10 +123,54 @@ namespace StatisticalTests
 
             return this;
         }
-    
+
         void WriteToExcel(string path)
         {
+            /*
+      double[] test = new double[100];
+      ContinuousUniform nDist = new ContinuousUniform(-1, 1);
+      for (int i = 0; i < test.Length; i++)
+      {
+          test[i] = nDist.Sample();
+      }
 
+      StringBuilder distriOut = new StringBuilder();
+      var contPath = @"C:\Users\Philipp\Desktop\DistriARTA.csv";
+      foreach (var coeff in test)
+      {
+          distriOut.Append(coeff + "\n");
+          File.AppendAllText(contPath, distriOut.ToString());
+
+      }
+
+      StringBuilder artaOut = new StringBuilder();
+      var artaPath = @"C:\Users\Philipp\Desktop\outArtaStdCont.csv";
+      foreach (var coeff in data)
+      {
+          artaOut.Append(coeff + "\n");
+          File.AppendAllText(artaPath, artaOut.ToString());
+
+      }
+
+      StringBuilder pacfsOut = new StringBuilder();
+      var artaPacfsPath = @"C:\Users\Philipp\Desktop\PacfsARTAStd.csv";
+      foreach (var coeff in pacfs)
+      {
+          pacfsOut.Append(coeff + "\n");
+          File.AppendAllText(artaPacfsPath, pacfsOut.ToString());
+
+      }
+
+
+      StringBuilder acfsOut = new StringBuilder();
+      var artaAcfsPath = @"C:\Users\Philipp\Desktop\AcfsARTAStd.csv";
+      foreach (var coeff in acfs)
+      {
+          acfsOut.Append(coeff + "\n");
+          File.AppendAllText(artaAcfsPath, acfsOut.ToString());
+
+      }
+      */
         }
     }
 }

@@ -37,5 +37,9 @@ namespace Arta.Math
 
             return new ArtaProcessGeneral(ar, this);
         }
+        public override string ToString()
+        {
+            return " Exponential";
+        }
     }
 }

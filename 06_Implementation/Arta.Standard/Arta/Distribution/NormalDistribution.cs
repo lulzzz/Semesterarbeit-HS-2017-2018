@@ -32,5 +32,9 @@ namespace Arta.Math
             ArProcess arProcess = ArProcessFactory.CreateArProcess(artaCorrelationCoefficients, random);
             return new ArtaProcessNormal(arProcess, normal.Mean, normal.Variance);
         }
+        public override string ToString()
+        {
+            return " Normal";
+        }
     }
 }

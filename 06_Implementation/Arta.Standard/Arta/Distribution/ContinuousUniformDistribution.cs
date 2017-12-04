@@ -37,5 +37,10 @@ namespace Arta.Math
             ArProcess ar = ArProcessFactory.CreateArProcess(arCorrelationCoefficients, random);
             return new ArtaProcessUniform(ar, continuousUniform.LowerBound, continuousUniform.UpperBound);
         }
+
+        public override string ToString()
+        {
+            return " Continuousuniform";
+        }
     }
 }
