@@ -7,10 +7,10 @@ namespace Arta.Math
 {
     public class EmpiricalDistribution : ContinuousUniform
     {
-        private int nPoints;
-        private double[] points;
-        private double mean, variance, lowerBound, upperBound;
-        Random random;
+        private readonly int nPoints;
+        private readonly double[] points;
+        private readonly double mean, variance, lowerBound, upperBound;
+        private readonly Random random;
 
         public EmpiricalDistribution(double[] values)
         {

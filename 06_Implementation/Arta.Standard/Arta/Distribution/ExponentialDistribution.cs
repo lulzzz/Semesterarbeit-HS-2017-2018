@@ -1,11 +1,10 @@
-﻿using MathNet.Numerics.Distributions;
-using System;
+﻿using Arta.Fitting;
+using MathNet.Numerics.Distributions;
 using MathNet.Numerics.Random;
-using Arta.Fitting;
 
 namespace Arta.Math
 {
-    public class ExponentialDistribution : IBaseDistribution
+    public class ExponentialDistribution : BaseDistribution
     {
         private readonly Exponential exponential;
         private const double DefaultError = 0.0001;
@@ -15,22 +14,22 @@ namespace Arta.Math
             exponential = new Exponential(1);
         }
 
-        public double GetMean()
+        public override double GetMean()
         {
             return exponential.Mean;
         }
 
-        public double GetVariance()
+        public override double GetVariance()
         {
             return exponential.Variance;
         }
 
-        public double InverseCumulativeDistribution(double p)
+        public override double InverseCumulativeDistribution(double p)
         {
             return exponential.InverseCumulativeDistribution(p);
         }
 
-        public AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
+        public override AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
         {
             var fitter = new AutocorrelationFitter(this);
             var arCorrelationCOefficients = fitter.FitArAutocorrelations(artaCorrelationCoefficients, DefaultError);

@@ -10,7 +10,7 @@ namespace Arta.Executable
         {
 
 
-            var executionContext = new ArtaExecutionContext(new ExponentialDistribution(), new double[] { -0.4, 0.5 });
+            var executionContext = new ArtaExecutionContext(BaseDistribution.Distribution.NormalDistribution , new double[] { -0.4, 0.5 });
             var artaProcess = executionContext.CreateArtaProcess();
 
 

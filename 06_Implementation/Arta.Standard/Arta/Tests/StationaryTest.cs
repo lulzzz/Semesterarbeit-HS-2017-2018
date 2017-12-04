@@ -1,6 +1,6 @@
 ﻿namespace Arta.Tests
 {
-    class StationaryTest
+    public static class StationaryTest
     {
         public static bool IsStationary(double[] alphas)
         {

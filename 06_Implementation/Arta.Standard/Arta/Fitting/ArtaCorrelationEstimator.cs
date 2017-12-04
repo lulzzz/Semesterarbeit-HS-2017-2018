@@ -4,7 +4,7 @@ using MathNet.Numerics.Distributions;
 
 namespace Arta.Fitting
 {
-    class ArtaCorrelationEstimator
+    public class ArtaCorrelationEstimator
     {
         /** Abscissae used for the Gauss and Kronrod weights in interval -1.0 to 1.0 */
         private readonly double[] abscissae =  { 0.991455371120812639206854697526329,
@@ -58,7 +58,7 @@ namespace Arta.Fitting
                                                    0.0};
 
         private readonly Normal standardNormal = new Normal();
-        private readonly IBaseDistribution distribution;
+        private readonly BaseDistribution distribution;
 
         private const double Tolerance_Outer = 0.00001;
         private const double Tolerance_Inner = 0.00005;
@@ -66,7 +66,7 @@ namespace Arta.Fitting
         private LruCache<double, double> estimationsCache = new LruCache<double, double>(100);
         private LruCache<double, double> transformationCache = new LruCache<double, double>(1000);
 
-        public ArtaCorrelationEstimator(IBaseDistribution distribution)
+        public ArtaCorrelationEstimator(BaseDistribution distribution)
         {
             this.distribution = distribution;
         }

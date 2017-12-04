@@ -3,41 +3,31 @@ using MathNet.Numerics.Random;
 
 namespace Arta.Math
 {
-    public class NormalDistribution : IBaseDistribution
+    public class NormalDistribution : BaseDistribution
     {
-        private Normal normal;
+        private readonly Normal normal;
 
-        public void Handle(ArtaExecutionContext context)
+        public NormalDistribution()
         {
             normal = new Normal(0, 1);
         }
 
-        public double InverseCumulativeDistribution(double p)
+        public override double InverseCumulativeDistribution(double p)
         {
             return normal.InverseCumulativeDistribution(p);
         }
 
-        public double GetLowerBound()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public double GetMean()
+        public override double GetMean()
         {
             return normal.Mean;
         }
 
-        public double GetUpperBound()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public double GetVariance()
+        public override double GetVariance()
         {
             return normal.Variance;
         }
 
-        public AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
+        public override AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
         {
             ArProcess arProcess = ArProcessFactory.CreateArProcess(artaCorrelationCoefficients, random);
             return new ArtaProcessNormal(arProcess, normal.Mean, normal.Variance);

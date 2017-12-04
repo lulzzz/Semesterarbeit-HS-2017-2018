@@ -5,12 +5,12 @@ namespace Arta.Math
     public class ArtaExecutionContext
     {
         public IArtaProcess Arta { get; set; }
-        public IBaseDistribution State { get; set; }
+        public BaseDistribution distribution { get; set; }
         public double[] ArtaCorrelationCoefficients { get; set; }
 
-        public ArtaExecutionContext(IBaseDistribution state, double[] artaCorrelationCoefficients)
+        public ArtaExecutionContext(BaseDistribution.Distribution distribution, double[] artaCorrelationCoefficients)
         {
-            State = state;
+            this.distribution = DistributionFactory.CreateDistribution(distribution);
             ArtaCorrelationCoefficients = artaCorrelationCoefficients;
         }
 
@@ -21,10 +21,10 @@ namespace Arta.Math
                 ArtaCorrelationCoefficients = new double[] { 0.0 };
             }
             AutoCorrelation.GetCorrelationMatrix(ArtaCorrelationCoefficients).Cholesky();
-            return State.CreateArtaProcess(ArtaCorrelationCoefficients, new MersenneTwister());
+            return distribution.CreateArtaProcess(ArtaCorrelationCoefficients, new MersenneTwister());
         }
 
-
+   
 
 
     }

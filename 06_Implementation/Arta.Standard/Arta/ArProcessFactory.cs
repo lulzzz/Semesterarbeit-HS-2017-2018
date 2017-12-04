@@ -2,15 +2,12 @@
 using Arta.Tests;
 using MathNet.Numerics.Distributions;
 using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Factorization;
 using MathNet.Numerics.Random;
-using System;
 
 namespace Arta
 {
-    class ArProcessFactory
+    public class ArProcessFactory
     {
-        private static Cholesky<Double> cholesky;
         private ArProcessFactory() { }
 
         public static ArProcess CreateArProcess(double[] arAutocorrelations)

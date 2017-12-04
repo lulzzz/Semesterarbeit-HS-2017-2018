@@ -3703,7 +3703,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Delay\\.nuget\\packages\\": {},
+    "C:\\Users\\adelay\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -3712,17 +3712,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
+      "projectUniqueName": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
       "projectName": "StatisticalTests",
-      "projectPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
-      "packagesPath": "C:\\Users\\Delay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\obj\\",
+      "projectPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
+      "packagesPath": "C:\\Users\\adelay\\.nuget\\packages\\",
+      "outputPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Delay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\adelay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

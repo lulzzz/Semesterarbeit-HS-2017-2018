@@ -2,11 +2,11 @@
 
 namespace Arta.Fitting
 {
-    class AutocorrelationFitter
+    public class AutocorrelationFitter
     {
         private ArtaCorrelationEstimator artaCorrelationEstimator;
 
-        public AutocorrelationFitter(IBaseDistribution distribution)
+        public AutocorrelationFitter(BaseDistribution distribution)
         {
             artaCorrelationEstimator = new ArtaCorrelationEstimator(distribution);
         }

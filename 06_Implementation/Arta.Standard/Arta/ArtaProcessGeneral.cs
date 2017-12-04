@@ -4,9 +4,9 @@ namespace Arta
 {
     class ArtaProcessGeneral : AbstractArtaProcess
     {
-        private Math.IBaseDistribution distribution;
+        private Math.BaseDistribution distribution;
         private readonly Normal normal = new Normal();
-        public ArtaProcessGeneral(ArProcess ar, Math.IBaseDistribution distribution) : base(ar)
+        public ArtaProcessGeneral(ArProcess ar, Math.BaseDistribution distribution) : base(ar)
         {
             this.distribution = distribution;
         }
