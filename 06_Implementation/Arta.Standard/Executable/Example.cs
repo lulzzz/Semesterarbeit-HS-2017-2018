@@ -1,55 +1,21 @@
-﻿using Arta.Fitting;
-using Arta.Math;
+﻿using Arta.Math;
+using MathNet.Numerics.Distributions;
+using StatisticalTests;
 using System;
+using System.Text;
 
 namespace Arta.Executable
 {
     class Example
     {
         public static void Main(String[] args)
-        {
-
-
+        {           
             var executionContext = new ArtaExecutionContext(new ExponentialDistribution(), new double[] { -0.4, 0.5 });
             var artaProcess = executionContext.CreateArtaProcess();
 
-
-
-
-            double[] data = new double[10000];
-            for (int i = 0; i < data.Length; i++)
-            {
-                data[i] = artaProcess.Next();
-            }
-
-            int maxLag = 10;
-            double[] acfs = AutoCorrelation.CalculateAcfs(data, maxLag);
-            double[] pacfs = AutoCorrelation.CalculatePacfs(acfs);
-
-            Console.WriteLine("#########################");
-            Console.WriteLine("ACFS");
-            foreach (double d in acfs)
-            {
-                Console.WriteLine(d.ToString());
-            }
-            Console.WriteLine('\n');
-
-            Console.WriteLine("#########################");
-            Console.WriteLine("PACFS");
-            foreach (double d in pacfs)
-            {
-                Console.WriteLine(d);
-            }
-            Console.WriteLine('\n');
-
-            Console.WriteLine("#########################");
-            Console.WriteLine("Order");
-            Console.WriteLine(OrderEstimator.EstimateOrder(data, maxLag));
-
+            ArtaStatistics arta = new ArtaStatistics(executionContext).Initialize(10).Iterations(1000).ArtaNumbers().Acfs().Pacfs().Excecute();
+          
             /*
-            Console.WriteLine(executionContext.State.GetMean());
-
-
             double[] test = new double[100];
             ContinuousUniform nDist = new ContinuousUniform(-1, 1);
             for (int i = 0; i < test.Length; i++)
@@ -94,6 +60,8 @@ namespace Arta.Executable
 
             }
             */
+
+
             Console.ReadKey();
         }
     }

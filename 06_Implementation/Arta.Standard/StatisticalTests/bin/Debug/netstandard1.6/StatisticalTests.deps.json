@@ -7,13 +7,13 @@
   "targets": {
     ".NETStandard,Version=v1.6": {},
     ".NETStandard,Version=v1.6/": {
-      "arta/1.0.0": {
+      "statisticaltests/1.0.0": {
         "dependencies": {
-          "MathNet.Numerics.Core": "3.17.0",
+          "Arta": "1.0.0",
           "NETStandard.Library": "1.6.1"
         },
         "runtime": {
-          "Arta.dll": {}
+          "StatisticalTests.dll": {}
         }
       },
       "mathnet.numerics.core/3.17.0": {
@@ -802,11 +802,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "arta/1.0.0": {
+        "dependencies": {
+          "MathNet.Numerics.Core": "3.17.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "Arta.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "arta/1.0.0": {
+    "statisticaltests/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1342,6 +1351,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "arta/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
