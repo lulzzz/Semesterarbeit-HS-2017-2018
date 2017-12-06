@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Simio
 {
-    class ArtaDistributionProperty : IProperty
+    class ArtaExecutionProperty : IProperty
     {
-        public string Name => throw new NotImplementedException();
+        string _value;
+        public string Name => "ArtaExecutionProperty";
 
-        public string Value { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Value { get { return _value; } set { _value = value; } }
 
         public IUnitBase Unit => throw new NotImplementedException();
     }

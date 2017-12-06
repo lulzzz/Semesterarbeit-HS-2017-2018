@@ -8,8 +8,8 @@ namespace StatisticalTests
     {
         private int lag, iterations, order;
         private readonly ArtaExecutionContext context;
-        private double[] artaNumbers, pacfs, acfs, correlationCoefficients;
-        private bool printOrder, printArtaNumbers, printAcfs, printPacfs;
+        private double[] artaNumbers, pacfs, acfs, correlationCoefficients, arNumbers;
+        private bool printOrder, printArtaNumbers, printAcfs, printPacfs, printCorrelationmatrix, printArnumbers;
 
         public ArtaStatistics(ArtaExecutionContext context)
         {
@@ -62,6 +62,23 @@ namespace StatisticalTests
             return this;
         }
 
+        public ArtaStatistics ArNumbers()
+        {
+            var artaProcess = context.CreateArtaProcess();
+            arNumbers = new double[iterations];
+            for(int i = 0; i < iterations; i++)
+            {
+                arNumbers[i] = artaProcess.GetArProcess().Next();
+            }
+            return this;
+        }
+
+        public ArtaStatistics CorrelationMatrix()
+        {
+            AutoCorrelation.GetCorrelationMatrix(context.ArtaCorrelationCoefficients);
+            return this;
+        }
+
         public void PrintAcfs()
         {
             Console.WriteLine("###############################################\n");
@@ -98,6 +115,16 @@ namespace StatisticalTests
             }
         }
 
+        public void PrintArnumbers()
+        {
+            Console.WriteLine("###############################################\n");
+            Console.WriteLine("AR Numbers: ");
+            foreach (var num in arNumbers)
+            {
+                Console.WriteLine(num);
+            }
+        }
+
         public void PrintBasicInformation()
         {
             Console.WriteLine("###############################################\n");
@@ -120,12 +147,27 @@ namespace StatisticalTests
                 PrintOrder();
             if (printArtaNumbers)
                 PrintArtanumbers();
+            if (printArnumbers)
+                PrintArnumbers();
 
             return this;
         }
 
         void WriteToExcel(string path)
         {
+            /*
+            Microsoft.Office.Interop.Excel._Workbook workbook;
+            Microsoft.Office.Interop.Excel._Worksheet sheet;
+            Microsoft.Office.Interop.Excel.Range range;
+            object misvalue = System.Reflection.Missing.Value;
+
+            sheet.Cells.Value = "blabla";
+
+            sheet.Cells[1, 1] = "ArtaStatistics - Report";
+            sheet.Cells[1, 2] = "Datum: " + DateTime.Now;
+            */
+
+        }
             /*
       double[] test = new double[100];
       ContinuousUniform nDist = new ContinuousUniform(-1, 1);
@@ -171,6 +213,6 @@ namespace StatisticalTests
 
       }
       */
-        }
+        
     }
 }

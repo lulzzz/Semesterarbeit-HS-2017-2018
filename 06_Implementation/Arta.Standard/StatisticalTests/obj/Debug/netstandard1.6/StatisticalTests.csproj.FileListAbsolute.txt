@@ -7,3 +7,8 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.AssemblyInfo.cs
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.dll
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.6\Interop.Microsoft.Office.Core.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.6\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\Interop.Microsoft.Office.Core.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.csproj.ResolveComReference.cache

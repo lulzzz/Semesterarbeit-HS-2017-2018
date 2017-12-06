@@ -7,3 +7,11 @@
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\obj\Debug\Arta.Simio.dll
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\obj\Debug\Arta.Simio.pdb
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\obj\Debug\Arta.Simio.csprojResolveAssemblyReference.cache
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\bin\Debug\Arta.Simio.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\bin\Debug\Arta.Simio.pdb
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\bin\Debug\SimioAPI.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\bin\Debug\SimioAPI.Extensions.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\bin\Debug\SimioAPI.Graphics.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\obj\Debug\Arta.Simio.csprojResolveAssemblyReference.cache
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\obj\Debug\Arta.Simio.dll
+C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\05_Prototyp\Arta.Simio\Arta.Simio\obj\Debug\Arta.Simio.pdb

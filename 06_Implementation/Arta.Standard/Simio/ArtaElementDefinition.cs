@@ -41,7 +41,9 @@ namespace Simio
         public void DefineSchema(IElementSchema schema)
         {
             IPropertyDefinition pd;
-            
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.0);
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.0);
+
         }
     }
 }
