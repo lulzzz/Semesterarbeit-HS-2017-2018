@@ -24,15 +24,15 @@ namespace Simio
             coefficient2 = corr2.GetDoubleValue(_data.ExecutionContext);
 
             artaExecution = (IProperty)_data.Properties.GetProperty("ArtaExecutionProperty");
+         
             
-
 
 
         }
 
         public void Initialize()
         {
-            artaExecution.Value = artaExecutionContext.ArtaProcess.Next().ToString();
+            
         }
 
         public void Shutdown()
@@ -54,5 +54,5 @@ namespace Simio
         public IUnitBase Unit => throw new NotImplementedException();
     }
 
-
+   
 }

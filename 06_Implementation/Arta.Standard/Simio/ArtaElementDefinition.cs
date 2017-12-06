@@ -1,4 +1,5 @@
-﻿using SimioAPI;
+﻿using Arta.Math;
+using SimioAPI;
 using SimioAPI.Extensions;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace Simio
     public class ArtaElementDefinition : IElementDefinition
     {
         public static readonly Guid MY_ID = new Guid("{48A1ECB4-DE39-4265-ABD9-66D56B4A70F6}");
+       
 
         public string Name
         {
@@ -46,6 +48,17 @@ namespace Simio
 
             pd = schema.PropertyDefinitions.AddRealProperty("ArtaExecutionProperty", 1.0);
 
+            schema.ElementFunctions.AddSimpleRealNumberFunction("ARTAfunky", "funk funk funk", new SimioSimpleRealNumberFunc(FUCKINGAWESOMEDELEGATE));
+       
+        }
+
+        private static double FUCKINGAWESOMEDELEGATE(object element)
+        {
+            ArtaExecutionContext artaExecutionContext = new ArtaExecutionContext(BaseDistribution.Distribution.ExponentialDistribution, new double[] { 0.1, 0.2 });
+            
+            return artaExecutionContext.ArtaProcess.Next();
         }
     }
+
+  
 }
