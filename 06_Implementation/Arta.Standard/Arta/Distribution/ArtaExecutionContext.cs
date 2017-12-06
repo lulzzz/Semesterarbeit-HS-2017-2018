@@ -4,17 +4,19 @@ namespace Arta.Math
 {
     public class ArtaExecutionContext
     {
-        public IArtaProcess Arta { get; set; }
-        public BaseDistribution distribution { get; set; }
+        public IArtaProcess ArtaProcess { get; private set; }
+        public BaseDistribution distribution { get; private set; }
         public double[] ArtaCorrelationCoefficients { get; set; }
+
 
         public ArtaExecutionContext(BaseDistribution.Distribution distribution, double[] artaCorrelationCoefficients)
         {
             this.distribution = DistributionFactory.CreateDistribution(distribution);
             ArtaCorrelationCoefficients = artaCorrelationCoefficients;
+            ArtaProcess = CreateArtaProcess();
         }
 
-        public IArtaProcess CreateArtaProcess()
+        private IArtaProcess CreateArtaProcess()
         {
             if (ArtaCorrelationCoefficients == null)
             {
@@ -24,7 +26,7 @@ namespace Arta.Math
             return distribution.CreateArtaProcess(ArtaCorrelationCoefficients, new MersenneTwister());
         }
 
-   
+
 
 
     }

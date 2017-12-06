@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Simio
 {
-    class ArtaElementDefinition : IElementDefinition
+    public class ArtaElementDefinition : IElementDefinition
     {
         public static readonly Guid MY_ID = new Guid("{48A1ECB4-DE39-4265-ABD9-66D56B4A70F6}");
 
@@ -41,8 +41,10 @@ namespace Simio
         public void DefineSchema(IElementSchema schema)
         {
             IPropertyDefinition pd;
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.0);
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.0);
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.3);
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.4);
+
+            pd = schema.PropertyDefinitions.AddRealProperty("ArtaExecutionProperty", 1.0);
 
         }
     }

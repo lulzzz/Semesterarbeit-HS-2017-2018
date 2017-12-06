@@ -11,15 +11,15 @@ namespace Arta.Executable
     {
         public static void Main(String[] args)
         {           
-            var executionContext = new ArtaExecutionContext(BaseDistribution.Distribution.ContinousUniformDistribution, new double[] { -0.4, 0.5 });
-            var artaProcess = executionContext.CreateArtaProcess();
+            var executionContext = new ArtaExecutionContext(BaseDistribution.Distribution.ExponentialDistribution, new double[] { 0, 0 });
+          
 
-            //ArtaStatistics arta = new ArtaStatistics(executionContext).Initialize(10).Iterations(1000).ArtaNumbers().Acfs().Pacfs().Excecute();
-
+            ArtaStatistics arta = new ArtaStatistics(executionContext).Initialize(10).Iterations(1000).ArtaNumbers().Acfs().Pacfs().Excecute();
+/*
             double[] arNumbers = new double[1500];
             for(int i = 0; i < arNumbers.Length; i++)
             {
-                arNumbers[i] = artaProcess.GetArProcess().Next();
+                arNumbers[i] = executionContext.ArtaProcess.GetArProcess().Next();
             }
 
 
@@ -28,7 +28,7 @@ namespace Arta.Executable
             double[] artaNumbers = new double[1500];
             for (int i = 0; i < artaNumbers.Length; i++)
             {
-                artaNumbers[i] = artaProcess.Next();
+                artaNumbers[i] = executionContext.ArtaProcess.Next();
             }
 
             double[] test = new double[100];
@@ -82,7 +82,7 @@ namespace Arta.Executable
             }
             File.AppendAllText(artaAcfsPath, acfsOut.ToString());
             Console.WriteLine(nDist.Variance);
-
+*/
             Console.ReadKey();
         }
     }
