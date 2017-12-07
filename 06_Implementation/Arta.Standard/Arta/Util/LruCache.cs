@@ -19,8 +19,8 @@ namespace Arta.Util
             lock (_syncRoot)
             {
                 CheckCapacity();
-                _queue.AddLast(key);                            //O(1)
-                _dict[key] = value;                             //O(1)
+                _queue.AddLast(key);                            
+                _dict[key] = value;                          
             }
         }
 
@@ -28,13 +28,12 @@ namespace Arta.Util
         {
             lock (_syncRoot)
             {
-                var count = _dict.Count;                        //O(1)
+                var count = _dict.Count;                        
                 if (count == _max)
                 {
-                    // cache full, so re-use the oldest node
                     var node = _queue.First;
-                    _dict.Remove(node.Value);                   //O(1)
-                    _queue.RemoveFirst();                       //O(1)
+                    _dict.Remove(node.Value);                  
+                    _queue.RemoveFirst();                       
                 }
             }
         }
@@ -43,8 +42,8 @@ namespace Arta.Util
         {
             lock (_syncRoot)
             {
-                _dict.Remove(key);                              //O(1)
-                _queue.Remove(key);                             //O(n)
+                _dict.Remove(key);                              
+                _queue.Remove(key);                             
             }
         }
 
@@ -53,10 +52,10 @@ namespace Arta.Util
             lock (_syncRoot)
             {
                 V ret;
-                if (_dict.TryGetValue(key, out ret))            //O(1)
+                if (_dict.TryGetValue(key, out ret))         
                 {
-                    _queue.Remove(key);                         //O(n)
-                    _queue.AddLast(key);                        //O(1)
+                    _queue.Remove(key);                         
+                    _queue.AddLast(key);                       
                 }
                 return ret;
             }

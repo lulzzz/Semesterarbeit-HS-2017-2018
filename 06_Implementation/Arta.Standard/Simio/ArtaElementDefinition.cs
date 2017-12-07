@@ -1,19 +1,15 @@
-﻿using Arta.Math;
+﻿using Arta.Distribution;
+using Arta.Math;
 using SimioAPI;
 using SimioAPI.Extensions;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Simio
 {
     public class ArtaElementDefinition : IElementDefinition
     {
         public static readonly Guid MY_ID = new Guid("{48A1ECB4-DE39-4265-ABD9-66D56B4A70F6}");
-       
 
         public string Name
         {
@@ -43,19 +39,14 @@ namespace Simio
         public void DefineSchema(IElementSchema schema)
         {
             IPropertyDefinition pd;
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.3);
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.4);
-
-            pd = schema.PropertyDefinitions.AddRealProperty("ArtaExecutionProperty", 1.0);
-
-            schema.ElementFunctions.AddSimpleRealNumberFunction("ARTAfunky", "funk funk funk", new SimioSimpleRealNumberFunc(FUCKINGAWESOMEDELEGATE));
-       
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.0);
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.0);
+            schema.ElementFunctions.AddSimpleRealNumberFunction("ARTAfunky", "funk funk funk", new SimioSimpleRealNumberFunc(FUCKINGAWESOMEDELEGATE));  
         }
 
         private static double FUCKINGAWESOMEDELEGATE(object element)
         {
             ArtaExecutionContext artaExecutionContext = new ArtaExecutionContext(BaseDistribution.Distribution.ExponentialDistribution, new double[] { 0.1, 0.2 });
-            
             return artaExecutionContext.ArtaProcess.Next();
         }
     }

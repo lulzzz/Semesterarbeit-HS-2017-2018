@@ -1,6 +1,7 @@
-﻿using MathNet.Numerics.Random;
+﻿using Arta.Math;
+using MathNet.Numerics.Random;
 
-namespace Arta.Math
+namespace Arta.Distribution
 {
     public class ArtaExecutionContext
     {
@@ -25,9 +26,5 @@ namespace Arta.Math
             AutoCorrelation.GetCorrelationMatrix(ArtaCorrelationCoefficients).Cholesky();
             return distribution.CreateArtaProcess(ArtaCorrelationCoefficients, new MersenneTwister());
         }
-
-
-
-
     }
 }

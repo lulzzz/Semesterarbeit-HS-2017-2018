@@ -1,8 +1,7 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\adelay\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\adelay\\.nuget\\packages"
+      "C:\\Users\\pbuetiko\\.nuget\\packages"
     ]
   }
 }

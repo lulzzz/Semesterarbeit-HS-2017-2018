@@ -4,6 +4,7 @@ using StatisticalTests;
 using System;
 using System.IO;
 using System.Text;
+using Arta.Distribution;
 
 namespace Arta.Executable
 {

@@ -1,4 +1,5 @@
-﻿using Arta.Math;
+﻿using Arta.Fitting;
+using Arta.Math;
 using System;
 
 namespace StatisticalTests

@@ -1,6 +1,8 @@
 ﻿using Arta.Fitting;
 using Arta.Math;
+using MathNet.Numerics.LinearAlgebra;
 using System;
+using Arta.Distribution;
 
 namespace StatisticalTests
 {
@@ -8,6 +10,7 @@ namespace StatisticalTests
     {
         private int lag, iterations, order;
         private readonly ArtaExecutionContext context;
+        private Matrix<double> corrMatrix;
         private double[] artaNumbers, pacfs, acfs, correlationCoefficients, arNumbers;
         private bool printOrder, printArtaNumbers, printAcfs, printPacfs, printCorrelationmatrix, printArnumbers;
 
@@ -75,7 +78,9 @@ namespace StatisticalTests
 
         public ArtaStatistics CorrelationMatrix()
         {
-            AutoCorrelation.GetCorrelationMatrix(context.ArtaCorrelationCoefficients);
+
+            corrMatrix = AutoCorrelation.GetCorrelationMatrix(context.ArtaCorrelationCoefficients);
+            printCorrelationmatrix = true;
             return this;
         }
 
@@ -118,11 +123,18 @@ namespace StatisticalTests
         public void PrintArnumbers()
         {
             Console.WriteLine("###############################################\n");
-            Console.WriteLine("AR Numbers: ");
-            foreach (var num in arNumbers)
+            Console.WriteLine("Arta Numbers: ");
+            foreach (var num in artaNumbers)
             {
                 Console.WriteLine(num);
             }
+        }
+
+        public void PrintCorrelationmatrix()
+        {
+            Console.WriteLine("###############################################\n");
+            Console.WriteLine("Correlationmatrix");
+            Console.WriteLine(corrMatrix.ToMatrixString());
         }
 
         public void PrintBasicInformation()
@@ -149,6 +161,8 @@ namespace StatisticalTests
                 PrintArtanumbers();
             if (printArnumbers)
                 PrintArnumbers();
+            if (printCorrelationmatrix)
+                PrintCorrelationmatrix();
 
             return this;
         }
@@ -168,51 +182,5 @@ namespace StatisticalTests
             */
 
         }
-            /*
-      double[] test = new double[100];
-      ContinuousUniform nDist = new ContinuousUniform(-1, 1);
-      for (int i = 0; i < test.Length; i++)
-      {
-          test[i] = nDist.Sample();
-      }
-
-      StringBuilder distriOut = new StringBuilder();
-      var contPath = @"C:\Users\Philipp\Desktop\DistriARTA.csv";
-      foreach (var coeff in test)
-      {
-          distriOut.Append(coeff + "\n");
-          File.AppendAllText(contPath, distriOut.ToString());
-
-      }
-
-      StringBuilder artaOut = new StringBuilder();
-      var artaPath = @"C:\Users\Philipp\Desktop\outArtaStdCont.csv";
-      foreach (var coeff in data)
-      {
-          artaOut.Append(coeff + "\n");
-          File.AppendAllText(artaPath, artaOut.ToString());
-
-      }
-
-      StringBuilder pacfsOut = new StringBuilder();
-      var artaPacfsPath = @"C:\Users\Philipp\Desktop\PacfsARTAStd.csv";
-      foreach (var coeff in pacfs)
-      {
-          pacfsOut.Append(coeff + "\n");
-          File.AppendAllText(artaPacfsPath, pacfsOut.ToString());
-
-      }
-
-
-      StringBuilder acfsOut = new StringBuilder();
-      var artaAcfsPath = @"C:\Users\Philipp\Desktop\AcfsARTAStd.csv";
-      foreach (var coeff in acfs)
-      {
-          acfsOut.Append(coeff + "\n");
-          File.AppendAllText(artaAcfsPath, acfsOut.ToString());
-
-      }
-      */
-        
     }
 }
