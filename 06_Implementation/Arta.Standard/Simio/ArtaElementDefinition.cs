@@ -1,4 +1,5 @@
-﻿using Arta.Distribution;
+﻿using Arta;
+using Arta.Distribution;
 using Arta.Math;
 using SimioAPI;
 using SimioAPI.Extensions;

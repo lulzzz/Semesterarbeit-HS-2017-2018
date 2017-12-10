@@ -1,7 +1,8 @@
-﻿using Arta.Math;
+﻿using Arta.Distribution;
+using Arta.Math;
 using MathNet.Numerics.Random;
 
-namespace Arta.Distribution
+namespace Arta
 {
     public class ArtaExecutionContext
     {

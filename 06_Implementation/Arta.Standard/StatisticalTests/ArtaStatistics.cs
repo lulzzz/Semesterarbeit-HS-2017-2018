@@ -1,4 +1,4 @@
-﻿using Arta.Distribution;
+﻿using Arta;
 using Arta.Fitting;
 using Arta.Math;
 using System;

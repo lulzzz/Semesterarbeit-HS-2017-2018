@@ -1,4 +1,5 @@
-﻿using Arta.Math;
+﻿using Arta.Distribution;
+using Arta.Math;
 using Arta.Util;
 using MathNet.Numerics.Distributions;
 

@@ -1,7 +1,7 @@
 ﻿using MathNet.Numerics.Distributions;
 using MathNet.Numerics.Random;
 
-namespace Arta.Math
+namespace Arta.Distribution
 {
     public class NormalDistribution : BaseDistribution
     {

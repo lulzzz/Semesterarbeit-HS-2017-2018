@@ -1,7 +1,7 @@
 ﻿using Arta.Math;
 using System;
 
-namespace Arta
+namespace Arta.Distribution
 {
     public static class DistributionFactory
     {

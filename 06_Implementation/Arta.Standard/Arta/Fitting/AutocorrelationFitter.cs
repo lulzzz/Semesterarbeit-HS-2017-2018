@@ -1,4 +1,4 @@
-﻿using Arta.Math;
+﻿using Arta.Distribution;
 
 namespace Arta.Fitting
 {

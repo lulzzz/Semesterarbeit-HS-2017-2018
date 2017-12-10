@@ -1,12 +1,13 @@
-﻿using MathNet.Numerics.Distributions;
+﻿using Arta.Distribution;
+using MathNet.Numerics.Distributions;
 
 namespace Arta
 {
     class ArtaProcessGeneral : AbstractArtaProcess
     {
-        private Math.BaseDistribution distribution;
+        private BaseDistribution distribution;
         private readonly Normal normal = new Normal();
-        public ArtaProcessGeneral(ArProcess ar, Math.BaseDistribution distribution) : base(ar)
+        public ArtaProcessGeneral(ArProcess ar, BaseDistribution distribution) : base(ar)
         {
             this.distribution = distribution;
         }

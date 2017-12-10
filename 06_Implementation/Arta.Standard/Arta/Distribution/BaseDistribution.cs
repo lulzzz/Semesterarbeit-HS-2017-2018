@@ -1,6 +1,6 @@
 ﻿using MathNet.Numerics.Random;
 
-namespace Arta.Math
+namespace Arta.Distribution
 {
     public abstract class BaseDistribution
     {
