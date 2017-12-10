@@ -1,4 +1,5 @@
-﻿using Arta.Fitting;
+﻿using Arta.Distribution;
+using Arta.Fitting;
 using Arta.Math;
 using System;
 
@@ -52,11 +53,10 @@ namespace StatisticalTests
 
         public ArtaStatistics ArtaNumbers()
         {
-            var artaProcess = context.CreateArtaProcess();
             artaNumbers = new double[iterations];
             for (int i = 0; i < iterations; i++)
             {
-                artaNumbers[i] = artaProcess.Next();
+                artaNumbers[i] = context.ArtaProcess.Next();
             }
             printArtaNumbers = true;
             return this;
@@ -64,11 +64,11 @@ namespace StatisticalTests
 
         public ArtaStatistics ArNumbers()
         {
-            var artaProcess = context.CreateArtaProcess();
+            
             arNumbers = new double[iterations];
             for(int i = 0; i < iterations; i++)
             {
-                arNumbers[i] = artaProcess.GetArProcess().Next();
+                arNumbers[i] = context.ArtaProcess.Next();
             }
             return this;
         }

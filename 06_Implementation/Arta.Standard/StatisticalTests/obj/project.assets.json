@@ -4549,7 +4549,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pbuetiko\\.nuget\\packages\\": {}
+    "C:\\Users\\Delay\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4557,14 +4558,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
+      "projectUniqueName": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
       "projectName": "StatisticalTests",
-      "projectPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
-      "packagesPath": "C:\\Users\\pbuetiko\\.nuget\\packages\\",
-      "outputPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\obj\\",
+      "projectPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\StatisticalTests.csproj",
+      "packagesPath": "C:\\Users\\Delay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\StatisticalTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\pbuetiko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Delay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4577,11 +4581,16 @@
       "frameworks": {
         "netstandard1.6": {
           "projectReferences": {
-            "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj": {
-              "projectPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj"
+            "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj": {
+              "projectPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {

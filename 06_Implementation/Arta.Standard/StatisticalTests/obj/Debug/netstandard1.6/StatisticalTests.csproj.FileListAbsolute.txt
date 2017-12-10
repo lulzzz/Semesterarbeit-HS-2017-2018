@@ -22,3 +22,14 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.csproj.ResolveComReference.cache
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.csproj.CoreCompileInputs.cache
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.AssemblyInfo.cs
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.csprojResolveAssemblyReference.cache
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.csproj.CoreCompileInputs.cache
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.AssemblyInfoInputs.cache
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.AssemblyInfo.cs
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.6\StatisticalTests.deps.json
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.6\StatisticalTests.dll
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.6\StatisticalTests.pdb
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.6\Arta.dll
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\bin\Debug\netstandard1.6\Arta.pdb
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.dll
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\StatisticalTests\obj\Debug\netstandard1.6\StatisticalTests.pdb

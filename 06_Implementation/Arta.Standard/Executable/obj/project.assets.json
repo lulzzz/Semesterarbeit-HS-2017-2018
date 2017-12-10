@@ -2496,7 +2496,7 @@
       ]
     },
     "Microsoft.NETCore.App/1.1.2": {
-      "sha512": "TUPK1xhef7WcbsIkhfZOz6J7DrG5aebjVRBswPfHe90eDhfnlWHaLiI1OtMB2O78bf5d37WO6ge+9nel2keKkA==",
+      "sha512": "fcN0Ob6rjY7Zu0770cA5l9wRJvj7+ltJPPdryUidejkkhao+y2AYrtezBTlP9nCSFXLmYR9BtaknORT17x8reA==",
       "type": "package",
       "path": "microsoft.netcore.app/1.1.2",
       "files": [
@@ -2520,7 +2520,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetHostPolicy/1.1.2": {
-      "sha512": "fD2UWfXXY+FgPWVqvpNo2/d7b/LHYl1/aepVimYYkVsuF4CczP8hgCJIlKiUbWF/d98xCMtz7bbuv6LkGfdfeQ==",
+      "sha512": "nes7MaBG1zWz44m+zR4SDiOVmpCFiY49BcJGRaIO0TqjsLZmuUQVXEGcNZFlme95dlaki9QYJr4FK5NKNlPA6Q==",
       "type": "package",
       "path": "microsoft.netcore.dotnethostpolicy/1.1.2",
       "files": [
@@ -7185,7 +7185,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pbuetiko\\.nuget\\packages\\": {}
+    "C:\\Users\\Delay\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7193,14 +7193,14 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Executable\\Executable.csproj",
+      "projectUniqueName": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Executable\\Executable.csproj",
       "projectName": "Executable",
-      "projectPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Executable\\Executable.csproj",
-      "packagesPath": "C:\\Users\\pbuetiko\\.nuget\\packages\\",
-      "outputPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Executable\\obj\\",
+      "projectPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Executable\\Executable.csproj",
+      "packagesPath": "C:\\Users\\Delay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Executable\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pbuetiko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Delay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7208,16 +7208,22 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj": {
-              "projectPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj"
+            "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj": {
+              "projectPath": "C:\\Users\\Delay\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {

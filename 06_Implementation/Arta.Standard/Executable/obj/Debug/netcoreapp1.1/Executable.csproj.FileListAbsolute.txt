@@ -36,3 +36,16 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.AssemblyInfo.cs
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.dll
 \\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.pdb
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.deps.json
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.runtimeconfig.json
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.runtimeconfig.dev.json
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.dll
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Executable.pdb
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Arta.dll
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\bin\Debug\netcoreapp1.1\Arta.pdb
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.csprojResolveAssemblyReference.cache
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.csproj.CoreCompileInputs.cache
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.AssemblyInfoInputs.cache
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.AssemblyInfo.cs
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.dll
+C:\Users\Delay\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Executable\obj\Debug\netcoreapp1.1\Executable.pdb
