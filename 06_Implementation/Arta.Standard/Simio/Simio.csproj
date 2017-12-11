@@ -59,6 +59,7 @@
     <Compile Include="ArtaElementDefinition.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAddin.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Arta\Arta.csproj">
