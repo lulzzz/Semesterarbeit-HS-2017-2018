@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="ArtaElement.cs" />
     <Compile Include="ArtaElementDefinition.cs" />
+    <Compile Include="Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

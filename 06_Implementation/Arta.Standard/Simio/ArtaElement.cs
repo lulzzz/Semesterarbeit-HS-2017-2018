@@ -1,27 +1,27 @@
 ﻿using Arta;
-using Arta.Math;
+using Arta.Distribution;
 using SimioAPI;
 using SimioAPI.Extensions;
-using System;
 
 namespace Simio
 {
-    public class ArtaElement : IElement
+    public class ArtaElement : Configuration, IElement
     {
         private IElementData _data;
-        private static double coefficient1, coefficient2;
+
 
         public ArtaElement(IElementData data)
         {
             _data = data;
-            IPropertyReader corr1 = _data.Properties.GetProperty("CorrelationCoefficient1");
-            IPropertyReader corr2 = _data.Properties.GetProperty("CorrelationCoefficient2");           
-            coefficient1 = corr1.GetDoubleValue(_data.ExecutionContext);
-            coefficient2 = corr2.GetDoubleValue(_data.ExecutionContext);
+        
         }
         public void Initialize()
         {
-
+            var corr1 = _data.Properties.GetProperty("CorrelationCoefficient1");
+            var corr2 = _data.Properties.GetProperty("CorrelationCoefficient2");
+            correlationCoefficient1 = corr1.GetDoubleValue(_data.ExecutionContext);
+            correlationCoefficient2 = corr2.GetDoubleValue(_data.ExecutionContext);
+            artaExecutionContext = new ArtaExecutionContext(BaseDistribution.Distribution.ExponentialDistribution, new double[] { correlationCoefficient1, correlationCoefficient2 });
         }
 
         public void Shutdown()

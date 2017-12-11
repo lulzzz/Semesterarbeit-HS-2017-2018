@@ -1,14 +1,11 @@
-﻿using Arta;
-using Arta.Distribution;
-using Arta.Math;
-using SimioAPI;
+﻿using SimioAPI;
 using SimioAPI.Extensions;
 using System;
 using System.Drawing;
 
 namespace Simio
 {
-    public class ArtaElementDefinition : IElementDefinition
+    public class ArtaElementDefinition : Configuration, IElementDefinition
     {
         public static readonly Guid MY_ID = new Guid("{48A1ECB4-DE39-4265-ABD9-66D56B4A70F6}");
 
@@ -19,7 +16,7 @@ namespace Simio
 
         public string Description
         {
-            get { return "Creates a new Arta Element"; }
+            get { return "Contains an ArtaProcess which generates \"Autoregressiv To Anything\" numbers. "; }
         }
 
         public Image Icon
@@ -40,17 +37,16 @@ namespace Simio
         public void DefineSchema(IElementSchema schema)
         {
             IPropertyDefinition pd;
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.0);
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.0);
-            schema.ElementFunctions.AddSimpleRealNumberFunction("ARTAfunky", "funk funk funk", new SimioSimpleRealNumberFunc(FUCKINGAWESOMEDELEGATE));  
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.5);
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.5);
+            schema.ElementFunctions.AddSimpleRealNumberFunction("Process", "Returns \"Autoregressiv To Anything\" numbers with the given Correlationcoefficients.", new SimioSimpleRealNumberFunc(ArtaProcess));
         }
 
-        private static double FUCKINGAWESOMEDELEGATE(object element)
+        private static double ArtaProcess(object element)
         {
-            ArtaExecutionContext artaExecutionContext = new ArtaExecutionContext(BaseDistribution.Distribution.ExponentialDistribution, new double[] { 0.1, 0.2 });
             return artaExecutionContext.ArtaProcess.Next();
         }
     }
 
-  
+
 }
