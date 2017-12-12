@@ -4530,8 +4530,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adelay\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\pbuetiko\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4539,17 +4538,14 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
+      "projectUniqueName": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
       "projectName": "Arta",
-      "projectPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
-      "packagesPath": "C:\\Users\\adelay\\.nuget\\packages\\",
-      "outputPath": "\\\\svm-c113.hsr.ch\\adelay\\Documents\\SemesterArbeit\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\obj\\",
+      "projectPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\Arta.csproj",
+      "packagesPath": "C:\\Users\\pbuetiko\\.nuget\\packages\\",
+      "outputPath": "\\\\svm-c113.hsr.ch\\pbuetiko\\Documents\\GitHub\\Semesterarbeit-HS-2017-2018\\06_Implementation\\Arta.Standard\\Arta\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\adelay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pbuetiko\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4563,11 +4559,6 @@
         "netstandard1.6": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
