@@ -4,7 +4,7 @@ using MathNet.Numerics.Random;
 
 namespace Arta.Distribution
 {
-    public class ExponentialDistribution : BaseDistribution
+    public class ExponentialDistribution : IBaseDistribution
     {
         private readonly Exponential exponential;
         private const double DefaultError = 0.0001;
@@ -14,22 +14,22 @@ namespace Arta.Distribution
             exponential = new Exponential(1);
         }
 
-        public override double GetMean()
+        public  double GetMean()
         {
             return exponential.Mean;
         }
 
-        public override double GetVariance()
+        public  double GetVariance()
         {
             return exponential.Variance;
         }
 
-        public override double InverseCumulativeDistribution(double p)
+        public  double InverseCumulativeDistribution(double p)
         {
             return exponential.InverseCumulativeDistribution(p);
         }
 
-        public override AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
+        public  AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
         {
             var fitter = new AutocorrelationFitter(this);
             var arCorrelationCOefficients = fitter.FitArAutocorrelations(artaCorrelationCoefficients, DefaultError);

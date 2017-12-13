@@ -5,15 +5,15 @@ namespace Arta.Distribution
 {
     public static class DistributionFactory
     {
-        public static BaseDistribution CreateDistribution(BaseDistribution.Distribution distribution)
+        public static IBaseDistribution CreateDistribution(ArtaExecutionContext.Distribution distribution)
         {
             switch (distribution)
             {
-                case BaseDistribution.Distribution.NormalDistribution:
+                case ArtaExecutionContext.Distribution.NormalDistribution:
                     return new NormalDistribution();
-                case BaseDistribution.Distribution.ContinousUniformDistribution:
+                case ArtaExecutionContext.Distribution.ContinousUniformDistribution:
                     return new ContinuousUniformDistribution();
-                case BaseDistribution.Distribution.ExponentialDistribution:
+                case ArtaExecutionContext.Distribution.ExponentialDistribution:
                     return new ExponentialDistribution();
                 default:
                     throw new NotImplementedException();

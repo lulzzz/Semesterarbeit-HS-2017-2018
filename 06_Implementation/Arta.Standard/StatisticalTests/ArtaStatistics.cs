@@ -7,9 +7,15 @@ namespace StatisticalTests
 {
     public class ArtaStatistics
     {
-        private int lag, iterations, order;
+        private int lag;
+        private int iterations;
+        private int order;
         private readonly ArtaExecutionContext context;
-        private double[] artaNumbers, pacfs, acfs, correlationCoefficients, arNumbers;
+        private double[] artaNumbers;
+        private double[] pacfs;
+        private double[] acfs;
+        private double[] correlationCoefficients;
+        private double[] arNumbers;
         private bool printOrder, printArtaNumbers, printAcfs, printPacfs, printCorrelationmatrix, printArnumbers;
 
         public ArtaStatistics(ArtaExecutionContext context)
@@ -32,7 +38,7 @@ namespace StatisticalTests
 
         public ArtaStatistics Acfs()
         {
-            acfs = AutoCorrelation.CalculateAcfs(artaNumbers, lag);
+           
             printAcfs = true;
             return this;
         }
@@ -53,11 +59,6 @@ namespace StatisticalTests
 
         public ArtaStatistics ArtaNumbers()
         {
-            artaNumbers = new double[iterations];
-            for (int i = 0; i < iterations; i++)
-            {
-                artaNumbers[i] = context.ArtaProcess.Next();
-            }
             printArtaNumbers = true;
             return this;
         }
@@ -131,13 +132,24 @@ namespace StatisticalTests
             Console.WriteLine("ARTA-Statistics\n");
             Console.WriteLine("Inputvalues:\n");
             Console.WriteLine("Distribution: {0}\n", context.distribution.ToString());
-            Console.WriteLine("Correlationcoefficients: {0}, {1}\n", correlationCoefficients[0], correlationCoefficients[1]);
+            int i = 1;
+            foreach(var coeff in correlationCoefficients)
+            {
+                Console.WriteLine("Correlationcoefficients " + i + ": {0}\t\t", coeff);
+            }
+           
             Console.WriteLine("Lag: {0}\n", lag);
             Console.WriteLine("Iterations: {0}", iterations);
         }
 
         public ArtaStatistics Excecute()
         {
+            artaNumbers = new double[iterations];
+            for (int i = 0; i < iterations; i++)
+            {
+                artaNumbers[i] = context.ArtaProcess.Next();
+            }
+            acfs = AutoCorrelation.CalculateAcfs(artaNumbers, lag);
             PrintBasicInformation();
             if (printAcfs)
                 PrintAcfs();

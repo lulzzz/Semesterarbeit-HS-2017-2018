@@ -4,8 +4,7 @@ namespace Simio
 {
     public class Configuration
     {
-        public static double correlationCoefficient1;
-        public static double correlationCoefficient2;
+        public static double correlationCoefficient;
         public static ArtaExecutionContext artaExecutionContext;
     }
 }

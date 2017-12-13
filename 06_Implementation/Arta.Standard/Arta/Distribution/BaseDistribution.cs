@@ -2,18 +2,11 @@
 
 namespace Arta.Distribution
 {
-    public abstract class BaseDistribution
+    public interface IBaseDistribution
     {
-        public abstract AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random);
-        public abstract double InverseCumulativeDistribution(double p);
-        public abstract double GetMean();
-        public abstract double GetVariance();
-
-        public enum Distribution
-        {
-            NormalDistribution,
-            ContinousUniformDistribution,
-            ExponentialDistribution
-        }
+        AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random);
+        double InverseCumulativeDistribution(double p);
+        double GetMean();
+        double GetVariance();
     }
 }

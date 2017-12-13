@@ -3,7 +3,7 @@ using MathNet.Numerics.Random;
 
 namespace Arta.Distribution
 {
-    public class ContinuousUniformDistribution : BaseDistribution
+    public class ContinuousUniformDistribution : IBaseDistribution
     {
         private readonly ContinuousUniform continuousUniform;
 
@@ -11,22 +11,22 @@ namespace Arta.Distribution
         {
             continuousUniform = new ContinuousUniform(-1, 1);
         }
-        public override double InverseCumulativeDistribution(double p)
+        public double InverseCumulativeDistribution(double p)
         {
             return continuousUniform.InverseCumulativeDistribution(p);
         }
-       
-        public override double GetMean()
+
+        public double GetMean()
         {
             return continuousUniform.Mean;
         }
 
-        public override double GetVariance()
+        public double GetVariance()
         {
             return continuousUniform.Variance;
         }
 
-        public override AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
+        public AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
         {
             var dim = artaCorrelationCoefficients.Length;
             var arCorrelationCoefficients = new double[dim];

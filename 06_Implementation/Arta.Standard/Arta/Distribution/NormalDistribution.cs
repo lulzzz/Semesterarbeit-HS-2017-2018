@@ -3,7 +3,7 @@ using MathNet.Numerics.Random;
 
 namespace Arta.Distribution
 {
-    public class NormalDistribution : BaseDistribution
+    public class NormalDistribution : IBaseDistribution
     {
         private readonly Normal normal;
 
@@ -12,22 +12,22 @@ namespace Arta.Distribution
             normal = new Normal();
         }
 
-        public override double InverseCumulativeDistribution(double p)
+        public double InverseCumulativeDistribution(double p)
         {
             return normal.InverseCumulativeDistribution(p);
         }
 
-        public override double GetMean()
+        public double GetMean()
         {
             return normal.Mean;
         }
 
-        public override double GetVariance()
+        public double GetVariance()
         {
             return normal.Variance;
         }
 
-        public override AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
+        public AbstractArtaProcess CreateArtaProcess(double[] artaCorrelationCoefficients, RandomSource random)
         {
             ArProcess arProcess = ArProcessFactory.CreateArProcess(artaCorrelationCoefficients, random);
             return new ArtaProcessNormal(arProcess, normal.Mean, normal.Variance);
