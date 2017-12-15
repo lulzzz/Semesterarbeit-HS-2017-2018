@@ -5,3 +5,11 @@ C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.AssemblyInfo.cs
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.dll
 C:\Users\Philipp\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.pdb
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Release\netstandard1.6\Arta.deps.json
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Release\netstandard1.6\Arta.dll
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\bin\Release\netstandard1.6\Arta.pdb
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.csprojResolveAssemblyReference.cache
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.csproj.CoreCompileInputs.cache
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.AssemblyInfo.cs
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.dll
+\\svm-c113.hsr.ch\pbuetiko\Documents\GitHub\Semesterarbeit-HS-2017-2018\06_Implementation\Arta.Standard\Arta\obj\Release\netstandard1.6\Arta.pdb

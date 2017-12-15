@@ -37,8 +37,7 @@ namespace Simio
         public void DefineSchema(IElementSchema schema)
         {
             IPropertyDefinition pd;
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient1", 0.4);
-            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient2", 0.5);
+            pd = schema.PropertyDefinitions.AddRealProperty("CorrelationCoefficient", 0.4);
             schema.ElementFunctions.AddSimpleRealNumberFunction("Process", "Returns \"Autoregressiv To Anything\" numbers with the given Correlationcoefficients.", new SimioSimpleRealNumberFunc(ArtaProcess));
         }
 
