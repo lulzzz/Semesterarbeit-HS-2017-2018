@@ -1,4 +1,4 @@
-﻿namespace Arta.Tests
+﻿namespace Arta.Verification
 {
     public static class StationaryTest
     {

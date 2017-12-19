@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Arta.Tests
+namespace Arta.Verification
 {
     class NotStationaryException : ArgumentException
     {

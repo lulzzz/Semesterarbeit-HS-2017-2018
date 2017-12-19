@@ -1,5 +1,5 @@
 ﻿using Arta.Math;
-using Arta.Tests;
+using Arta.Verification;
 using MathNet.Numerics.Distributions;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.Random;
