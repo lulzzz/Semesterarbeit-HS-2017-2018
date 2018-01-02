@@ -18,41 +18,30 @@ namespace StatisticalTests
         private double[] arNumbers;
         private bool printOrder, printArtaNumbers, printAcfs, printPacfs, printCorrelationmatrix, printArnumbers;
 
-        public ArtaStatistics(ArtaExecutionContext context)
+        public ArtaStatistics(ArtaExecutionContext context, int lag, int iterations)
         {
             this.context = context;
             this.correlationCoefficients = context.ArtaCorrelationCoefficients;
-        }
-
-        public ArtaStatistics Initialize(int lag)
-        {
             this.lag = lag;
-            return this;
-        }
-
-        public ArtaStatistics Iterations(int iterations)
-        {
             this.iterations = iterations;
-            return this;
-        }
 
+        }
         public ArtaStatistics Acfs()
         {
-           
             printAcfs = true;
             return this;
         }
 
         public ArtaStatistics Pacfs()
         {
-            pacfs = AutoCorrelation.CalculatePacfs(acfs);
+            acfs = AutoCorrelation.CalculateAcfs(artaNumbers, lag); 
             printPacfs = true;
             return this;
         }
 
         public ArtaStatistics Order()
         {
-            order = OrderEstimator.EstimateOrder(artaNumbers, lag);
+            
             printOrder = true;
             return this;
         }
@@ -82,6 +71,7 @@ namespace StatisticalTests
 
         public void PrintAcfs()
         {
+            acfs = AutoCorrelation.CalculateAcfs(artaNumbers, lag);
             Console.WriteLine("###############################################\n");
             Console.WriteLine("ACFS:");
             foreach (var num in acfs)
@@ -92,6 +82,7 @@ namespace StatisticalTests
 
         public void PrintPacfs()
         {
+            pacfs = AutoCorrelation.CalculatePacfs(acfs);
             Console.WriteLine("###############################################\n");
             Console.WriteLine("PACFS:");
             foreach (var num in pacfs)
@@ -102,6 +93,7 @@ namespace StatisticalTests
 
         public void PrintOrder()
         {
+            order = OrderEstimator.EstimateOrder(artaNumbers, lag);
             Console.WriteLine("###############################################\n");
             Console.WriteLine("Order: {0}", order);
         }
@@ -149,7 +141,7 @@ namespace StatisticalTests
             {
                 artaNumbers[i] = context.ArtaProcess.Next();
             }
-            acfs = AutoCorrelation.CalculateAcfs(artaNumbers, lag);
+        
             PrintBasicInformation();
             if (printAcfs)
                 PrintAcfs();
