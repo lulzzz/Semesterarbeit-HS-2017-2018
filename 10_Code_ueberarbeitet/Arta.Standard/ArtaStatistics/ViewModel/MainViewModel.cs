@@ -7,13 +7,19 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using System;
 using System.Windows;
+using System.Windows.Controls;
+using System.Text.RegularExpressions;
+using System.Text;
+using System.IO;
+using CsvHelper;
+using Microsoft.Win32;
 
 namespace ArtaStatistics.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
         private int distribution = 0;
-        private int iterations = 1000;
+        private int iterations = 0;
         private int lag = 10;
         private int order;
         private string errorMessage;
@@ -21,6 +27,7 @@ namespace ArtaStatistics.ViewModel
         private double[] artaNumbers;
         private double[] acfs;
         private double[] pacfs;
+        private bool exportIsEnabled = false;
 
         private Visibility errorIsVisible = Visibility.Hidden;
 
@@ -29,6 +36,7 @@ namespace ArtaStatistics.ViewModel
         public ObservableCollection<ListHelper> Pacfs { get; set; }
 
         public ICommand ExecuteCommand { get; set; }
+        public ICommand ExportCommand { get; set; }
 
         public MainViewModel()
         {
@@ -36,9 +44,15 @@ namespace ArtaStatistics.ViewModel
             Acfs = new ObservableCollection<ListHelper>();
             Pacfs = new ObservableCollection<ListHelper>();
             ExecuteCommand = new RelayCommand(Execute);
+            ExportCommand = new RelayCommand(ExportToCSV);
         }
 
-   
+
+        public bool ExportIsEnabled
+        {
+            get { return exportIsEnabled; }
+            set { SetProperty(ref exportIsEnabled, value); }
+        }
         public int Distribution
         {
             get { return distribution; }
@@ -78,6 +92,7 @@ namespace ArtaStatistics.ViewModel
 
         private void Execute(object obj)
         {
+            ErrorIsVisible = Visibility.Hidden;
             if (!InputIsValid()) { return; }
             ArtaNumbers.Clear();
             Acfs.Clear();
@@ -108,22 +123,59 @@ namespace ArtaStatistics.ViewModel
                     Pacfs.Add(new ListHelper(0, 0, item));
                 }
                 Order = OrderEstimator.EstimateOrder(artaNumbers, lag);
-               
+                ExportIsEnabled = true;
             }
             catch (Exception exception)
             {
                 ErrorMessage = exception.Message;
                 ErrorIsVisible = Visibility.Visible;
             }
-           
+
         }
 
         private bool InputIsValid()
         {
             if (correlationCoefficient > 1 || correlationCoefficient < -1) { CorrelationCoefficient = 0; ErrorMessage = "Correlation coefficient has to be between -1 and 1"; ErrorIsVisible = Visibility.Visible; return false; }
-            if (Iterations < 1000) { Iterations = 1000; ErrorMessage = "Iterations has to be higher than 999"; ErrorIsVisible = Visibility.Visible; return false; }
+            if (Iterations < 1000) { Iterations = 0; ErrorMessage = "Iterations has to be higher than 999"; ErrorIsVisible = Visibility.Visible; return false; }
             return true;
         }
+
+        private void ExportToCSV(object obj)
+        {
+            ErrorIsVisible = Visibility.Hidden;
+            try
+            {
+                var stringBuilder = new StringBuilder();
+                stringBuilder.AppendLine(string.Format(string.Format("{0};{1};{2};Order = {3}", "ArtaNumber", "Pacf", "Acf", Order)));
+
+                for (int i = 0; i < Iterations; i++)
+                {
+
+                    stringBuilder.AppendLine(string.Format(string.Format("{0};{1};{2}", ArtaNumbers[i].ArtaNumber, i < Lag ? Pacfs[i].Pacf.ToString() : "", i < Lag ? Acfs[i].Acf.ToString() : "")));
+
+                }
+                if(!Directory.Exists(Directory.GetCurrentDirectory() + @"\ArtaStatistics\")){
+                    Directory.CreateDirectory(Directory.GetCurrentDirectory() +  @"\ArtaStatistics\");
+                }
+
+                File.WriteAllText(Directory.GetCurrentDirectory() + "/ArtaStatistics/ArtaStatistics.csv", stringBuilder.ToString());
+             //   File.Open(Directory.GetCurrentDirectory() + "/ArtaStatistics/ArtaStatistics.csv", FileMode.Open);
+
+                var openFileDialog = new OpenFileDialog();
+                openFileDialog.InitialDirectory = Directory.GetCurrentDirectory() + @"\ArtaStatistics\";
+                openFileDialog.ShowDialog();
+            }
+            catch(Exception e)
+            {
+                ErrorIsVisible = Visibility.Visible;
+                ErrorMessage = e.Message;
+            }
+          
+        }
+
+   
+
+
     }
 
     public class ListHelper

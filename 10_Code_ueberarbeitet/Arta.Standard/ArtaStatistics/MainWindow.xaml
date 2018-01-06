@@ -48,7 +48,7 @@
             </ComboBox>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Correlation coefficients:" Margin="10,0,0,0"></TextBlock>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Text="{Binding CorrelationCoefficient, Mode=TwoWay}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="1" Text="{Binding CorrelationCoefficient, Mode=TwoWay}" TextChanged="TextBox_TextChanged"/>
 
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Iterations:" Margin="10,0,0,0"></TextBlock>
             <TextBox Grid.Row="2" Grid.Column="1" Margin="1" Text="{Binding Iterations, Mode=TwoWay}"/>
@@ -113,10 +113,12 @@
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Text="Order:" TextAlignment="Left" Margin="10,5,5,5"></TextBlock>
             <TextBlock Grid.Column="1" Text="{Binding Order}" Margin="5" TextAlignment="Left"></TextBlock>
-            <Button Grid.Column="3" Command="{Binding ExecuteCommand}">Execute</Button>
+            <Button Grid.Column="3" Command="{Binding ExportCommand}" IsEnabled="{Binding ExportIsEnabled}">Export to CSV</Button>
+            <Button Grid.Column="4" Command="{Binding ExecuteCommand}">Execute</Button>
         </Grid>
     </Grid>
 
